@@ -1,0 +1,916 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='000 - 009'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>000 - 009 Ilmu Umum dan Komputer</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>000 - 009 Ilmu Umum dan Komputer</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><STRONG><FONT face=Arial size=4><EM>Knowledge - 
+Special Computer Methods (Ilmu&nbsp;Umum 
+dan&nbsp;Komputer)</EM></FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>000 Generalities/Karya 
+Umum</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>001 Knowledge/</FONT><FONT face=Arial 
+size=2>Ilmu 
+Pengetahuan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></STRONG><FONT face=Arial size=2>Kelaskan di sini diskusi dari berbagai 
+bidang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk ilmu pengetahuan umum</FONT></P>
+<P><FONT face=Arial size=2><STRONG>001.01 Theory of Knowledge/Teori Ilmu 
+Pengetahuan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></FONT><FONT face=Arial size=2>Jangan gunakan untuk filsafat dan teori 
+ilmu pengetahuan; kelaskan di nomor 121</FONT></P>
+<P><STRONG>001.0601 UNESCO/Organisasi Pendidikan, Keilmuan, dan Kebudayaan 
+PBB</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;United 
+Nation Educational, Scientific and Cultural 
+Organization<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 352.113&nbsp;untuk PBB&nbsp;</P>
+<P><FONT face=Arial size=2><STRONG>001.1 Intellectual Life/Kehidupan 
+Intelektual</STRONG><BR><STRONG></STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>001.3 
+Humanities/Humanisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini&nbsp;nilai-nilai dari ilmu 
+pengetahuan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk ilmu 
+humaniora<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 144 untuk filsafat 
+humanisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 923.6 untuk biografi tokoh humaniora&nbsp;&nbsp;</FONT></P>
+<P><FONT face=Arial size=2><STRONG>001.4&nbsp;Research; Statistical 
+Methods/Riset; 
+Metode&nbsp;Statistik<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelaskan 
+di&nbsp;sini riset 
+evaluasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan riset&nbsp;dari spesifik disiplin subjek ilmu pengetahuan ke 
+dalam&nbsp;<FONT face=Arial size=2>subjek&nbsp;</FONT><FONT face=Arial 
+size=2>utamanya masing-masing</FONT></FONT><FONT face=Arial 
+size=2><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ditambah notasi 072 dari <A href="Table%201%20Standard%20Subdivisions.htm">Tabel 
+1</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>Contoh</EM>: 
+riset linguis<FONT face=Arial size=2>tik </FONT>410.72</FONT><FONT face=Arial 
+size=2><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk statistik umum; kelaskan&nbsp;mulai nomor 
+310&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></P>
+<P><FONT face=Arial size=2><STRONG>001.42 Reseach Methods/Metode 
+Riset</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini metode penelitian ilmiah, metodologi penelitian 
+ilmiah</FONT></P>
+<P><FONT face=Arial size=2><STRONG>001.43 Descriptive and Experimental 
+Methods/Riset Deskriptif, Metode&nbsp;Eksperimen dan Percobaan 
+Ilmiah</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>001.9 Controversial Knowledge/Pengetahuan 
+Kontroversial<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini pengetahuan yang sulit dijelaskan secara ilmiah seperti UFO, 
+monster, Segitiga 
+Bermuda,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Atlantis dan misteri-misteri 
+lainnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;620.419&nbsp;untuk teknik 
+extraterrestrial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 919 <SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-bidi-font-size: 11.0pt; mso-bidi-font-weight: bold; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">untuk 
+perjalanan ke dunia </SPAN><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">extraterrestrial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga </SPAN>999 untuk sejarah extraterrestrial</FONT></P>
+<P><FONT face=Arial size=2><STRONG>001.96 Illusions/Ilusi</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>002&nbsp;The 
+Book/Buku<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;deskripsi 
+buku&nbsp;<STRONG><BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 028.1 untuk tinjauan 
+buku<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai 090 untuk 
+buku-buku&nbsp;langka<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">676.2 untuk produksi 
+kertas untuk 
+buku<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga </SPAN></SPAN></SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">686.3 untuk 
+penjilidan 
+buku<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 920.4 untuk biografi penerbit buku dan penjual 
+buku</SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></P></FONT>
+<P><FONT face=Arial><STRONG><FONT 
+size=2>003&nbsp;Systems/Sistem-sistem</FONT><BR><FONT 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></STRONG><FONT size=2>Kelaskan di sini riset operasi, teori sistem, 
+sistem analisis, model, teknik simulasi</FONT></FONT></P>
+<P><FONT face=Arial size=2><STRONG>003.1&nbsp;System Identification/Identifikasi 
+Sistem<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Menentukan suatu model matematis untuk suatu sistem dengan mengamati 
+input-outputnya</FONT></P>
+<P><FONT face=Arial><FONT size=2><STRONG>003.2&nbsp;Forecasting and Forecast, 
+Futurology/Peramal dan Ramalan, 
+Futurologi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 133.3 untuk ramalan menurut cara-cara parapsikologi&nbsp;dan ilmu 
+ghaib&nbsp;</FONT></FONT></P>
+<P><FONT face=Arial><FONT size=2><STRONG>003.3&nbsp;Computer Modeling and 
+Simulation/Model dan Simulasi 
+Komputer<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Menentukan suatu model matematis untuk suatu sistem dengan mengamati 
+input-outputnya</FONT></FONT></P>
+<P><FONT face=Arial><FONT size=2><STRONG>003.5 Theory of Communication and 
+Control/Teori Komunikasi dan 
+Kontrol<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelaskan 
+di sini bionic/bionik, cybernetics/sibernatika, teori informasi, teori 
+pengambilan 
+keputusan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.382 untuk teknik 
+komunikasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 658.403 untuk manajemen pengambilan keputusan</FONT></FONT></P>
+<P><STRONG>003.7 Kinds of Systems/Macam-macam 
+System<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini stochastic system, distributed-parameter system</P>
+<P><FONT face=Arial><STRONG><FONT size=2>004&nbsp;Data Processing, Computer 
+Science/Pemrosesan Data, Ilmu Komputer, Teknik Informatika</FONT><BR><FONT 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></STRONG><FONT size=2>Kelaskan di sini seleksi dan penggunaan perangkat 
+keras/hardware komputer, karya komprehensif tentang&nbsp; 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+perangkat keras dan program-program dalam pengolahan data elektronis,&nbsp; 
+teknik komputer 
+informatika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk perakitan hardware, merakit 
+komputer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelaskan 
+pengolahan data komputer dari spesifik disiplin subjek ilmu pengetahuan ke 
+dalam&nbsp;<FONT face=Arial size=2>subjek&nbsp;</FONT><FONT face=Arial 
+size=2>utamanya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;masing-masing </FONT>ditambah notasi -0285 dari <A href="Table%201%20Standard%20Subdivisions.htm">Tabel 
+1</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: pengolahan data dalam akuntansi 
+657.0285<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jangan 
+gunakan untuk&nbsp;simulasi komputer; kelaskan di nomor&nbsp;dalam 
+003.3<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk</FONT></FONT><FONT face=Arial><FONT size=2> teknik 
+komputer; kelaskan di nomor 621.39</FONT></FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"></SPAN><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>004.0151 
+Computers Mathematical Principles/Prinsip Matematika dalam Ilmu 
+Komputer<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 519 untuk&nbsp;matematika 
+terapan</SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"></SPAN><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>004.019&nbsp;Psychological 
+Principles/Prinsip&nbsp;Psikologi dalam Ilmu 
+Komputer<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini interaksi antara manusia dengan 
+komputer</SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><STRONG>004.028&nbsp;Auxiliary 
+Techniques/Teknik, Prosedur, Alat-alat, Perlengkapan, Bahan-bahan&nbsp;dalam 
+Ilmu 
+Komputer</STRONG></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>004.0288 
+Computer Maintenance/Perawatan Komputer, Reparasi 
+Komputer</STRONG></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>004.03 
+Dictionaries and Encyclopedia Computer Science/Kamus Ilmu Komputer dan 
+Kamus&nbsp;Teknik Informatika, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Ensiklopedia Ilmu Komputer dan&nbsp;Ensiklopedia&nbsp;Teknik 
+Informatika</STRONG></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"></SPAN><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>004.05 
+General Publications/Terbitan Berseri, Berkala Umum&nbsp;Ilmu Komputer dan 
+Teknik 
+Informatika<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini majalah&nbsp;ilmu komputer dan teknik informatika, jurnal ilmu 
+komputer dan teknik 
+informatika</SPAN></P></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT>
+<P><FONT face=Arial size=2><STRONG>004.0688 Computer Management/Manajemen 
+Komputer</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.071 Computer Science Education/Pendidikan 
+Ilmu Komputer, Pendidikan Teknik Informatika</STRONG></FONT></P>
+<P><STRONG>004.08 Computer and Human/Komputer dan 
+Manusia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini komputer dan wanita, komputer dan anak-anak, komputer 
+dan orang dewasa</P>
+<P><FONT face=Arial size=2><STRONG>004.09 History of Computer/Sejarah 
+Komputer</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.1&nbsp;General&nbsp;Works on Specific 
+Types of Computers/Karya Umum tentang&nbsp;Tipe-tipe Khusus 
+Komputer</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.11 Digital Computer/Komputer 
+Digital<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Lihat 
+juga 621.39 untuk teknik elektronika komputer 
+digital<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 776 untuk seni&nbsp;komputer, seni digital</FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.11 SuperComputers/Super 
+Komputer</STRONG></FONT></P>
+<P><STRONG>004.12 Mainframe Computers/Komputer Mainframe</STRONG></P>
+<P><STRONG>004.14 Midrange Computers/Komputer Midrange</STRONG></P>
+<P><FONT face=Arial size=2><STRONG>004.16 Personal Computers/Komputer Personal, 
+PC<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini laptop, notebook, komputer tablet, komputer 
+jinjing&nbsp;<STRONG>&nbsp;</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.19 Hybrid and Analog Computers/Komputer 
+Hybrid dan Komputer Analog</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.21&nbsp;Systems Analysis and Computer 
+Design/Sistem Analis dan Desain Komputer</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.22&nbsp;Computer Architecture/Arsitektur 
+Komputer</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.24 Computer 
+Performance&nbsp;Evaluation/Evaluasi Daya&nbsp;Guna dan Performa 
+Komputer&nbsp;</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.3&nbsp;Processing Modes/Prosessing 
+Mode<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini real-time processing,&nbsp;multiprocessing, 
+distributed 
+processing<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Termasuk processor/prosessor,&nbsp;multiprocessors/multiprosessor, 
+dualcore, central processing 
+unit/CPU<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk macam-macam prosessor seperti&nbsp;intel, celeron, AMD, dan 
+lain-lain</FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.5 
+Storage/Penyimpanan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini internal storage, external storage, virtual 
+memory<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk random access memory/RAM, CD-ROM, DVD, floppy disk, flash disk, hard 
+disk, hard disk drive, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+disket, sim card, memory card/kartu penyimpan data</FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.6 Interfacing and Communications/Tampilan 
+Antar Muka (Interface) dan Jaringan Komunikasi 
+Komputer<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Peralatan yang menghubungkan komputer dengan peripheral divice atau dengan 
+komputer lain</FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.65 Computer Communications 
+Networks/Jaringan Komunikasi Komputer</STRONG></FONT></P>
+<P><STRONG>004.66 Data Transmission Modes and Data Switching Methods/Metode 
+Transmisi 
+Data<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini wired, wireless, wi-fi/wifi, wireless fidelity</P>
+<P><FONT face=Arial size=2><STRONG>004.67 Wide Area Network (WAN)/Wide Area 
+Network&nbsp;&nbsp;</STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.678&nbsp;Internet (World Wide 
+Web)/Internet<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini website, situs web&nbsp;internet, 
+http,&nbsp;domain&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;mesin pencari 
+google<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk internet browser internet (mozilla firefox, opera, internet explorer), 
+dan 
+lain-lain<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk web design; kelaskan di nomor 006.7</FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.6782 Cloud Computing/Cloud 
+Technology</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.68&nbsp;Local Area Network (LAN)/Local 
+Area 
+Network<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini intranet</FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.692 Electronic Mail, Email/Surat 
+Elektronik, 
+Surel<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini yahoo, gmail, dan lain-lain</FONT></P>
+<P><STRONG>004.693 Internet Discussion Group/Grup Diskusi di 
+Internet<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;chatting, chat group, mailing list, yahoo group, 
+dan lain-lain</P>
+<P><FONT face=Arial size=2><STRONG>004.695 Internet Telephony/Telepon 
+Internet</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>004.7 
+Peripherals/Peripheral<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;I/O (Input/Output)</FONT></P>
+<P><STRONG>004.76 Input</STRONG> <STRONG>Peripherals/Periperal 
+Input<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini screen, monitor, printer</P>
+<P><STRONG>004.77 Ouput</STRONG> <STRONG>Peripherals/Periperal 
+Output<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini keyboard, mouse komputer, joystick, card reader</P>
+<P><FONT face=Arial size=2><STRONG>004.9 Nonelectronic Data 
+Processing/Pemrosesan Data Non Elektronik&nbsp;</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>005.1 
+Programming/Pemrograman<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;software engineering/rekayasa software, rekayasa perangkat 
+lunak</FONT></P>
+<P><FONT face=Arial size=2><STRONG>005.1092 Computer Programmers/Programmer 
+Komputer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini ahli pemrograman, hacker, 
+cracker,&nbsp;peretas</FONT></P>
+<P><FONT face=Arial size=2><STRONG>005.11 Special Programming/Pemrograman 
+Khusus<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Termasuk 
+modular programming, structured programming, functional programming, logic 
+programming,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+constraint programming, object oriented programming, visual 
+programming</FONT></P>
+<P><FONT face=Arial size=2><STRONG>005.12&nbsp;Software System Analysis and 
+Design/Sistem Analisa dan Desain Perangkat Lunak</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>005.13 Language Programming/Bahasa 
+Pemrograman<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini coding of programs, source code/kode 
+program&nbsp;&nbsp;</FONT></P>
+<P><FONT face=Arial size=2><STRONG>005.2 Programming for 
+Specific&nbsp;Computers, for Specific Operating&nbsp;Systems, for Specific User 
+Interface/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Pemrograman untuk Tipe Komputer,&nbsp;Sistem Operasi&nbsp;dan Tampilan Muka 
+Pengguna 
+Tertentu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan&nbsp;di sini assembly language, assembler/bahasa assembly</FONT></P>
+<P><FONT face=Arial size=2><STRONG>005.262 Programming&nbsp;in&nbsp;Specific 
+Program Language/Pemrograman untuk&nbsp;Bahasa 
+Pemrograman&nbsp;Tertentu<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>:&nbsp;C++, pascal, pemrograman web, HTML, PHP, java, visual 
+basic, fox pro, dan lain-lain</FONT></P>
+<P><FONT face=Arial size=2><STRONG>005.265 Programming for&nbsp;Specific 
+Computers/Pemrograman untuk 
+Komputer&nbsp;Tertentu<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM> 
+Contoh</EM>: pemrograman untuk komputer IBM PC&nbsp;</FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.268 Programming for&nbsp;Specific 
+Operating&nbsp;Systems/Pemrograman untuk&nbsp;Sistem Operasi 
+Tertentu<BR></STRONG></FONT></FONT><FONT size=2><FONT 
+face=Arial>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: pemrograman untuk sistem operasi windows, pemrograman untuk 
+sistem operasi 
+linux<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk sistem operasi komputer; kelaskan di nomor 
+005.43</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.3 
+Programs/Program<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini program khusus untuk supercomputer, program khusus 
+untuk mainframe 
+computer,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+program khusus untuk midrange 
+computer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk semua hal yang berkaitan dengan software/aplikasi perangkat lunak, 
+software licensed, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+software open source, freeware, free software open source</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.36 Programs for Personal 
+Computers/Program untuk Komputer 
+Personal</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini program aplikasi,&nbsp;program terintegrasi, sistem 
+informasi&nbsp;</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.4 System Programming/Sistem 
+Pemrograman<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini pemrograman untuk memproduksi operating 
+system</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.43&nbsp;Operating System/Sistem 
+Operasi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini sistem operasi windows, linux/unix, mac OS/apple, DOS, 
+android<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk utility 
+programs<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>:&nbsp;windows XP, windows 7, windows 8, linux ubuntu, linux 
+mandriva, linux suse, dan lain-lain&nbsp;&nbsp;</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.437 Computer User 
+Interface/Tampilan Muka Komputer</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.5 General Purpose Application 
+Programs/Program Aplikasi dengan Kegunaan 
+Khusus<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini word processing, spreadsheet, presentation software, 
+dan 
+lain-lain<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>:&nbsp;microsoft&nbsp;office, open office, macromedia flash, 
+dreamweaver,&nbsp;pdf reader, game 
+komputer,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dan&nbsp;lain-lain<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN>794.8 untuk 
+permainan video 
+game</SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN>&nbsp;</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.7&nbsp;Data in&nbsp;Computer 
+Systems/Data dalam Sistem-sistem Komputer</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.73 Data Structures/Struktur 
+Data</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.74&nbsp;Data Files and 
+Database/Data File-file dan Database,&nbsp;Pangkalan Data, Pusat 
+Data<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan&nbsp;di sini data file processing, manajemen 
+database,&nbsp;hierarchical database, relational 
+database<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk server, microsoft access, MySQL, oracle, SQLserver</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.741 File Structures/Struktur 
+File</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>005.8&nbsp;Computer Security, Data 
+Security/Keamanan Komputer, Keamanan 
+Data<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan&nbsp;di sini antivirus</FONT></FONT></P>
+<P><FONT face=Arial size=2><STRONG>005.82 Data Encryption/Data 
+Enkripsi</STRONG></FONT></P>
+<P><STRONG>005.84 
+Malware/Malware<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan&nbsp;di sini&nbsp;virus komputer, spyware, 
+worms&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk hack, hacking, crack, cracking, retas, 
+meretas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P><FONT face=Arial size=2><STRONG>005.86 Data Backup, Data 
+Recovery/Penyelamatan Data</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>006&nbsp;Special Computer Methods/Metode 
+Komputer Tertentu</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>006.242 Bar Coding/Kode Bar, 
+Barkod</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>006.3&nbsp;Artificial Intelligence/Kecerdasan 
+Buatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sistem 
+pakar<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 153 untuk kecerdasan intelektual dan mental ditinjau dari segi 
+psikologi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>006.37 Computer Vision/Visi 
+Komputer</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>006.4 Computer Pattern Recognition/Pola 
+Pengenalan 
+Komputer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini optical pattern recognition, optica 
+character&nbsp;recognition/OCR, handwriting 
+recognition,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+speech recognition</FONT></P>
+<P><FONT face=Arial size=2><STRONG>006.42 Barcoding/Barcode</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>006.5 Digital 
+Audio/Suara&nbsp;Digital<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 776 untuk seni&nbsp;komputer, seni 
+digital<STRONG>&nbsp;<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 781.3&nbsp;aspek komputer dalam&nbsp;komposisi 
+musik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;786.7 untuk&nbsp;komputer sebagai&nbsp;alat musik</FONT></P>
+<P><FONT face=Arial size=2><STRONG>006.6 Computer Graphics/Komputer Grafis, 
+Grafika 
+Komputer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini digital 
+image<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 604.2 untuk menggambar grafika 
+teknik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">741.6 
+untuk teknik menggambar desain 
+grafis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga </SPAN>776 untuk seni&nbsp;komputer, seni digital</FONT></P>
+<P><FONT face=Arial size=2><STRONG>006.62 Hardware&nbsp;for Computer 
+Graphics/Perangkat Keras untuk Komputer 
+Grafis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini scanner, plotter</FONT></P>
+<P><STRONG>006.66&nbsp;Programming for Computer Graphics/Pemrograman untuk 
+Komputer 
+Grafis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini adobe photoshop, gimp&nbsp;</P>
+<P><FONT face=Arial size=2><STRONG>006.686 CorelDRAW/Corel 
+Draw</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>006.693 Three Dimensional Graphics, 
+3-D/Komputer Grafis Tiga Dimensi</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>006.696 Digital Video/Video 
+Digital<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;animasi 
+komputer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 776 untuk seni&nbsp;komputer, seni digital</FONT></P><FONT face=Arial 
+size=2>
+<P><FONT face=Arial size=2><STRONG>006.7&nbsp;Multimedia Systems/Sistem-sistem 
+Multimedia<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelaskan 
+di sini&nbsp;interactive video/video 
+interaktif<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk web design/desain 
+web<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 776 untuk seni komputer, seni digital</FONT></P>
+<P><STRONG>006.752 Blogs/Blog, Web 
+Blog<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini blogger, multiply, wordpress, joomla, drupal, dan 
+lain-lain</P>
+<P><STRONG>006.754 Online Social Network/Situs Jejaring 
+Sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini facebook, twitter, friendster, myspace, plurk, dan 
+lain-lain</P>
+<P><STRONG>007 - 008 - 009 Unassigned/Belum 
+Digunakan</STRONG></P></FONT></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

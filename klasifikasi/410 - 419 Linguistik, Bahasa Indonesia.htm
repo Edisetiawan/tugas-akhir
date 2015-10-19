@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='410 - 419'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>410 - 419 Linguistik, Bahasa Indonesia</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>410 - 419 Linguistik, Bahasa Indonesia</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><STRONG><FONT face=Arial size=4><EM>Linguistics 
+(Linguistik, Bahasa Indonesia dengan Nomor Dasar 410)<FONT 
+color=#ff0000>*</FONT></EM></FONT></STRONG></P><FONT face=Arial size=2>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><STRONG>410 
+Linguistics/Linguistik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Linguistik: ilmu 
+bahasa<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;bahasa Indonesia, linguistik bahasa 
+Indonesia<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<FONT color=#ff0000><EM>Opsi pilihan</EM>: 
+</FONT></STRONG>berdasarkan&nbsp;Schedule DDC Edisi 23 nomor dasar&nbsp;<A href="499.221%20Bahasa%20Indonesia.htm"><STRONG>499.221</STRONG></A>&nbsp;dapat 
+juga digunakan 
+untuk<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;bahasa Indonesia. Gunakan salah satu sesuai 
+keperluan.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga bahasa Indonesia dengan nomor dasar <A href="499.221%20Bahasa%20Indonesia.htm"><STRONG>499.221</STRONG></A></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><STRONG>410.151 Mathematical 
+Linguistics/Matematika Linguistik</STRONG></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><STRONG>410.72 Research and 
+Statistical Methods of Linguistic/Riset Linguistik, Metode Statistik 
+Linguistik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini riset dan metode statistik linguistik bahasa 
+Indonesia<STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><FONT face=Arial 
+size=2><STRONG>411 Writing Systems/Sistem Tulisan, 
+Penulisan&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;sistem penulisan bahasa 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk alfabet, ideograph, braille, akronim, tanda 
+baca<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jangan 
+gunakan untuk menulis; kelaskan di nomor 
+372.623<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 372.4 untuk 
+membaca<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 418.4 untuk membaca dalam bahasa 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 421 untuk menulis dalam bahasa 
+Inggris<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 652.1 untuk teknik menulis 
+indah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 808.02 untuk kepengarangan dan teknik&nbsp;penulisan</FONT></P>
+<P><STRONG>411.52 Spelling/Ejaan dan 
+Ucapan&nbsp;<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;ejaan dan ucapan bahasa 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Ejaan Bahasa Indonesia&nbsp;yang Disempurnakan/EYD</P>
+<P><FONT face=Arial size=2><STRONG>411.7 Paleography and Epigraphy/Paleografi 
+dan 
+Epigrafi&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Paleografi: ilmu tentang tulisan tangan 
+kuno<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Epigrafi: ilmu tentang membaca dan menafsirkan 
+prasasti<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;paleografi dan epigrafi dalam bahasa 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Termasuk 
+prasasti<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 091 untuk naskah-naskah 
+kuno<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 653 untuk penulisan tangan ditinjau dari segi manajemen 
+perkantoran</FONT></P>
+<P><FONT face=Arial size=2><STRONG>412 
+Etymology/Etimologi&nbsp;<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Etimologi: ilmu tentang asal 
+kata<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini etimologi bahasa Indonesia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>413 
+Dictionaries/Kamus&nbsp;<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;kamus bahasa 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Kamus Besar Bahasa Indonesia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>413.028 
+Lexicography/Leksikografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Leksikografi: perkamusan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>413.1 Specialized Dictionaries, Idioms/Kamus 
+Khusus, 
+Idiom<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini kamus bergambar, kamus sinonim</FONT></P>
+<P><FONT face=Arial size=2><STRONG>413.2 - 413.9 Polyglot Dictionaries/Kamus 
+Lebih dari Satu Bahasa, Kamus Banyak 
+Bahasa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar&nbsp;413&nbsp;dari <A href="Table%206%20Languages.htm">Tabel 
+6</A>&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: kamus Indonesia-Inggris 413.21, kamus Indonesia-Belanda 
+413.393, kamus Indonesia-Perancis 
+413.41,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+dan seterusnya</FONT></P>
+<P><FONT face=Arial size=2><STRONG>414 
+Phonology/Fonologi&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Fonologi: ilmu tentang bunyi bahasa atau tata 
+bunyi<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini untuk fonologi dan fonetik, atau untuk fonologi 
+saja<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk fonem&nbsp;</FONT></P>
+<P><FONT face=Arial size=2><STRONG>414.8 
+Phonetics/Fonetik&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Fonetik: ilmu tentang bunyi bahasa dan cara penulisannya</FONT></P>
+<P><FONT face=Arial size=2><STRONG>415 Grammar, Sentences, Syntax, Word 
+Order/Tata Bahasa, Kalimat, Sintaksis, 
+Kata<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini tata bahasa Indonesia, kalimat dan kata dalam bahasa 
+Indonesia&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk grammar dalam bahasa Inggris; kelaskan di nomor 
+425</FONT></P>
+<P><FONT face=Arial size=2><STRONG>415.5 Nouns, Pronouns, Adjectives, 
+Articles/Kata Benda, Kata Ganti, Kata Sifat, 
+Artikel<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini kata benda, kata ganti, kata sifat, artikel dalam 
+bahasa Indonesia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>415.6 Verb/Kata Kerja 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini kata kerja dalam bahasa Indonesia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>415.62 Tenses/Tenses</STRONG></FONT></P>
+<P><STRONG>415.76 Adverb/Kata 
+Keterangan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini kata kerja dalam bahasa Indonesia<STRONG> </STRONG></P>
+<P><FONT face=Arial size=2><STRONG>415.9 Morphology/Morfologi Bahasa 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Morfologi: ilmu tentang bentuk kata atau tata 
+bentuk<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini morfologi dalam bahasa Indonesia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>417.2 Dialectology Linguistics/Dialek 
+Bahasa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini bahasa Indonesia dialek Jakarta,&nbsp;bahasa Indonesia 
+dialek Melayu, dan 
+sebagainya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk slang, jargon</FONT></P>
+<P><FONT face=Arial size=2><STRONG>417.7 Historical Linguistic, Diachronic 
+Linguistic/Sejarah Bahasa, Perkambangan 
+Bahasa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini perkembangan bahasa Indonesia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>418 Applied Linguistics/Bahasa-bahasa Daerah 
+di 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini bahasa Jawa, bahasa Sunda, bahasa Madura,&nbsp;bahasa 
+Bali, bahasa Aceh,&nbsp;bahasa 
+Banjar,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+bahasa Batak Toba,&nbsp; bahasa Batak Dairi,&nbsp; bahasa Minangkabau,&nbsp; 
+bahasa Lampung,&nbsp; bahasa 
+Bugis,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;bahasa 
+Makasar/Makassar<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<STRONG><FONT color=#ff0000><EM>Opsi pilihan</EM>:</FONT></STRONG>&nbsp; 
+berdasarkan&nbsp;Schedule DDC Edisi 23 nomor <STRONG><A href="499.221%20Bahasa%20Indonesia.htm">499.222 - 
+499.2264</A>&nbsp;</STRONG>dapat juga digunakan 
+untuk<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bahasa-bahasa 
+daerah di Indonesia. Gunakan salah satu sesuai keperluan.</FONT></P>
+<P><STRONG><FONT face=Arial size=2>418.02 Translating and 
+Interpreting/Penerjemahan dan Penafsiran Bahasa</FONT></STRONG></P>
+<P><STRONG>418.4 
+Reading/Membaca<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 028.9 untuk minat baca dan 
+perpustakaan<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 372.4 untuk belajar 
+membaca<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 411 untuk 
+menulis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 421.55 untuk membaca dalam bahasa Inggris</P>
+<P><FONT face=Arial size=2><STRONG>419 Sign Language/Bahasa 
+Isyarat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini fingerspelling</FONT></P>
+<P>&nbsp;</P>
+<P><FONT face=Arial color=#ff0000 size=2><EM><STRONG>*Keterangan: 
+</STRONG></EM></FONT></P>
+<UL>
+  <LI><FONT face=Arial color=#ff0000 size=2><EM><STRONG>Berdasarkan Schedules 
+  DDC Edisi 23 Volume 2 halaman&nbsp;931 Option A, nomor dasar 410 dapat 
+  digunakan untuk bahasa di negara tertentu, termasuk bahasa 
+  Indonesia.</STRONG></EM></FONT> 
+  <LI><STRONG><EM><FONT color=#ff0000>Lihat juga bahasa Indonesia dengan nomor 
+  dasar <A href="499.221%20Bahasa%20Indonesia.htm">499.221</A>. Gunakan salah satu 
+  sesuai keperluan.</FONT></EM></STRONG></LI></UL></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

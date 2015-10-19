@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='600 - 609'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>600 - 609 Aneka Ragam Teknologi dan Ilmu Terapan</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>600 - 609 Aneka Ragam Teknologi dan Ilmu Terapan</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><STRONG><FONT face=Arial size=4><EM>Miscellany of 
+Technology and Applied Sciences (Aneka Ragam tentang Teknologi dan Ilmu 
+Terapan)</EM></FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>600 Technology, Applied Sciences/Teknologi, 
+Ilmu 
+Terapan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga mulai 926 untuk biografi ahli teknologi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>601 Philosophy and Theory of 
+Technology/Filsafat dan Teori tentang Teknologi&nbsp;dan Ilmu 
+Terapan</STRONG></FONT></P>
+<P><STRONG><FONT face=Arial size=2>602 Miscellany of Technology and Applied 
+Sciences/Aneka Ragam tentang Teknologi dan Ilmu Terapan</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>603 Dictionaries, Encyclopedia/Kamus 
+Teknologi dan Ilmu Terapan, Ensiklopedia Teknologi dan Ilmu 
+Terapan</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>604.2 Technical Drawing/Menggambar 
+Teknik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini gambar teknik, grafika teknik, ilustrasi teknik, 
+drafting, draft 
+teknik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;006.6 untuk grafika 
+komputer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 692.1 untuk&nbsp;menggambar konstruksi 
+bangunan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 720.22 untuk menggambar 
+arsitektur<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-weight: bold">Lihat 
+juga 741 untuk seni menggambar dan&nbsp;<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold">741.6 
+untuk teknik menggambar desain 
+grafis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai&nbsp;760 untuk seni grafika</SPAN><O:P></O:P></SPAN></P></FONT>
+<P><FONT face=Arial size=2><STRONG>604.7 Hazardous Materials 
+Technology/Teknologi Bahan 
+Berbahaya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pengelolaan cairan dan gas yang mudah terbakar, bahan 
+peledak, bahan 
+beracun<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 623.45<STRONG> </STRONG>untuk teknik 
+amunisi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 662.2 untuk industri bahan peledak</FONT></P>
+<P><STRONG><FONT face=Arial size=2>605 Serial Publications/Terbitan Berseri 
+tentang Teknologi dan Ilmu&nbsp;Terapan Umum</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>606 Organizations of Technology and Applied 
+Sciences/Organisasi di Bidang&nbsp;Teknologi dan Ilmu 
+Terapan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Badan Atom Nasional (BATAN)</FONT></P>
+<P><FONT face=Arial size=2><STRONG>607.1 Education of Technology and Applied 
+Sciences/Pendidikan di Bidang Teknologi dan Ilmu Terapan</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>607.2 Research, Statistical Methods/Riset, 
+Metode&nbsp;Statistik di Bidang&nbsp;Teknologi dan Ilmu 
+Terapan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini riset produksi, eksperimen ilmiah, percobaan 
+ilmiah&nbsp;di bidang teknologi dan ilmu 
+terapan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk riset teknik, metode statistik teknik</FONT></P>
+<P><FONT face=Arial size=2><STRONG>607.21 - 607.29 Geographic Treatment of 
+Research/Riset Teknologi dan Ilmu Terapan di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini riset teknik dan ilmu terapan di lokasi 
+tertentu<STRONG>&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 607.2 notasi 1 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: riset produksi di China Tiongkok 607.251</FONT></P>
+<P><FONT face=Arial size=2><STRONG>607.2598 Research of Technology in 
+Indonesia/Riset&nbsp;Teknologi dan Ilmu Terapan&nbsp;di 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini riset teknik dan ilmu terapan di Indonesia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>607.3 Other Aspect of&nbsp;Research/Aspek 
+Lain tentang Riset&nbsp;Teknologi dan Ilmu 
+Terapan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 607.3&nbsp;dengan menghilangkan&nbsp;angka 7 
+notasi 074 - 079 dari <A href="Table%201%20Standard%20Subdivisions.htm">Tabel 
+1</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>:&nbsp;pameran dan eksebisi di bidang teknologi dan ilmu terapan 
+607.34 (bukan 607.374)</FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>607.4 - 607.9 Education&nbsp;and 
+Related Topics of Technology and Applied Sciences in Specific 
+Localities/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Pendidikan dan Topik Terkait&nbsp;di Bidang Teknologi dan Ilmu Terapan di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Termasuk&nbsp;pendidikan teknik dan ilmu terapan di lokasi 
+tertentu<STRONG>&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 607 notasi 4 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: pendidikan di bidang teknologi dan ilmu terapan di Jepang 
+607.52</FONT></FONT></P>
+<P><FONT size=2><STRONG><FONT face=Arial>607.598 Education and Related Topics of 
+Technology and Applied Sciences in Indonesia/Pendidikan 
+Teknologi,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+dan Topik Terkait&nbsp;di Bidang Teknologi dan Ilmu Terapan 
+di&nbsp;Indonesia</FONT></STRONG></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>608 Inventions and Patents/Inovasi, 
+Penemuan&nbsp;dan 
+Paten<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346.04&nbsp;untuk 
+hukum hak paten</SPAN>&nbsp; </FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>608.7 Geographic Treatment of 
+Inventions and Patents/Inovasi, Penemuan&nbsp;dan Paten&nbsp;di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 608.7 notasi 01 - 9 <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: paten dari Brazil 608.781</FONT></FONT></P>
+<P><FONT size=2><STRONG><FONT face=Arial>608.7598 Inventions and Patents from 
+Indonesia/Inovasi, Penemuan&nbsp;dan Paten&nbsp;dari 
+Indonesia</FONT></STRONG></FONT></P>
+<P><FONT size=2><STRONG><FONT face=Arial>609 History of Invention of 
+Technology/Sejarah Penemuan</FONT></STRONG>&nbsp;<STRONG><FONT face=Arial>di 
+Bidang Teknologi dan Ilmu 
+Terapan</FONT></STRONG></FONT></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

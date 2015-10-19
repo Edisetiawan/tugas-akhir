@@ -1,0 +1,2579 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='610 - 619'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>610 - 619 Ilmu Kedokteran dan Ilmu Pengobatan</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>610 - 619 Ilmu Kedokteran dan Ilmu Pengobatan</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><STRONG><I><SPAN 
+style="FONT-SIZE: 13.5pt; FONT-FAMILY: 'Arial','sans-serif'">Medical and 
+Medicine Science</SPAN></I></STRONG> <STRONG><I><SPAN 
+style="FONT-SIZE: 13.5pt; FONT-FAMILY: 'Arial','sans-serif'">(Ilmu</SPAN></I></STRONG> 
+<STRONG><I><SPAN 
+style="FONT-SIZE: 13.5pt; FONT-FAMILY: 'Arial','sans-serif'">Kedokteran dan Ilmu 
+Pengobatan)</SPAN></I></STRONG></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>610 
+Medicine and Health/Ilmu Kedokteran, Ilmu Pengobatan&nbsp;dan Ilmu 
+Kesehatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini teknologi layanan kedokteran, pengobatan dan 
+kesehatan</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>610.1 
+Philosophy and Theory of Medicine/Filsafat dan Teori Ilmu Kedokteran dan Ilmu 
+Pengobatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini ilmu kedokteran 
+umum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jangan 
+gunakan untuk ilmu kesehatan umum; kelaskan di nomor 
+613<BR>&nbsp;<STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Jangan gunakan untuk ilmu keperawatan umum; kelaskan di nomor 
+610.7301<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk ilmu kebidanan umum; kelaskan di nomor 618.2</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.153 Medical 
+Physics/Fisika Kedokteran, Fisika Kesehatan</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.28 Auxiliary 
+Techniques/Teknik, Prosedur, Alat-alat, Perlengkapan, Bahan-bahan, Instrumentasi 
+Medis</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+karya komprehensif tentang biomedical engineering/teknik 
+biomedis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk stetoskop, tensi meter, jarum suntik, infus, 
+dan&nbsp;sebagainya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk karya tentang pengolahan dan analisa data&nbsp;kedokteran, pengolahan 
+dan analisa data 
+kesehatan,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+pengolahan dan analisa data keperawatan, pengolahan dan analisa data 
+kebidanan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk rekam medis, dokumentasi medis, dokumentasi kedokteran, dokumentasi 
+keperawatan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.3 Dictionaries 
+and Encyclopedia of Medical/Kamus Kedokteran, Kamus Kesehatan, Kamus 
+Keperawatan,</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kamus Kebidanan,&nbsp;Ensiklopedia Kedokteran,&nbsp;Ensiklopedia 
+Kesehatan,&nbsp; Ensiklopedia 
+Keperawatan,&nbsp;&nbsp;</SPAN></STRONG><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Ensiklopedia Kebidanan&nbsp;</SPAN></STRONG></SPAN></B></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.5 General 
+Publications of Medical Science/Terbitan Berseri Kedokteran, Berkala 
+Umum&nbsp;Kedokteran</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan&nbsp; di sini&nbsp; majalah kedokteran,&nbsp; jurnal kedokteran,&nbsp; 
+majalah kesehatan,&nbsp; jurnal kesehatan, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+majalah keperawatan, jurnal keperawatan, majalah kebidanan, jurnal 
+kebidanan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.6 Organizations, 
+Management, Professions of Medical Science/Organisasi dan Manajemen Kedokteran, 
+</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Profesi di Bidang&nbsp;Ilmu Kedokteran</SPAN></STRONG><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+Ikatan Dokter Indonesia/IDI</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.696 Medical 
+Relationships/Hubungan dalam&nbsp;Bidang Medis</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+hubungan antara personalia medis dengan pasien, hubungan antara dokter dengan 
+pasien<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk hubungan antara personalia medis dengan publik, hubungan antara dokter 
+dengan 
+publik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 174.2 untuk etika medis, etika kesehatan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.7 Research and 
+Statistical Methods of Medical Science/Metode&nbsp;Riset Penelitian dan 
+Statistik&nbsp;Kedokteran, </SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Metode Riset Penelitian dan 
+Statistik&nbsp;Kesehatan</SPAN></STRONG><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk metode riset penelitian dan statistik keperawatan, metode riset 
+penelitian dan statistik kebidanan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.73 Nursing and 
+Services of Medical&nbsp;Technicians and Assistants/Perawat dan Teknisi Asisten 
+Layanan Medik</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+manajemen kesehatan, manajemen keperawatan, manajemen kebidanan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.7301 Philosophy 
+and Theory of Nursing/Filasafat dan Teori Keperawatan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini ilmu 
+keperawatan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.7306 Nursing 
+Organizations/Organisasi Keperawatan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+Persatuan Perawat Nasional 
+Indonesia/PPNI<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Ikatan Bidan Indonesia/IBI</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><STRONG>610.730692 
+Professional Nurses/Keperawatan Profesional</STRONG></SPAN></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN></SPAN></SPAN><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.730699 
+Relationships of Nurses/Hubungan di Bidang Keperawatan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+hubungan antara perawat dengan pasien, hubungan antara pasien dengan 
+publik</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.734 Public Healt 
+Nursing/Keperawatan Publik</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 361.77 
+untuk International Red Cross Committee</SPAN></P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">
+<P><SPAN><STRONG>610.92 Physicians/Petugas Medis, Dokter<BR><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+perawat, suster, bidan, 
+psikiater<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Termasuk 
+tabib, sinshe,&nbsp;dan tenaga medis tradisional 
+lainnya&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 926.1 untuk biografi ahli medis<O:P></O:P></SPAN></P>
+<P></SPAN><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">611&nbsp;Human 
+Anatomy,&nbsp;Cytology, Histology/Anatomi Manusia, Biologi Sel, Biologi 
+Jaringan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 571.5 
+untuk biologi jaringan dan fisiologi&nbsp;region<STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;</SPAN></STRONG></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">611.01 Anatomic 
+Embriology/Embriologi Anatomi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 571.86 
+untuk embriologi</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">611.1 Cardiovascular 
+Organs/Organ Kardiovaskular</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+jantung, arteri/pembuluh nadi, vein/vena/pembuluh darah, kapiler/urat 
+darah&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 612.1 untuk sirkulasi&nbsp;darah</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">611.2 Respiratory 
+Organs/Organ Pernapasan, Pernafasan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+larynx/trachea/pangkal tenggorokan,&nbsp;bronchi/saluran 
+pernapasan,&nbsp;paru-paru, pleura, 
+pleuron/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+selaput dada, diafragma/rongga dada, 
+mediastinum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 612.2 untuk fungsi pernapasan</SPAN></P>
+<P><FONT face=Arial size=2><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">611.3 Digestive Tract 
+Organs/Organ Pencernaan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+mulut, lidah, gigi, langit-langit mulut, bibir, pipi, pharynx, rongga 
+kerongkongan, 
+tonsil/amandel,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+esophagus, perut, pylorus/lubang antara perut dan usus, intestine/usus, 
+duodenum/usus dua belas jari, 
+jejunum/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usus 
+halus,</SPAN></FONT> <FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">ileum/ujung usus 
+halus, cecum</SPAN></FONT><SPAN class=style1><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">, </SPAN></SPAN><FONT face=Arial 
+size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">peritoneum/selaput 
+perut</SPAN></FONT><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">, usus besar,&nbsp; 
+pembuangan/rectum,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+anus,&nbsp;liver, gallbladder,&nbsp;empedu, pankreas, </SPAN><FONT face=Arial 
+size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">vermiform 
+appendix/umbai cacing</SPAN> </FONT></P><FONT face=Arial size=2>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">611.4 Lymphatic and 
+Glandular Organs/Limpa dan Organ Kelenjar</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+&nbsp;limpa&nbsp;kecil,&nbsp; thyroid/kelenjar tiroid,&nbsp; kelenjar 
+gondok,&nbsp; kelenjar tiroid kecil,&nbsp; kelenjar anak 
+ginjal,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;kelenjar getah bening, carotid, kelenjar lendir, pineal gland, payu 
+dara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk ASI/air susu 
+ibu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 612.66 untuk laktasi</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">611.6 Urogenital 
+Organs, Kidney/Organ&nbsp;Saluran Kencing, Ginjal</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+ureter/saluran kencing,&nbsp;kandung kemih,&nbsp; testis/buah 
+pelir,&nbsp;prostat/kelenjar saluran 
+kencing,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+skrotum, penis, organ kelamin laki-laki, ovarium/indung telur,&nbsp;organ 
+kelamin perempuan,&nbsp;uterus/kandungan, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+rahim, mulut rahim, vagina, vulva, hymen/selaput 
+dara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 612.4 untuk sistem urin dan 612.6 untuk fisiologi 
+reproduksi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.62 untuk penyakit 
+pada saluran kencing</SPAN></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">611.7 Musculoskeletal 
+System, Integument/Sistem Otot dan Tulang, Kulit</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+tulang, tengkorak, ligamen,&nbsp;sendi dan persendian, otot, tendon, rambut, 
+kuku<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 612.7 untuk&nbsp;fisiologi otot, tulang,&nbsp;dan kulit</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">611.8 Nervous System, 
+Sense Organs Anatomy/Anatomi Sistem Urat Syaraf, Organ 
+Perasa</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+otak,&nbsp;jaringan syaraf tulang belakang,&nbsp;mata, kelopak mata, telinga, 
+organ dan indera 
+peraba,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+organ dan&nbsp;indera penciuman,&nbsp;organ dan indera perasa,&nbsp;syaraf, 
+mastoid<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 612.8 untuk fungsi&nbsp;syaraf dan&nbsp;perasa</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">611.9 Regional and 
+Topographical Anatomy/Anatomi Regional dan Topografis</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+kepala, wajah, leher, punggung, dada, rongga dada, perut, abdomen/rongga dan isi 
+perut,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+pinggang, selangkangan, panggul, anggota gerak, kaki dan 
+tangan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 612.9 untuk&nbsp;fisiologi regional</SPAN></P>
+<P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612 
+Human Physiology/Fisiologi Manusia, Ilmu Faal, Anatomi dan 
+Fisiologi&nbsp;Manusia</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+karya komprehensif tentang anatomi dan fisiologi manusia<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Lihat juga 571 untuk fisiologi ditinjau dari segi biologi 
+dan&nbsp;571.3 untuk anatomi dan morfologi</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.014 
+Biophysics/Biofisika Manusia</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+bioenergetik, panas tubuh, regulasi manusia, elektrofisiologi<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Lihat juga 571.4 untuk biofisika ditinjau dari segi 
+biologi</SPAN></P>
+<P><SPAN><FONT size=2><FONT face=Arial><STRONG>612.015 Biochemistry/Biokimia 
+Manusia<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini biokimia kedokteran</FONT></FONT><BR><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 572.8 
+untuk biokimia 
+genetik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 660.63 untuk teknologi biokimia</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.1 Blood and 
+Circulation/Darah dan Peredaran, Sirkulasi&nbsp;Darah</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+eritrisot/sel darah merah, leukosit/sel darah putih, trombosit, plasma darah, 
+hemaglobin,&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+pengentalan darah,&nbsp; pembekuan darah,&nbsp;tekanan 
+darah,&nbsp;vasomotor/syaraf yang mengatur sirkulasi 
+darah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk golongan darah</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.2 Respirations 
+Physiology/Fisiologi&nbsp;Respirator</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp; karya komprehensif tentang fisiologi hidung, jaringan respirator, 
+napas, 
+nafas<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 611.2 untuk organ 
+pernafasan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 612.86 untuk fungsi hidung dan penciuman</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.3&nbsp;Nutrition/Nutrisi, 
+Ilmu Gizi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+proses pencernaan&nbsp;makanan, kelenjar air liur, saliva/air 
+liur,&nbsp;absorsi, penyerapan makanan, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+mekanisme lapar dan 
+haus<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 611.3 untuk&nbsp;organ pencernaan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.4 Secretion, 
+Excretion, Related Functions/Sekresi, Ekskresi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Fungsi yang terkait dengan pengeluaran kotoran dari 
+tubuh<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;hormonal, hormon manusia,&nbsp;sistem urin/air kencing, 
+tulang 
+sumsum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;571.74<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"> untuk 
+hormon&nbsp;ditinjau ari segi 
+biologi</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.62 untuk penyakit 
+pada saluran kencing</SPAN></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.6 Reproduction 
+Physiology/Fisiologi Reproduksi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+sistem reproduksi laki-laki, sistem reproduksi perempuan, hamil, kehamilan, 
+kelahiran bayi, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+plasenta, fisiologi embrio, 
+fetus/janin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk aktivitas seksual</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.65 Child 
+Development/Perkembangan Anak</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;tumbuh kembang 
+anak<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 362.7<STRONG> </STRONG>untuk layanan kepada anak ditinjau dari segi 
+kesejahteraan sosial</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.66 Adult 
+Development and Maturity/Masa Dewasa dan Pendewasaan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+menstruasi, datang&nbsp;bulan,&nbsp;haid,&nbsp;laktasi,&nbsp; 
+pemberian&nbsp;ASI,&nbsp;menopause</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.661 Puberty/Masa 
+Puber, Pubertas</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.67 Aging, 
+Gerontology/Masa Usia Tua, Gerontologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;penuaan, faktor panjang 
+umur<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Gerontologi: Ilmu tentang usia 
+lanjut<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 362.6 untuk layanan kepada manula ditinjau dari segi kesejahteraan 
+sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.97 
+untuk geriatri</SPAN></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.7 
+Musculoskeletal&nbsp;Physiology, Integument Physiology/Fisiologi Otot dan 
+Tulang, Fisiologi Kulit</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan&nbsp;di 
+sini&nbsp; fungsi motor,&nbsp; biofisika otot, tulang dan kulit,&nbsp;biokimia 
+otot, tulang dan kulit,&nbsp;mekanika tubuh, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;lokomotor,&nbsp; daya gerak,&nbsp; latihan dan istirahat otot,&nbsp; organ 
+bicara,&nbsp; suara,&nbsp;pigmen, zat 
+warna<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk neuroinguistic/neurolinguistik, tonus/ketegangan&nbsp;dan kontraksi 
+otot<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Neorulinguistik: cabang ilmu&nbsp;linguistik yang mempelajari cara otak 
+memproses bahasa<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Lihat juga 611.7 untuk&nbsp;anatomi otot, tulang,&nbsp;dan 
+kulit</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.8 Nervous 
+Functions, Sensory Functions/Fungsi&nbsp;Syaraf dan&nbsp;Indera 
+Perasa</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+neurochemistry/neurokimia, biofisika syaraf dan perasa, biokimia syaraf dan 
+perasa, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+fungsi&nbsp;memori, cerebrum/otak besar, diencephalon, mesencephalon/otak 
+tengah, cerebellum/otak 
+kecil<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Termasuk 
+psikoneuroimmunologi</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neurokimia: 
+studi tentang&nbsp;komposisi dan reaksi kimia dalam susunan 
+syaraf<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Lihat juga 611.8 untuk anatomi sistem urat syaraf dan organ 
+perasa</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.84 Eyes Functions 
+and Vision/Fungsi Mata dan Penglihatan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 611.8 
+untuk&nbsp;anatomi mata</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.85 Ears Functions 
+and Hearing/Fungsi Telinga dan Pendegaran</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 611.8 
+untuk&nbsp;anatomi telinga</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.86 Nose Functions 
+and Smelling/Fungsi Hidung dan Penciuman</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 611.2 
+untuk&nbsp;organ pernafasan dan 612.2 untuk fisiologi&nbsp;respirator</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.87 Tongue 
+Function and Tasting/Fungsi Lidah dan Pengecap Rasa</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 611.3 
+untuk&nbsp;anatomi lidah sebagai organ pencernaan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.88 Sense of 
+Movement and Motion Functions, Pain Reactions/Fungsi Indera Gerakan dan Reaksi 
+Sakit</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 611.8 untuk anatomi organ 
+perasa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 612.8 untuk fungsi&nbsp;syaraf dan&nbsp;perasa</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.89 Autonomic 
+Nervous Systems/Sistem Pengatur Refleks Tubuh</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.9 Regional 
+Physiology/Fisiologi Regional</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;fisiologi&nbsp;kepala, wajah, leher, punggung, dada,&nbsp;perut, 
+fisiologi&nbsp;kaki dan 
+tangan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 611.9 untuk&nbsp;anatomi regional </SPAN></P>
+<P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613 
+Personal Health, Hygiene/Ilmu Kesehatan Umum, Kesehatan Individu, Promosi 
+Kesehatan, Higienis Umum</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+hygienis perseorangan/hygienis perorangan<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG>Termasuk 
+penyakit keturunan sebagai faktor, pemeriksaan fisik, general 
+check-up&nbsp;</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.04 Promotion of 
+Health of Specific Groups/Promosi Kesehatan untuk Jenis Kelamin dan 
+Usia&nbsp;Tertentu</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+promosi kesehatan untuk pria/laki-laki, promosi kesehatan 
+untuk&nbsp;wanita/perempuan,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+promosi kesehatan untuk bayi, promosi kesehatan untuk anak-anak dan 
+remaja</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.1 Environmental 
+Factor/Faktor Lingkungan yang Mempengaruhi Promosi 
+Kesehatan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+faktor cuaca dan iklim,&nbsp;faktor kelembaban udara,&nbsp;faktor perubahan 
+cuaca,&nbsp;faktor sinar 
+matahari,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+faktor udara dan&nbsp;cahaya</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.2 Dietetics/Diet, 
+Ilmu Diet</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+makanan dan minuman,&nbsp;susunan makanan,&nbsp;karya komprehensif 
+tentang&nbsp;nilai kandungan 
+nutrisi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;dalam&nbsp;makanan, kalori, diet cara vegetarian, diet 
+serat/fiber</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.4 Personal 
+Cleanliness/Kebersihan Diri dan Individu</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+mandi, cuci muka dan membersihkan diri</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.5 Artificial 
+Environtment/Ilmu Kesehatan di Lingkungan Buatan, Ilmu Kesehatan 
+Lingkungan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini ilmu 
+kesehatan di ruang tertutup, ilmu kesehatan di rumah, temperatur ruang, 
+temperatur kamar</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.6 Special Topics 
+of Health and Safety/Topik-topik Khusus tentang Kesehatan dan 
+Keselamatan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp; keselamatan personal,&nbsp; keselamatan pribadi,&nbsp; self 
+defence/pertahanan diri, &nbsp;travel 
+health/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+kesehatan dalam bepergian, survival/penyelamatan diri, survival dari kecelakaan 
+dan bencana 
+alam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk safety riding/keamanan berkendara</SPAN></P></FONT>
+<P><FONT face=Arial size=2><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.62 Industrial 
+Health/Industri Kesehatan</SPAN></STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.7 Physical 
+Fitness/Kesehatan dan Kesegaran Jasmani</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+senam kesegaran jasmani,&nbsp;angkat beban, latihan gymnastik, jogging, jalan 
+kaki, aerobik, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+relaksasi</SPAN></FONT><SPAN class=style1><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">,&nbsp;</SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">body 
+building/binaraga/pembentukan 
+tubuh<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;tai 
+chi,&nbsp;yoga&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 181.45 untuk yoga ditinjau dari segi 
+filsafat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat juga 204 untuk yoga ditinjau dari segi ilmu agama<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+Lihat juga mulai <SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold">793&nbsp;- 
+799 untuk olah raga</SPAN></SPAN></P>
+<P><FONT face=Arial size=2><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.8 Subtance Abuse, 
+Drug Abuse/Kecanduan dan Ketagihan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+kecanduan obat terlarang; seperti: narkotika, hallucinogen, psychedelic, 
+amphetamine,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ephedrine, kokain,</SPAN></FONT><SPAN class=style1><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'"> </SPAN></SPAN><FONT face=Arial 
+size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">cannabis</SPAN></FONT><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk kecanduan alkohol/minuman keras dan kecanduan 
+rokok/nikotin/tembakau<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;362.292 untuk permasalahan 
+alkohol<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;362.293 untuk permasalahan 
+narkotika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 362.296 untuk permasalahan 
+tembakau/rokok<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;633.7 untuk 
+perkebunan&nbsp;tembakau<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 679 untuk produk rokok dan tembakau</SPAN></P><FONT face=Arial 
+size=2>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.9 Birth Control 
+and Sex Hygiene/Pembatasan Kelahiran dan Kesehatan 
+Reproduksi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp; family planning/keluarga berencana, KB,&nbsp; sterilisasi KB, 
+&nbsp;vasektomi,&nbsp; alat-alat kontrasepsi, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+kesehatan&nbsp;seksual,&nbsp;seks sehat, penggunaan kondom, panduan teknik 
+hubungan seks, pendidikan 
+seks<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Lihat 
+juga<B style="mso-bidi-font-weight: normal"> </B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-weight: bold">155.3 
+untuk psikologi 
+seks<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;176 untuk&nbsp;etika 
+seks<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 306.77&nbsp;untuk sosiologi 
+seks</SPAN></STRONG></SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.4 untuk perilaku seks menyimpang dan 363.96 untuk keluarga 
+berencana<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 649.6 pendidikan seks untuk anak</SPAN></SPAN></P>
+<P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">614 
+Public Preventive Medicine/Ilmu Kesehatan Masyarakat</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">614.1 Forensic 
+Medicine, Medical Jurisprudence/Kedokteran Forensik, 
+Yurisprudensi&nbsp;Medik</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+autopsi/otopsi, penentuan dan sebab-sebab kematian, sebab-sebab luka dan luasnya 
+luka<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk forensic dentistry/forensik kedokteran 
+gigi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk kedokteran gigi; kelaskan&nbsp;mulai nomor <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.6</SPAN></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">614.4 Incidence of 
+and Public Measure to Prevent Disease/Timbulnya Penyakit, Penyebaran Penyakit 
+dan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;Pengawasan Penyakit</SPAN></STRONG><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+epidemiology/epidemiologi,&nbsp;pembawa penyakit,&nbsp;tindakan preventif 
+masyarakat,&nbsp;karantina,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+isolasi, imunisasi, disinfeksi, fumigasi, 
+sterilisasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Epidemiologi: ilmu yang mempelajari epidemi/penyebaran penyakit dan 
+penyakit-penyakit 
+epidemik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 632.9 fumigasi hama</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">614.49 History of 
+Epidemics/Sejarah Epidemi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Tambahkan nomor dasar 
+614.49 notasi 1 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM><SPAN style="FONT-FAMILY: 'Arial','sans-serif'">Contoh</SPAN></EM>: sejarah 
+epidemi di Inggris 614.4941</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">614.49598 History of 
+Epidemics in Indonesia/Sejarah Epidemi di Indonesia</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">614.5 Incident of and 
+Public Measures to Prevent Specific Diseases and Kinds of Diseases/Timbulnya 
+Penyakit,</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;Penyebaran Penyakit dan Pengawasan Penyakit 
+Tertentu</SPAN></STRONG><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp; pencegahan penyakit menular;&nbsp; misalnya pencegahan tifus,&nbsp; 
+pencegahan demam 
+berdarah,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+dan 
+sebagainya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai nomor 616 - 616.99&nbsp;untuk penyakit </SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">614.6 Disposal of the 
+Dead/Pengurusan dan Penatalaksanaan Jenazah</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat 
+juga&nbsp;297.385 atau&nbsp;2X4.8 untuk pengurusan jenazah menurut Agama 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.7 untuk pengurusan jenazah ditinjau dari segi layanan 
+sosial</SPAN></P>
+<P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615 
+Pharmacology and Therapeutics/Farmakologi dan Terapi 
+Farmakologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+obat-obatan secara umum, 
+apotek<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Gunakan untuk farmakologi dan terapi<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Jangan gunakan untuk farmakologi umum saja; kelaskan di 
+615.1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jangan 
+gunakan untuk&nbsp;terapi umum saja; kelaskan di 
+615.5<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold">Lihat 
+juga&nbsp;363.1 untuk program keamanan terhadap keracunan 
+obat-obatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 581.6 untuk apotek hidup</SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold"></SPAN></SPAN><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.1 Drugs, 
+Medicine, Materia Medica/Obat-obatan, Materi Medika</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+farmakologi, &nbsp;pencegahan penyakit, &nbsp;formula obat,&nbsp; 
+dispensatori,&nbsp; pharmaceutical 
+chemistry/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+kimia farmasi, analisis farmasi</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.19 Medical 
+Chemistry/Kimia Kedokteran, Kimia Kesehatan</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.2 Inorganic 
+Drugs/Obat-obatan Anorganik</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.3 Organic 
+Drugs/Obat-obatan Organik</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp; obat-obatan sintetis,&nbsp; obat yang berasal dari tumbuhan,&nbsp; 
+obat yang berasal dari 
+binatang,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+terapi vitamin, serum dan obat-obatan untuk kekebalan tubuh</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.329 
+Antibiotics/Antibiotik</SPAN></SPAN></SPAN></SPAN></STRONG></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>615.3295654 
+Penicillin/Penisilin<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 579.5 jamur penisilium</SPAN></SPAN></SPAN></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.4 Practical 
+Pharmacy/Farmasi Praktis</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Mempersiapkan resep 
+dan penyaluran obat, pembuatan obat, pil, kapsul, tablet, bubuk dan 
+larutan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini</SPAN> resep dokter</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.5 Therapeutics, 
+Theraphy/Terapi, Diagnosis, Diagnosa, Diagnostik</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;sistem terapi umum, Ayurveda/pengobatan cara Hindu, allophaty, 
+homeophaty, 
+osteopathy,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+chiropractic,&nbsp;naturopathy,&nbsp;chemotherapy/kemoterapi<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG>Termasuk 
+karya komprehensif tentang ilmu pemeriksaan dan pengobatan,&nbsp;iatrogenic 
+diseases,&nbsp;placebo 
+effect&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iatrogenic: 
+penyakit yang disebabkab oleh diagnosis, cara, atau pengobatan oleh 
+dokter<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Placebo Effect: perasaan nyaman yang dirasakan pasien setelah mendapatkan 
+pengobatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk terapi rehabilitasi; kelaskan di nomor <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.03 
+</SPAN></SPAN></P>
+<P><SPAN><STRONG>615.5092 Theraphists/Ahli Terapi</STRONG></SPAN></P>
+<P><SPAN><STRONG>615.6 Methods of Administering Medication/Tata Cara dan Metode 
+Pengobatan</STRONG><BR><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'"><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Termasuk&nbsp;pengobatan 
+luar,&nbsp;inhalatory/pengobatan dengan cara dihisap,&nbsp;oral/pengobatan 
+dengan cara diminum, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+rectal/pengobatan yang dilakukan lewat dubur, metode suntik dan penyuntikan, 
+metode infus dan 
+penginfusan,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+donor darah, transfusi darah, cuci darah</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.7 
+Pharmachodynamics/Farmakodinamik</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+pharmacokinetics/farmakokinetik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Farmakodinamik: studi tentang dampak obat terhadap makhluk 
+hidup<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Farmakokinetik: daya kerja fisiologis dan terapis dari obat dan efek serta 
+reaksi obat terhadap bagian 
+tubuh<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk side effects/efek samping</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.8&nbsp;Physical 
+Therapies and Kinds of Therapics/Terapi Fisik dan Jenis-jenis 
+Terapi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp; resuscitation/penyadaran kembali,&nbsp;fisioterapi,&nbsp;terapi 
+pijat, akupuntur/tusuk jarum, akupresur, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+fototerapi,&nbsp; termoterapi,&nbsp; klimatoterapi,&nbsp; radioterapi,&nbsp; 
+elektroterapi,&nbsp; terapi mental,&nbsp; 
+hypnotheraphy/hipnoterapi,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+terapi sugesti,&nbsp; terapi rekreasi,&nbsp; terapi musik, &nbsp;terapi seni, 
+&nbsp;terapi dengan pendekatan agama, terapi 
+parental,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+hydrotheraphy/hidroterapi,&nbsp;terapi 
+diet<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Termasuk&nbsp; 
+bekam, &nbsp;obat-obatan tradisional,&nbsp; obat-obatan yang dipatenkan,&nbsp; 
+pengobatan dengan cara 
+Islam,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;ruqyah,&nbsp;penyembuhan dengan cara kuno lainnya</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.9 
+Toxicology/Toksikologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+racun dan keracunan<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Toksikologi: ilmu yang mempelajari karakteristik dan efek segala 
+macam 
+racun<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk pencegahan dan cara pengobatan keracunan, industri racun, racun 
+anorganik/racun buatan, racun 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+organik/racun&nbsp;tumbuhan dan hewan, bahan makanan beracun, 
+antidot<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold">Lihat 
+juga&nbsp;363.1 untuk program keamanan terhadap 
+keracunan&nbsp;makanan</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;571.95 untuk toksikologi pada tumbuhan dan hewan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616&nbsp;Diseases/Penyakit</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+pengobatan dalam&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.01 Medical 
+Microbiology/Mikrobiologi Medis, Mikrobiologi Kedokteran</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Mikrobiologi Kedokteran: studi&nbsp;tentang mikroorganisme patogenik/penyebab 
+penyakit dan hal-hal yang 
+barkaitan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+dengan 
+penyakit<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 660.63 untuk industri mikrobiologi</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.02 Special Topics 
+of Diseases/Topik-topik Khusus tentang Penyakit</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;pengobatan rawat jalan, perawatan gawat darurat,&nbsp;perawatan 
+intensif,&nbsp;perawatan akhir</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.0252 First 
+Aid/Pertolongan Pertama</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.04 Special 
+Medical Conditions of Diseases/Kondisi Pengobatan&nbsp;Khusus tentang 
+Penyakit</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;penyakit genetis turun-temurun,&nbsp;penyakit bawaan,&nbsp;penyakit 
+kronis,&nbsp;edema,&nbsp;demam,&nbsp;gangren,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shock, 
+luka, peradangan dan luka bakar,&nbsp;sindrom lelah 
+kronis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk 
+symptomatology/simptomatologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Simptomatologi: cabang ilmu kedokteran yang mempelajari hubungan antara gejala 
+dan penyakit</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.07 Pathology, 
+Pathophysiology/Patologi, Patofisiologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Patologi: ilmu 
+tentang 
+penyakit<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini diagnosis dan prognosis 
+patologi&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 571.9 untuk patologi pada hewan dan tumbuhan, patofisiologi pada hewan dan 
+tumbuhan</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>616.071 
+Etiology/Etiologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Etiologi: ilmu yang mempelajari asal-usul dan penyebab 
+penyakit</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>616.0757 
+Radiological Diagnosis/Diagnosa Radiologi, 
+Radiologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini rontgent, CT scan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.08 Psychosomatic 
+Medicine/Psikosomatik Kedokteran</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Psikosomatik 
+Kedokteran: penggunaan metode dan prinsip-prinsip ilmu jiwa untuk mengobati 
+penyakit jiwa</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.09 Case Histories 
+of Diseases/Riwayat Kasus Penyakit&nbsp;</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.1 Diseases of 
+Cardiovascular System/Penyakit pada Sistem 
+Kardiovaskular</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;penyakit jantung,&nbsp;endocardium, 
+pericardium<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;cardiopulmonary resuscitation/CPR/tindakan memberi napas buatan 
+melalui mulut dan napas 
+buatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+menekan dada 
+seseorang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk penyakit jantung; kelaskan di nomor 616.12</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.12 Diseases of 
+Heart, Cardiology/Penyakit Jantung, Kardiologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp; cor pulmonale,&nbsp; angina pectoris,&nbsp; jantung koroner,&nbsp; 
+ischemic heart diseases, 
+serangan&nbsp;jantung<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+gagal jantung, myocarditis,&nbsp;myocardium, valvular 
+diseases,&nbsp;arrhythmia,&nbsp;allorhythmia&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kardiologi: cabang ilmu kedokteran yang mempelajari jantung dan penyakit 
+jantung</SPAN></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.13 Diseases of 
+Blood Vessels, Angiology/Penyakit pada Aliran Darah, 
+Angiologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan&nbsp;di 
+sini&nbsp;tekanan darah tinggi/hipertensi,&nbsp;bludruk, karya komprehensif 
+tentang embolis dan trombosis, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+penyumbatan pada pembuluh darah arteri,&nbsp; penyumbatan pada jantung,&nbsp; 
+aterosklerosis,&nbsp; 
+arteriosklerosis/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+penyumbatan pada pembuluh nadi,&nbsp;penyakit pada nadi 
+besar<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Angiologi: cabang ilmu anatomi yang mempelajari darah dan pembuluh 
+limpa</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.14 Diseases of 
+Veins and Capillaries/Penyakit pada Pembuluh Darah dan Urat 
+Darah</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+phlebitis,&nbsp; thrombophlebitis,&nbsp; varicose vein/varix, telangiectasis, 
+telangitis</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.15 Diseases of 
+Blood, Hematology/Penyakit pada Darah, Hematologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+penyakit pembentukan sel darah merah yang berlebihan,&nbsp;kelainan 
+hemoglobin,&nbsp;thalassemia,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+anemia/kurang darah,&nbsp;penyakit pembentukan sel darah&nbsp;putih yang 
+berlebihan,&nbsp;leukemia/kanker 
+darah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hematologi: 
+cabang ilmu kedokteran yang mempelajari segala sesuatu tentang darah</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.2 Diseases of 
+Respiratory Systems/Penyakit pada Sistem&nbsp;Respirator</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+apnea, dyspnea, batuk pada anak-anak disertai sesak napas, influenza,&nbsp;batuk 
+rejan,&nbsp;pertusis,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;alergi pada sistem pernapasan,&nbsp;demam 
+hay,&nbsp;demam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 614.5 untuk pencegahan influenza, pertusis dan lain-lain</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.21 Disease of 
+Nose, Rhinology/Penyakit pada Hidung, Rhinologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+nasopharynx, 
+polip<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Rhinologi: cabang ilmu kedokteran&nbsp;yang mempelajari hidung dan 
+penyakitnya</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.22 Diseases of 
+Larynx and Vocal Cords, Laryngology/Penyakit pada Tenggorokan dan&nbsp;Pita 
+Suara</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+glottis/celah suara, epiglottis/epiglotis, 
+laringologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Laryngologi: cabang ilmu kedokteran&nbsp;tentang keadaan dan penyakit pada 
+tenggorokan dan selaput&nbsp;suara</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.23 Diseases of 
+Trachea and Bronchi/Penyakit pada Batang Tenggorokan dan Saluran 
+Pernapasan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+bronchiectasis, tracheitis, ronchitis, bronchial asthma, 
+asma<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk infeksi saluran pernapasan/ISPA</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.24 Diseases of 
+Lungs/Penyakit pada Paru-paru</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;penyakit paru-paru kronis,&nbsp; necrepneumonia,&nbsp;emphysema, 
+pneumonia, penyakit pluera, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+alergi debu, penyakit mediastinum</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.3 Diseases of 
+Digestive Sistems/Penyakit pada Sistem Pencernaan </SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.31 Diseases of 
+Mouth and Throat/Penyakit pada Mulut dan Kerongkongan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+penyakit sariawan, penyakit pada amandel, penyakit pada pharynx dan 
+esophogus</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.33 Diseases of 
+Stomach, Gastroenterology/Penyakit pada Perut, 
+Gastroenterologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+gastroptosis, gastroenteritis, maag/mag, dyspepsia,&nbsp;gastritis/radang 
+lambung<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Termasuk 
+karya komprehensif tentang 
+gastroenterologi&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Gastroenterologi: cabang ilmu kedokteran yang mempelajari pengobatan penyakit 
+lambung dan usus serta 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+organ yang berhubungan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.34 Diseases of 
+Intestine/Penyakit pada Usus</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini radang usus, appendicitis, giardiasis,&nbsp;diare, peptic 
+ulcers, enteritis</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.35 Diseases of 
+Rectum and Anus, Proctology/Penyakit pada&nbsp;Dubur dan Anus, 
+Proktologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+hemorrhoids, ambeien, 
+wasir<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Proktologi: cabang ilmu kedokteran yang mempelajari tentang alat pengeluaran 
+atau anus</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.362 Diseases of 
+Liver, Hepatology/Penyakit pada Liver, Hepatologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+hepatitis, cirrhosis, 
+juandice<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Hepatologi: cabang ilmu kedokteran yang mempelajari segala sesuatu tentang 
+hati/liver</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.365 Diseases of 
+Gallbladder and Bile Duct/Penyakit pada Kantung Empedu</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.37 Diseases of 
+Pancreas/Penyakit pada Pankreas</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+cystic fibrosis</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.38 Diseases of 
+Peritoneum/Penyakit pada Selaput Perut</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.39 Diseases of 
+Nutritional/Penyakit Kekurangan Nutrisi dan Kurang Gizi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+beriberi, pellagra/penyakit kulit dan gangguan syaraf akibat kekurangan vitamin 
+B,&nbsp; 
+scurvy/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+penyakit gusi berdarah, rakitis, obesitas/kegemukan, encok, phenylketonuria, 
+porphyria, 
+amyloidosis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.8 untuk kurang gizi ditinjau dari segi permasalahan 
+sosial</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.4 Diseases of 
+Endocrine Systems, Endocrinology/</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">Penyakit-penyakit&nbsp;pada 
+Pembentukan Darah, Limpa, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelenjar, dan Sistem 
+Endokrin,&nbsp;Endokrinologi</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Endokrinologi: cabang ilmu kedokteran yang berhubungan dengan kelainan 
+endokrin/sistem 
+sekresi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 573.4 untuk endokrinologi hewan ditinjau dari segi biologi</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.41 Diseases of 
+Blood-Forming/Penyakit pada Pembentukan Darah</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+kelaianan limpa kecil dan kelainan tulang</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.42 Diseases of 
+Lymphatic System/Penyakit pada Limpa</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+lymphatitis, lymphomatosis</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.43 Diseases of 
+Thymus Gland/Penyakit pada Kelenjar Kecil Dekat Tenggorokan</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.44 Diseases of 
+Thyroid and Parathroid Glands/Penyakit pada Kelenjar Tiroid dan Kelenjar Tiroid 
+Kecil</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+penyakit&nbsp;gondok,&nbsp;hyperthyroidism,&nbsp;penyakit Grave, 
+hypothyroidism</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.45&nbsp;Diseases 
+of Adrenal Glands/Penyakit Pada Kelenjar Adrenalin</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;penyakit Addison, Cushing's syndrom/sindrom Cushing, 
+hyperadrenalism, hypoadrenalism</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.46 Diseases of 
+Island of Langerhands/Penyakit&nbsp;pada Daerah 
+Langerhands</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+diabetes mellitus, kencing manis, 
+hypoglycemia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.62 untuk penyakit 
+pada saluran kencing</SPAN></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.47 Diseases 
+of&nbsp;Pituitary Gland/Penyakit pada Kelenjar Lendir</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;diabetes insipidus, pituitary dwarfism, pituitary gigantism, 
+gigantisme, polyglandular 
+disorder<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+hypopituitarism, acromegaly, penyakit 
+Simmond,&nbsp;hyperpinealism&nbsp;</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.5 Diseases of 
+Integument, Hair, Nails, Dermatology/Penyakit pada Kulit, Rambut dan Kuku, 
+Dermatologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+photosensitivity diseases, sunburn/luka bakar karena matahari, popular 
+eruptions, 
+urticaria,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+hives, dermatitis/radang 
+kulit<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Dermatologi: ilmu penyakit kulit</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.52 Pustular and 
+Vesicular Eruptions/Campak, Bisul dan Gudik </SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+herpes, eczema, shingles, boils and carbuncles, impetigo, psoriasis</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.53 Diseases of 
+sebaceous Glands/Penyakit Kelenjar Lemak</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+jerawat, bintik hitam pada wajah atau punggung, seborrhea, kutil</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.54 Skin 
+Hypertrophies and Scalp Diseases/Kulit Membesar dan Penyakit Kulit 
+Kepala</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+callosities, pengerasan kulit, ichthyosis, keratosis, scleroderma, warts, 
+verrucae, xeroderma, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+borok di kulit, decubitus ulcers, bedsores, kebotakan,&nbsp;rambut rontok, 
+alopecia,&nbsp; ketombe,&nbsp; rambut 
+berlebihan,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;ubanan/uban berlebihan, penyakit pada kuku/cantengen</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.55 Pigmentary 
+Changes/Kelainan Pigmen</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+albino, tahi lalat, pigmentary nevi, vitiligo</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.56 Diseases of 
+Sweat Glands/Penyakit pada Kelenjar Keringat</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+kekurangan keringat,&nbsp;bintik merah pada kulit/keringat buntat,&nbsp;bau 
+badan berlebihan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.57 Parasitic Skin 
+Diseases/Penyakit Kulit Karena Parasit</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini kutu 
+air, kudis/kadas, kurap, gatal-gatal/panu,&nbsp;penyakit kulit menular di daerah 
+tropis</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.58 Chapping, 
+Childblains, Frostbite/Kulit Kasar, Gatal Karena Kedinginan, Radang Karena 
+Kedinginan</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.6 Diseases of 
+Urinary System, Urology/Penyakit pada Sistem Urin, Urologi</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Urologi: cabang ilmu kedokteran yang mempelajari fungsi organ ekskresi, 
+reproduksi dan fungsi air seni</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.61 Diseases of 
+Kidney/Penyakit pada Ginjal&nbsp;</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp; nephrology, nephritis,&nbsp;glomerulonephritis,&nbsp;pyelonephritis, 
+pyelocystitis, pyelitis, gagal 
+ginjal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Nephrology: cabang ilmu kedokteran yang berhubungan dengan studi dan pengobatan 
+ginjal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk donor ginjal, transplantasi ginjal</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.62 Diseases of 
+Bladder and Urethra, Ureters/Penyakit pada Kandung Kemih dan Saluran 
+Kencing</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;batu ginjal,&nbsp;kencing batu,&nbsp;kencing nanah, urethritis, 
+cystitis,&nbsp;pyuria,&nbsp;uremia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk 
+keputihan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk kencing manis; kelaskan di nomor&nbsp;<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.46&nbsp;</SPAN>&nbsp;</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.65 Diseases of 
+Genital System/Penyakit pada Sistem Genital</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk penyakit pada kandung kemih laki-laki dan perempuan, penyakit pada 
+penis, penyakit pada 
+scrotum/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+skrotum/kantung kemaluan, penyakit pada testicles/pelir</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.69 Sexual 
+Disorders/Gangguan pada Fungsi Seksual</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+lemah syahwat, impoten/impotensi, infertility/mandul/kemandulan, 
+hermaphroditism/banci</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.7 Diseases of 
+Musculoskeletal System/Penyakit pada Sistem Otot dan 
+Tulang</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+karya komprehensif tentang 
+orthopedics/ortopedi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Orthopedic: ilmu penyakit tulang<STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;</SPAN></STRONG></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.71 Diseases of 
+Bones/Penyakit pada Tulang</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+penyakit tulang kronis, osteitis, osteomyelitis, osteoporosis</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.72 Diseases of 
+Joints/Penyakit pada Sendi dan Persendian</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+arthritis/radang sendi, osteoarthritis, rheumatoid arthritis, 
+rheumatism/reumatik, rheumatology</SPAN></P>
+<P><SPAN><STRONG>616.73 Diseases of Spine/Penyakit pada Tulang 
+Belakang<BR></STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'"><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini</SPAN></SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"> ankylosing 
+spondylitis</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.74 Diseases of 
+Muscles/Penyakit pada Otot</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+fibrositis, myalaga, muscular rheumatism, myositis, penyakit neuromuscular, 
+myasthenia 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+gravis, muscular dystrophy, penyakit pada tendon dan fasciae</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.77 Diseases of 
+Connective Tissues/Penyakit pada Jaringan Ikat</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+sindrom Ehlers-Danlos, sindrom Marfan, sindrom Sjogren, systemic lupus 
+erythematosus,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;callogen 
+diseases/penyakit kalogen</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.8 Diseases of 
+Nervous System/Penyakit-penyakit pada&nbsp;Sistem Urat 
+Syaraf</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+neuropsychiatry/neuropsikiatri, neurology/neurologi, penyakit pada 
+otak<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Neuropsikiatri: ilmu&nbsp;tentang&nbsp;kelainan jiwa yang 
+disebabkan oleh 
+syaraf<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Neurologi: ilmu yang mempelajari susunan syaraf dan kelainannya</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.81 
+Cerebrovascular Diseases/Penyakit pada Pembuluh yang Membawa Darah ke 
+Otak</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;apoplexy, stroke</SPAN></P>
+<P><SPAN><STRONG>616.82 Meningeal Diseases/Penyakit pada Selaput 
+Otak<BR></STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'"><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini</SPAN></SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"> meningitis/radang 
+selaput otak</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.83 Other Organic 
+Diseases of Central Nervous System/Penyakit Pusat Sistem Syaraf Organik 
+Lainnya</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+amytrophic lateral sclerosis, Friedereich's ataxia, sindrom Reye, tardive 
+dyskinesia, 
+dementia,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+penyakit&nbsp;basal ganglia,&nbsp; jaringan syaraf tulang belakang,&nbsp; 
+alzheimer/pikun,&nbsp; kepikunan,&nbsp; parkinson,&nbsp; 
+paraplegia,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+paralysis agitans,&nbsp;multiple sclerosis,&nbsp;poliomyelitis, cerebral 
+palsy/palsy cerebral,&nbsp;locomotor ataxia</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>616.84 
+Convulsions, Coma, Vertigo, Insomnia, Paralysis/Sawan, Koma, Vertigo, 
+Insomnia,&nbsp;Kelumpuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di ini lumpuh, pusing, sakit kepala, nyeri, gangguan 
+tidur<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk enuresis</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.85 Miscellaneous 
+Diseases&nbsp;of&nbsp;Nervous System/Aneka Ragam Penyakit 
+pada&nbsp;Sistem&nbsp;Urat Syaraf</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+chorea, neuroses,&nbsp;trauma,&nbsp; anxiety, phobia,&nbsp;obsessivecompulsive 
+neuroses, 
+amnesia,&nbsp;fugue,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hypochondrical 
+neuroses,&nbsp; gangguan nafsu makan/kurang selera&nbsp;makan,&nbsp; anorexia 
+nervosa, bulimia, 
+depresi/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+tekanan jiwa, neurasthenia,&nbsp; asthenic reactions,&nbsp;epilepsy/epilepsi, 
+fatigue kronis,&nbsp; gangguan bicara,&nbsp; 
+aphasia/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+gangguan bahasa, gangguan baca-tulis,&nbsp; agraphia,&nbsp;gagap,&nbsp; kelainan 
+pada syaraf kulit,&nbsp; sakit kepala,&nbsp; 
+migrain/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sakit 
+kepala sebelah, hysterical neuroses</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.858 Disorders of 
+Personality and&nbsp;Intellect/Gangguan&nbsp;Kepribadian dan&nbsp;Gangguan 
+Intelektual&nbsp;</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+perilaku agresif,&nbsp;perilaku menyakiti diri sendiri,&nbsp;keterbelakangan 
+mental, kelainan 
+seksual,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;homoseksual,&nbsp;sadisme dan masochisme/seks dengan 
+kekerasan,&nbsp;incest/hubungan sedarah,&nbsp;kleptomania, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+perilaku bunuh diri,&nbsp;pyromania,&nbsp; down syndrome,&nbsp; hydrocephalus, 
+microcephaly,&nbsp; cerebral 
+sphingolipidosis,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+penyakit&nbsp;Tay-Sachs, myxedema,&nbsp;gangguan 
+belajar,&nbsp;hyperaktif,&nbsp;hyperkinesia,&nbsp;onani,&nbsp;masturbasi, 
+impulsif<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk gangguan intelektual akibat pengaruh alkohol&nbsp;dan 
+narkotika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;176 untuk&nbsp;homoseksual ditinjau dari segi 
+etika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 362.28 untuk bunuh diri ditinjau dari segi permasalahan 
+sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 362.3 untuk layanan untuk keterbelakangan mental</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 363.4&nbsp;untuk&nbsp;homoseksual, onani dan&nbsp;masturbasi ditinjau dari 
+segi&nbsp;permasalahan 
+moral<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;394.8 untuk adat istiadat bunuh diri</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.89 Mental 
+Disorders/Sakit Jiwa, Gangguan Kejiwaan, Kelaianan 
+Jiwa&nbsp;</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+psikologi abnormal, shock 
+theraphy,&nbsp;terapi&nbsp;kognitif,&nbsp;psikodrama,&nbsp;psikoterapi 
+pernikahan,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+paranoia, rasa takut/cemas yang 
+berlebihan,&nbsp;schizophrenia/skizofrenia/penyakit 
+gila&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>616.8917 
+Psychiatry/Psikiatri<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Psikiatri: Ilmu penyakit jiwa<SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'"><STRONG>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 155.9042 untuk tekanan 
+jiwa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 362.2 untuk layanan rumah sakit jiwa</SPAN></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.9 Infections 
+and&nbsp;Other Diseases/Infeksi dan&nbsp;Penyakit-penyakit 
+Lainnya</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+penyakit komunitas yang 
+menular<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 571.98 untuk penyakit yang disebabkan oleh infeksi ditinjau dari segi 
+biologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 614.5 untuk penyebaran dan pengawasan penyakit</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.91 Eruptive 
+Diseases, Exanthemis/Penyakit Luar</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+cacar,&nbsp;cacar air,&nbsp;measles/rubella,&nbsp;scarlatina,&nbsp;yellow fever/demam kuning</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.92 Bacterial and 
+Viral&nbsp;Diseases/Penyakit yang Disebabkan Bakteri dan 
+Virus</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+DBD/demam berdarah dengue, penyakit Tsutsugamushi, Q fever, bullis 
+fever,&nbsp;tifus,&nbsp;salmonella,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+bubonic plague, tularemia, herpes,&nbsp;demam tifoid,&nbsp;demam 
+kuning<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 579.2 untuk virus dan 579.3 untuk bakteri ditinjau dari segi 
+biologi</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.93&nbsp;Bacillary 
+Diseases/Penyakit&nbsp;yang Disebabkan Kuman atau Baksil</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini kolera,&nbsp;disentri,&nbsp;dipteri, 
+botulism,&nbsp;tetanus,&nbsp;penyakit yang&nbsp;disebabkan protozoa, 
+leishmaniasis,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+trypanosomiasis, malaria,&nbsp;erysipelas, septicemia, pyemia</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.95 Sexuality 
+Transmitted Diseases/Penyakit Menular Seksual, PMS</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+syphilis/sepilis, raja singa, gonorrhea, chancroid, genital herpes, 
+lymphogranuloma 
+venereum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 616.97 untuk AIDS</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.959 
+Zoonoses/Penyakit yang Disebabkan&nbsp;Hewan, Penyakit yang Disebabkan 
+Binatang</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+rabies, hydrophobia, glanders, equinia, anthrax, undulant fever, brucellosis, 
+psittacosis,&nbsp;pes<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk trypanosomiasis, toxoplasmosis/toxoplasma, leptospirosis, 
+tularemia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk avian influenza/flu burung, virus H5N1, swine influenza/flu babi, virus 
+H1N1, H1N2, H3N1, H3N2, H2N3</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.96 Parasitology, 
+Parasiti</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">c <STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">Diseases/Parasitologi, Penyakit yang 
+Disebabkan Parasit</SPAN></STRONG><B><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></B>Kelaskan di sini&nbsp;penyakit karena cacing/cacingan, 
+penyakit karena jamur<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Termasuk medical parasitology/parasitologi kedokteran, medical 
+helminthology/helmintologi 
+kedokteran<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Parasitologi: cabang ilmu kedokteran yang mempelajari tentang 
+parasit<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Helmintologi: cabang ilmu kedokteran yang mempelajari tentang cacing 
+parasit</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.97 Diseases of 
+Immune System/Penyakit yang Disebabkan Kurangnya Sistem Kekebalan 
+Tubuh</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+dermatological allergies/alergi yang menyerang kulit, alergi terhadap makanan 
+dan 
+minuman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+tertentu, alergi obat-obatan, Acquired Immune Deficiency 
+Syndrome/AIDS<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk autoimmunity, autoimmune</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.98 Environmental 
+Medicine/Kedokteran yang Berhubungan dengan Lingkungan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan&nbsp;di 
+sini&nbsp;penyakit karena hawa panas,&nbsp;hypothermia/penyakit karena&nbsp;hawa 
+dingin, mountain 
+sickness,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+penyakit karena radiasi<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Termasuk kedokteran lingkungan, klimatologi dan meteorologi 
+kedokteran, kedokteran penerbangan dan 
+udara,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+kedokteran laut, kedokteran militer,&nbsp;kedokteran industri</SPAN></P></FONT>
+<P><FONT face=Arial size=2><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.9803 Industrial 
+Medicine/Industri Obat-obatan</SPAN></STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.99 Tumors 
+Diseases/Penyakit Tumor</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+tumor otak dan tumor-tumor di bagian tubuh lainnya, tumor jinak,&nbsp;kanker, 
+leukimia,</SPAN></FONT><SPAN class=style1><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'"> </SPAN></SPAN><FONT face=Arial 
+size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">lepra</SPAN></FONT><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+kanker darah,&nbsp;kanker payu dara dan kanker-kanker di bagian tubuh lainnya, 
+tuberculosis/TBC, 
+kusta<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk 
+oncology/onkologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Onkologi: cabang ilmu kedokteran yang mempelajari tentang pengobatan 
+tumor</SPAN></P><FONT face=Arial size=2>
+<P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617 
+Miscellaneous Branches of Medicine and Surgery/Bedah dan Pembedahan dan 
+Topik&nbsp;Terkait</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Jangan gunakan untuk 
+bedah dan pembedahan organ tertentu; kelaskan mulai nomor 617.41 - 
+617.57</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.001 Philosophy 
+and Theory of Surgery/Filsafat dan Teori tentang Ilmu Bedah</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.02 Physician, 
+Technicians and Assistans of Surgery/Dokter Bedah, Teknisi dan Asisten 
+Bedah</SPAN></STRONG></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>617.03 
+Rehabilitation/Terapi 
+Rehabillitasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Terapi rehabilitasi pasca 
+bedah/operasi<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 364.8 untuk rahabilitasi ditinjau dari segi permasalahan 
+sosial</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.1 Injuries and 
+Wounds/Cedera dan Luka-luka</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;cedera olah raga,&nbsp;kecelakaan&nbsp;lalu lintas,<STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;</SPAN></STRONG>luka 
+bakar,&nbsp;luka tembak&nbsp;<STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;</SPAN></STRONG><B><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></B>Termasuk traumatology/traumatologi<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Traumatologi: penelitian yang berkaitan dengan luka fisik atau 
+sakit akibat 
+luka<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-weight: bold">Lihat 
+juga 363.1 untuk program keamanan terhadap kecelakaan olah 
+raga&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-weight: bold">Lihat 
+juga 363.125 untuk program </SPAN>kecelakaan lalu 
+lintas<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 616.04 untuk pengobatan 
+luka<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 793&nbsp;- 799 untuk olah raga</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P></SPAN>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>617.15 
+Fractures/Fraktur<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini patah, retak</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.2 Result of 
+Injuries/Akibat Cedera</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+traumatik/trauma, demam 
+infeksi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk infeksi; kelaskan di nomor 616.9</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.41 Surgery by 
+Cardiovascular System/Pembedahan atau Operasi pada Sistem 
+Kardiovaskular</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+bedah jantung, bedah arteri, bedah pembuluh darah, bedah kapiler, bedah urat 
+darah<STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;</SPAN></STRONG></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.43 Surgery by 
+Digestive System/Pembedahan atau Operasi pada 
+Sistem&nbsp;Pencernaan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini</SPAN> bariatric surgery/bedah bariatrik</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.44 Surgery 
+by&nbsp;Glands and Lymphatic&nbsp;System/Pembedahan atau Operasi pada Sistem 
+Kelenjar dan Limpa</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini</SPAN> bedah tulang sumsum</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.46 Surgery by 
+Urogenital System/Pembedahan atau Operasi pada Sistem&nbsp;Saluran 
+Kencing</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+bedah pada organ kelamin laki-laki dan 
+perempuan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk di sini sirkumsisi/sunat/khitan, vasektomi</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.47 Surgery by 
+Musculoskeletal, Integument/Pembedahan atau Operasi pada Sistem Otot dan 
+Tulang,</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pembedahan&nbsp;atau 
+Operasi&nbsp;pada&nbsp;Kulit</SPAN></STRONG><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+orthopedic surgery/bedah ortopedi/bedah tulang, bedah otot, pembersihan 
+rambut</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.48&nbsp; Surgery 
+by&nbsp;Nervous System/Pembedahan atau Operasi pada Sistem&nbsp;Urat 
+Syaraf</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+bedah otak, bedah syaraf, bedah jaringan syaraf tulang 
+belakang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk neurosurgery/bedah susunan syaraf, psychosurgery/bedah otak untuk 
+penyakit jiwa</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.51 Head 
+Surgery/Pembedahan atau Operasi&nbsp;pada Kepala</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+bedah tengkorak/bedah tempurung kepala</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.52 Face 
+Surgery/Pembedahan atau Operasi pada&nbsp;Wajah</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+bedah pada bibir, operasi bibir sumbing, operasi hidung</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.53 Neck 
+Surgery/Pembedahan atau Operasi pada&nbsp;Leher</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+bedah pada kerongkongan, bedah pada tenggorokan, operasi amandel</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.54 Thorax and 
+Respiratory/Pembedahan atau Operasi pada&nbsp;Rongga Dada&nbsp;dan&nbsp;Sistem 
+Pernapasan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+operasi paru-paru, operasi pada saluran pernapasan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.55 Abdominal and 
+Pelvic Cavities Surgery/Pembedahan atau Operasi pada&nbsp;Perut dan 
+Punggung</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;operasi usus, operasi usus buntu, operasi pada anus, operasi pada 
+liver, opereasi 
+empedu,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+operasi pankreas, operasi hernia, operasi turun berok</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.57 Extremities 
+Surgery/Pembedahan atau Operasi pada&nbsp;Anggota Gerak</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+bedah pada bahu, bedah pada tangan, bedah pada kaki, operasi lutut, operasi 
+ankle<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk podiatry/perawatan kaki, chiropody</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.6 
+Dentistry/Kedokteran Gigi</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.601 Oral Hygiene 
+and Preventive Dentistry/Kesehatan Mulut dan Pencegahan Sakit 
+Gigi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;dental hygiene/kesehatan 
+gigi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk gosok gigi</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.605 Dental 
+Surgery/Pembedahan atau Operasi pada Gigi dan Gusi</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.63 Dental 
+Diseases/Penyakit Gigi dan Gusi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+alveolar abscesses/gigi berlubang, gingivitis/radang gusi, periodontitis, 
+endodontics<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk 
+periodontics<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Periodontics: cabang ilmu kedokteran gigi yang mempelajari perawatan gigi dan 
+gusi</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.64 Orthodontics 
+and Pedodontics/Ortodonsi dan&nbsp;Pedodonsi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Ortodonsi: cabang 
+ilmu kedokteran gigi&nbsp;tentang pembetulan dari 
+ketidakwajaran&nbsp;letak&nbsp;gigi dan 
+rahang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Pedodonsi: cabang ilmu kedokteran gigi yang mempelajari perawatan gigi dan gusi 
+pada anak-anak</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.66 
+Exodontics/Pencabutan Gigi</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.67 Caries/Karies 
+Gigi, Pembusukan pada&nbsp;Gigi</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.69 
+Prosthodontics/Pembuatan Gigi Palsu</SPAN></STRONG></P>
+<P><SPAN><STRONG>617.7 
+Ophthalmology/Oftalmologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini oftalmologi 
+umum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Oftalmologi: ilmu kedokteran mata</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.71 
+Pathology and Surgery of Eyes/Patologi dan Pembedahan atau&nbsp;Operasi pada 
+Mata</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini bedah mata, buta dan kebutaan, luka dan cedera pada 
+mata<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk diagnosis dan prognosis pada penyakit mata</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.719 
+Diseases of Cornea and Scleras/Penyakit pada Kornea dan Sclera 
+Mata</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.73 
+Diseases of Optic Nerves and Retinas/Penyakit pada Syaraf Optik dan 
+Retina</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.74 
+Diseases of Eyeballs/Penyakit pada Bola Mata</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini glaucoma/glaukoma, catarac/katarak</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.75 
+Disorders of Refraction and Accomodation and Color Blindness/Gangguan 
+Penglihatan dan Buta Warna</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini optomtery/optometri, buta warna,&nbsp;lensa 
+mata,&nbsp;astigmatism,&nbsp;hyperopia,&nbsp;myopia,&nbsp;aniseikonia,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optometri: 
+ilmu&nbsp;tentang pemeriksaan mata</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.76 
+Diseases of Ocular Muscles and Lacrimal/Penyakit pada Otot Okular Mata dan 
+Kelenjar Air Mata</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini binocular imbalance, diplopia, strabismus, 
+orthoptic/orthoptik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Orthoptik: ilmu tentang kelainan pada mata dan pengobatan menggunakan metode 
+latihan tanpa pembedahan</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.77 
+Diseases of Eyelids and Conjunctivas/Penyakit pada Kelopak Mata dan Selaput 
+Mata</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini trachoma/trakoma, conjunctivitis/radang selaput mata</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.79 
+Prosthetic Opthalmology/Penggantian Organ Mata</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.8 
+Otology and Audiology/Otologi dan Audiologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini tuli dan kurang pendengaran<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Otologi: ilmu kedokteran yang berhubungan dengan penyakit 
+telinga<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Audiologi: ilmu kedokteran yang mempelajari pendengaran dan kelainan 
+pendengaran</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.82 
+Diseases of Auricles/Penyakit pada Daun Telinga</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.83 
+Diseases of Auditory Canals/Penyakit pada Saluran 
+Pendengaran</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.84 
+Diseases of Ossicles/Penyakit pada Telinga Bagian Tengah</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.85 
+Diseases of Tympanic Membranes/Penyakit pada Gendang Telinga</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.88 
+Diseases of Aural Nervous System/Penyakit pada Syaraf 
+Pendengaran</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.89&nbsp;Correction 
+of Impaired Hearing/Pengobatan pada Penyakit Telinga&nbsp;dan&nbsp;Kurang 
+Pendengaran&nbsp;</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.9 
+Auxiliary Techniques and Procedures, Apparatus and Equipment of Surgical 
+Appliances/Teknik, Prosedur,</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Alat-alat dan Perlengkapan Pembedahan</SPAN></STRONG><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini teknik bedah dan operasi, prosedur bedah dan operasi</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.91 
+Operative Surgery/Operasi Bedah Umum</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.917 
+Operating Room/Ruang Operasi, Ruang Bedah</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.93 
+Surgical Dressing/Pakaian Bedah</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.95 
+Plastic Surgery and Transplantation of Organs/Operasi Plastik, Bedah Plastik dan 
+Transplantasi Organ</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">617.96 
+Anesthesiology/Anestesiologi, Anestesi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;Kelaskan di sini bius dan pembiusan</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618 
+Gynecology and Obstetric/Ginekologi dan Obstetri</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Ginekologi: 
+ilmu tentang penyakit 
+wanita<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Obstetri: ilmu 
+kandungan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk ginekologi; kelaskan di nomor 
+618.1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk obstetri; kelaskan di nomor 618.2</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.01 
+Philosophy and Theory of Gynecology and Obstetric/Filsafat dan Teori Ginekologi 
+dan Obstetri</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.03 
+Dictionaries and Encyclopedia/Kamus Ginekologi dan Obstetri, Ensiklopedi 
+Ginekologi dan Obstetri,</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kumpulan Indeks di Bidang Ginekologi dan Obstetri</SPAN></STRONG></SPAN></B></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.1 
+Gynecology/Ginekologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini endocrine gynecology/ginekologi endokrin, endometriosis</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.11 
+Diseases of Ovaries/Penyakit di Ovarium, Indung Telur</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.12 
+Diseases of Fallopian Tubes, Oviduct/Penyakit pada Saluran Indung Telur dengan 
+Rahim</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.13 
+Diseases of Perimetrium, Periuterine/Penyakit pada 
+Perimetrium</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.14 
+Diseases of Uterus/Penyakit pada Rahim</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini infeksi rahim, cervicitis/serviks, endometritis, pyometra, 
+malformations, hysterectomies</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.15 
+Diseases of Vagina/Penyakit di Vagina</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.16 
+Diseases of Vulva/Penyakit di Vulva</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.17 
+Functional and Systemic Disorders/Gangguan Fungsi dan Sistem 
+Ginekologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini amenorrhea, dysmenorrhea, menorrhagia, oligomenorrhea, premenstrual 
+syndrome/sindrom 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+pramenstruasi, leukorrhea, menopause disorder/gangguan menopause, artificial 
+insemination/inseminasi buatan</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.19 
+Diseases of Breast/Penyakit pada Payu Dara</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.2 
+Obstetric, Midwifery/Obstetri, Ilmu Kandungan, Ilmu 
+Kebidanan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini pregnancy and childbirth/kehamilan dan 
+kelahiran<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk keperawatan maternitas, kebidanan maternitas&nbsp;</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.24 
+Prenatal Care and Preparation for Childbirth/Keperawatan Pra Melahirkan dan 
+Persiapan Melahirkan</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.25 
+Multiple Pregnancy and Childbirth/Kehamilan dan Kelahiran 
+Kembar</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.3 
+Diseases&nbsp;and Complications of Pregnancy/Penyakit dan Komplikasi 
+Kehamilan</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.31 
+Extrauterine Pregnancy, Ectopic Pregnancy/Kehamilan di Luar 
+Kandungan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini andominal, tubal pregnancies</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.32 
+Fetal Disorders, Perinatology/Gangguan Janin, 
+Perinatologi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini pengobatan 
+perinatal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Perinatologi: bidang medis yang berhubungan dengan perawatan dan pengobatan ibu 
+dan bayi pada sebelum, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+sewaktu serta sesudah melahirkan</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.34 
+Diseases of Placenta and Amniotic Fluid/Penyakit pada Plasenta dan Air 
+Ketuban</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.39 
+Miscarriage, Spontaneous Abortion, Premature Delivery/Keguguran dan Kelahiran 
+Prematur</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.4 
+Childbirth, Parturition/Melahirkan secara Normal</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.5 
+Complicated, Dystocia/Melahirkan secara Rumit</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.6 
+Normal Peurperium/Masa Setelah Melahirkan yang Berlangsung 
+Normal</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini postpartum management and care/perawatan pasca melahirkan</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.7 
+Peurperal Diseases/Penyakit Setelah Melahirkan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini Seehan's syndrom/sindrom Seehan</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.71 
+Diseases of Lactation/Penyakit pada Laktasi</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.73 
+Diseases of Metritis and Peritonitis/Penyakit Radang Rahim</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.74 
+Peurperal Septicema and Pyemia/Kelahiran dengan Keracunan Darah 
+</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.75 
+Peurperal Eclampsia/Eklamsia, Kelahiran dengan Tekanan Darah 
+Tinggi</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.76 
+Peurperal Mental Disorders/Kelahiran dengan Gangguan 
+Jiwa</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini</SPAN> postpartum depression/depresi setelah melahirkan</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.79 
+Maternal Death/Kematian Ibu pada saat Melahirkan</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.8 
+Obstetrical Surgery/Bedah Kebidanan</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.82 
+Version and Extraction/Versi dan Ekstraksi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini</SPAN> kelahiran dengan vacuum</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.83 
+Embryotomy and Craniotomy/Embriotomi dan Kraniotomi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Embriotomi: 
+pembunuhan embrio; Kraniotomi: pemecahan kepala bayi yang mati pada saat 
+kelahiran</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.85 
+Minor Surgery/Bedah Kebidanan Minor</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini episiotomy, symphyseotomy, vaginiperineotomy</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.86 
+Cesarean Section/Operasi Caesar</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.87 
+Surgical Removal Placenta/Operasi Pengangkatan Janin</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><STRONG>618.88 
+Surgical Abortion/Bedah 
+Aborsi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 363.46 untuk aborsi ditinjau dari segi permasalahan 
+sosial</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.89 
+Asepsis and Antisepsis/Asepsis and Antisepsis</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.92 
+Pediatric/Pediatrik</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Pediatri: 
+ilmu kedokteran yang mempelajari tentang penyakit bayi dan anak sampai dengan 
+masa 
+puber<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelaskan 
+di sini keperawatan bayi, keperawatan balita, keperawatan 
+anak&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Termasuk 
+sudden infant death syndrome/sindrom kematian mendadak pada 
+bayi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 305.2 untuk&nbsp;bayi dan anak-anak ditinjau dari segi 
+sosiologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 649.4 untuk kesehatan anak ditinjau dari segi kesejahteraan rumah 
+tangga</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.9201 
+Newborn Infant, Neonates/Perawatan Bayi Baru Lahir, 
+Neonatal</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini 
+neonatology/neonatologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Neonatologi: ilmu kedokteran yang mempelajari tentang perawatan dan perkembangan 
+bayi yang baru lahir</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.985882 
+Autism Pediatrics/Autisme</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.97 
+Geriatrics/Geriatri</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini keperawatan pada orang dewasa dan lanjut usia, keperawatan pada manula 
+dan 
+lansia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 612.67 untuk gerontologi</SPAN></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.976 
+Specific Diseases of Geriatrics/Penyakit-penyakit pada&nbsp;Orang Lanjut 
+Usia</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">619 
+Experimental Medicine/Kedokteran Eksperimental, Eksperimen Kedokteran, Percobaan 
+Kedokteran</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">619.5 
+Experimental Medicine at Birds/Kedokteran Eksperimental pada 
+Burung</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">619.7 
+Experimental Medicine at Dogs/Kedokteran Eksperimental pada 
+Anjing</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">619.8 
+Experimental Medicine at Cats/Kedokteran Eksperimental pada 
+Kucing</SPAN></STRONG></P>
+<P style="LINE-HEIGHT: 115%"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">619.9 
+Experimental Medicine at Other Mammals/Kedokteran Eksperimental pada Mamalia dan 
+Manusia</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">Kelaskan 
+di sini kedokteran eksperimental pada kelinci, tikus, kera 
+dan&nbsp;monyet</SPAN></P></FONT></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

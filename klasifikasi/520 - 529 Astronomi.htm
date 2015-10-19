@@ -1,0 +1,461 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='520 - 529'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>520 - 529 Astronomi</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>520 - 529 Astronomi</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><STRONG><FONT face=Arial size=4><EM>Astronomy 
+(Astronomi)</EM></FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>520 Comprehensive Works of Astronomy/Karya 
+Komprehensif tentang Astronomi</STRONG></FONT></P><FONT face=Arial size=2>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>520.285 
+Data Processing and Analysis of Astronomy/Pengolahan dan Analisa Data 
+di&nbsp;Bidang&nbsp;Astronomi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini proses komputerisasi astronomi</SPAN><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"></P>
+<P><FONT face=Arial size=2><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"></SPAN></SPAN></SPAN></SPAN></STRONG></FONT><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>520.3 
+Dictionaries and Encyclopedia of Astronomy/Kamus Astronomi, Ensiklopedia 
+Astronomi</STRONG></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>520.5 
+General Publications of Astronomy/Terbitan Berseri Astronomi, Berkala 
+Umum&nbsp;Astronomi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini majalah astronomi, jurnal 
+astronomi</SPAN></P></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'">
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>520.6 
+Organization and Management of Astronomy/Organisasi dan Manajemen di Bidang 
+Astronomi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini LAPAN (Lembaga Penerbangan dan Antariksa 
+Nasional)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;NASA (National Aeronautics and Space 
+Administration)</SPAN></SPAN></SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>520.72 
+Research Methods of Astronomy/Metode&nbsp;Riset Penelitian 
+Astronomi</STRONG></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>520.92 
+Astronomers/Astronom<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 925.2 untuk biografi ahli astronomi</SPAN></SPAN></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><FONT face=Arial 
+size=2><STRONG>521 Celestial Mechanics, Equilibrium/Mekanika Angkasa, 
+Ekuilibrium<BR></STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>521.1 Gravitation/Gravitasi 
+Angkasa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Jangan gunakan untuk gaya tarik&nbsp;bumi; kelaskan di nomor 531.14 
+</FONT></P>
+<P><FONT face=Arial size=2><STRONG>521.3 
+Orbits/Orbit<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini hukum Kepler</FONT></P>
+<P><STRONG>521.4 Perturbations/Gangguan-gangguan Angkasa</STRONG></P>
+<P><STRONG>522 Techniques and Procedures of Astronomy/Teknik Astronomi dan 
+Prosedur&nbsp;Astronomi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini astrometri</P>
+<P><FONT face=Arial size=2><STRONG>522.1 
+Observatories/Observatorium<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Lihat 
+juga 727.5 untuk arsitektur observatorium</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>522.19 Geographic Treatment of 
+Observatories/Observatorium di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 522.19 notasi 01 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: observatorium di&nbsp;Chili 522.1983</FONT></P>
+<P><FONT face=Arial size=2><STRONG>522.19598 Observatories in 
+Indonesia/Observatorium di 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG><EM>Contoh</EM>: observaturium Boscha</FONT></P>
+<P><FONT face=Arial size=2><STRONG>522.2 Astronomical Instruments, 
+Telescopes/Perkakas Astronomi, 
+Teleskop<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini teropong 
+bintang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 
+681.4&nbsp;untuk produksi alat-alat optik</SPAN></FONT></P>
+<P><STRONG><FONT face=Arial size=2>522.3 Meridional Instrument/Perkakas 
+Meridian</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>522.4 Extrameridional Instruments/Perkakas 
+Ekstrameridian<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini astrolab, kuadran, sextant, zenith teleskop, ekuator 
+teleskop<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 
+681.4 untuk produksi alat-alat 
+optik</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P><FONT face=Arial size=2><STRONG>522.5 Auxiliarry Instruments/Perkakas 
+Pembantu Astronomi 
+Lainnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini chronograph/kronograf, 
+chronometer/kronometer</FONT></P>
+<P><FONT face=Arial size=2><STRONG>522.6 Special Methods of 
+Observation/Metode-metode Khusus 
+Observasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini photometry/fotometri, polarimetry/polarimetri, 
+spectroscopy/spektroskopi, radio 
+astronomi,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+infrared/sinar infra merah astronomi, sinar gamma astronomi, sinar x 
+astronomi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 535 untuk sinar infra merah ditinjau dari segi 
+fisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 539.7222 untuk sinar gamma dan sinar x ditinjau dari segi 
+fisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.362 untuk teknologi infra merah</FONT></P>
+<P><FONT face=Arial size=2><STRONG>522.7 Spherical Astronomy/Astronomi 
+Sferis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sistem benda-benda angkasa, benda-benda 
+langit</FONT></P>
+<P><FONT face=Arial size=2><STRONG>523 Specific Celestial Bodies/Benda-benda 
+Angkasa 
+Khusus<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di 
+sini&nbsp;zodiac/zodiak<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jangan 
+gunakan untuk zodiak ditinjau dari segi ramalan perbintangan; kelaskan di 
+nomor&nbsp;133.5</FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.01 
+Astrophysics/Astrofisika</STRONG></FONT></P>
+<P><STRONG><FONT face=Arial size=2>523.02 
+Cosmochemistry/Kosmokimia</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>523.1 The Universe/Alam Semesta, Jagat Raya, 
+Alam Raya, Antariksa, Ruang 
+Angkasa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini kosmologi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.112 
+Galaxies/Galaksi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;debu kosmik, lubang hitam, 
+quasar/kuasar</FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.113 Milky Way/Galaksi Bima 
+Sakti</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.12 
+Cosmogony/Kosmogoni<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Teori tentang asal mula dan perkembangan alam 
+semesta<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini teori berakhirnya alam semesta</FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.2 Solar System, Planetary Systems/Tata 
+Surya, Sistem 
+Planet<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini struktur, gerakan dan sifat-sifat tata 
+surya</FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.3 
+Moon/Bulan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini ukuran dan massa bulan, orbit bulan</FONT></P>
+<P><STRONG>523.38 Moon Eclipses/Gerhana Bulan</STRONG></P>
+<P><FONT face=Arial size=2><STRONG>523.4 
+Planets/Planet-planet<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lokasi, gerakan dan sifat-sifat 
+planet<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini Merkurius, Venus, Mars, Asteroid, Jupiter, Saturnus, Uranus, 
+Neptunus, Pluto</FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.5 
+Meteors/Meteor<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini meteorit, hujan meteor</FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.6 
+Comets/Komet<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Komet Halley, komet-komet lainnya</FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.7 Sun/Matahari, 
+Surya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini ukuran dan massa matahari, radioaktif matahari, gerakan matahari, 
+photosphere/fotosfer,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp; chromosphere/kromosfer,&nbsp;corona/korona, bintik-bintik 
+matahari<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.7289&nbsp;untuk sampah 
+radioaktif<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 539.752 untuk radioaktif ditinjau dari segi 
+fisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.483 untuk radioaktif isotop</FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.78 Sun Eclipses/Gerhana 
+Matahari</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.8 
+Stars/Bintang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini magnitudo, parallax, cluster</FONT></P>
+<P><FONT face=Arial size=2><STRONG>523.9 Sattelites and Rings, Transits, 
+Occultations/Satelit dan Cincin, Transit, 
+Okultasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan&nbsp;di sini&nbsp;satelit-satelit 
+planet<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk cincin Saturnus, cincin 
+Jupiter<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk bulan; kelaskan di nomor 523.3</FONT></P>
+<P><FONT face=Arial size=2><STRONG>525 Earth, Astronomical Geography/Bumi, 
+Geografis 
+Astronomikal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga mulai 910.01 untuk geografi 
+umum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 910.02 untuk bumi ditinjau dari segi geografi fisik</FONT></P>
+<P><FONT face=Arial size=2><STRONG>525.1 Constants and Dimensions of 
+Earth/Konstanta Bumi, Dimensi 
+Bumi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini ukuran bumi, massa bumi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>525.2 Optical, Radioactive, Thermal 
+Properties of Earth/Sifat-sifat Optik Bumi, Radioaktif, dan Thermal 
+Bumi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;535.2 untuk fisika 
+optik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 541.7 untuk 
+aktivitas&nbsp;optikal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.36 untuk optik 
+terapan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">681.4 untuk produksi 
+alat-alat optik</SPAN>&nbsp;</FONT></P>
+<P><FONT face=Arial size=2><STRONG>525.3 Orbits and Motions of Earth/Orbit Bumi, 
+Gerakan 
+Bumi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini rotasi bumi, tabel matahari/tabel surya</FONT></P>
+<P><FONT face=Arial size=2><STRONG>525.5 Seasons and Zones of Latitude/Zona 
+Musim dan Zona 
+Iklim<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini musim semi, musim panas, musim gugur, musim 
+dingin/musim 
+salju<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk<STRONG>&nbsp;</STRONG>zona iklim tropis, zona iklim sedang, zona iklim 
+empat 
+musim<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 551.6 untuk klimatologi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>526 Marhematical Geography/Geografi 
+Matematis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga mulai 910.01 untuk geografi umum</FONT></P>
+<P><FONT face=Arial size=2><STRONG>526.0221 
+Chartography/Kartografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini kartografi/pembuatan peta umum non 
+militer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 358.24 untuk kartografi 
+militer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 912 untuk atlas dan peta ditinjau dari segi 
+geografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">912.014 
+untuk teknik membaca peta</SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>526.1 
+Geodesy/Geodesi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Geodesi: ilmu yang mempelajari bentuk dan dimensi bumi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>526.6 Geodetic Astronomy and Geographical 
+Positions/Astronomi Geodetis dan Posisi 
+Geografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini koordinat, garis lintang, garis bujur, azimuth, 
+equator/khatulistiwa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai 910.01 untuk geografi umum</FONT></P>
+<P><FONT face=Arial size=2><STRONG>526.8 Map Projections/Proyeksi 
+Peta<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini orthomorphic/proyeksi ortomofis, proyeksi 
+ekuivalen</FONT></P>
+<P><FONT face=Arial size=2><STRONG>526.9 
+Surveying/Survey<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini survey topografi, kontur, survey hidrografi, survey 
+perbatasan, fotogrammetri</FONT></P>
+<P><FONT face=Arial size=2><STRONG>527 Celestial Navigation/Navigasi 
+Angkasa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 623.89 untuk navigasi kelautan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>528 Ephemerides/Efemerida, Almanak dan 
+Kalender 
+Astronomikal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Jangan gunakan untuk kalender; kelaskan di nomor 
+529.3</FONT><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></P>
+<P><STRONG><FONT face=Arial size=2>529 Chronology/Waktu 
+Kronologis</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>529.1 Days/Hari</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>529.2 Intervals of Time/Interval 
+Waktu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini perhitungan tahun, bulan, minggu</FONT></P>
+<P><STRONG><FONT face=Arial size=2>529.3 Calendars/Kalender, Sistem 
+Penanggalan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold">Kelaskan 
+di kalender masehi, kalender Julian, kalender 
+Gregorian<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk&nbsp;sistem kalender Islam; kelaskan di nomor 297.265 atau 
+2X0.5293<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold">Lihat 
+juga 741.6 untuk teknik menggambar desain 
+kalender</SPAN></SPAN></FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>529.7 
+Horology/Horologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Horologi: ilmu untuk mengukur 
+waktu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan&nbsp; di sini hisab, hilal, 
+rukyat/rukyah</FONT></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

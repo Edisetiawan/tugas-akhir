@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='900 - 909'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>900 - 909 Teori Ilmu Sejarah</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>900 - 909 Teori Ilmu Sejarah</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><FONT face=Arial size=2><STRONG><FONT 
+size=4><EM>Theory of History (Teori Ilmu 
+Sejarah)</EM></FONT></STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>900 History, Events/Ilmu Sejarah, 
+Kejadian&nbsp;</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>901 Philosopy and Theory of History/Filsafat 
+dan Teori Sejarah</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>902 Miscellany&nbsp;of History/Aneka Ragam 
+Sejarah</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>903 Dictionary and&nbsp;Encyclopedia/Kamus 
+Sejarah, Ensiklopedia 
+Sejarah<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini konkordans sejarah</FONT></P>
+<P><FONT face=Arial size=2><STRONG>904 Adventure, Collected Accounts of 
+Events/Petualangan, Kumpulan Peristiwa 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini kisah para 
+petualang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">910.4 
+untuk kisah 
+perjalanan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 923.9 untuk biografi penjelajah dan biografi 
+penakluk</SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>905 Serial Publications&nbsp;of 
+History/Terbitan Berseri di 
+Bidang&nbsp;Sejarah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini majalah sejarah, jurnal sejarah</FONT></P>
+<P><FONT face=Arial size=2><STRONG>906 Organization an Management of 
+History/Organisasi dan Manajemen di Bidang&nbsp;Sejarah</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>907 Education and&nbsp;Research of 
+History/Pendidikan, Riset 
+Penelitian&nbsp;Sejarah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini metode statistik sejarah</FONT></P>
+<P><FONT face=Arial size=2><STRONG>909 World History, Civilizations/Sejarah 
+Dunia, 
+Peradaban<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sejarah umum dunia, sejarah&nbsp;peradaban dan 
+kejadian&nbsp;tidak terbatas lokasi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>909.04 History with Racial, Ethnic 
+Groups/Sejarah Berdasarkan Ras dan 
+Etnis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 909.04 notasi 03 - 99 dari <A href="Table%205%20Racial,%20Ethnic,%20National%20Group.htm">Tabel 
+5</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>Contoh</EM>: 
+sejarah ras Yahudi 909.04924; sejarah ras China Tionghoa 
+909.04951<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Tambahkan "0"&nbsp;dan notasi 3 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 2</A> apabila melibatkan 
+negara 
+tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: sejarah ras Yahudi di Jerman 909.04924043; sejarah ras China 
+Tionghoa di Indonesia 909.049510598</FONT></P>
+<P><FONT face=Arial size=2>&nbsp;<STRONG>909.041 History&nbsp;of Race of 
+Indonesia/Sejarah Ras-ras dan Suku-suku&nbsp;di 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sejarah&nbsp;suku Jawa, sejarah suku Sunda, sejarah 
+suku Madura, dan lain-lain</FONT></P>
+<P><FONT face=Arial size=2><STRONG>909.07 History of Middle Ages/Sejarah Dunia 
+pada Abad 
+Pertengahan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sejarah umum dunia pada Abad 
+Kegelapan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Crusade/karya komprehensif tentang Perang Salib, sejarah umum Perang 
+Salib<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-size: 11.0pt; mso-bidi-font-weight: bold">Jangan 
+gunakan untuk biografi tokoh Perang Salib (King Richard, Salahuddin/Saladin; 
+kelaskan di nomor </SPAN><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-weight: bold">923.2</SPAN></STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 940.1 untuk sejarah umum Eropa pada waktu Perang Salib</FONT></P>
+<P><STRONG><FONT face=Arial size=2>909.1 World History 6th - 12th Century, 500 - 
+1199/Sejarah Dunia Abad 6 -&nbsp;Abad 12, Tahun 500 - 1199</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>909.2 World History 13th Century, 1200 - 
+1299/Sejarah Dunia Abad 13, Tahun 1200 - 1299</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>909.3 World History 14th Century, 1300 - 
+1399/Sejarah Dunia Abad 14, Tahun 1300 - 1399</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>909.4 World History 15th Century, 1400 - 
+1499/Sejarah Dunia Abad 15, Tahun 1400 - 1499</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>909.5 World History 16th Century, 1500 - 
+1599/Sejarah Dunia Abad 16, Tahun 1500 - 1599</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>909.6 World History 17th Century, 1600 - 
+1699/Sejarah Dunia Abad 17, Tahun 1600 - 1699</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>909.7 World History 18th Century, 1700 - 
+1799/Sejarah Dunia Abad 18, Tahun 1700 - 1799</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>909.81 World History 19th Century, 1800 - 
+1899/Sejarah Dunia Abad 19, Tahun 1800 - 
+1899<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sejarah umum Revolusi 
+Industri<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 303.64 untuk revolusi&nbsp;ditinjau dari segi sosiologi</FONT></P>
+<P><STRONG><FONT face=Arial size=2>909.82 World History 20th Century, 1900 - 
+1999/Sejarah Dunia Abad 20, Tahun 1900 - 1999</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>909.83 World History 21th Century, 2000 - 
+2999/Sejarah Dunia Abad 21, Tahun 2000 - 
+2999</FONT></STRONG></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

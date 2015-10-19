@@ -1,0 +1,561 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='530 - 539'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>530 - 539 Fisika</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>530 - 539 Fisika</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><STRONG><FONT face=Arial size=4><EM>Physics 
+(Fisika)</EM></FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>530 
+Physics/Fisika<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini zat, materi, antimateri, fisika 
+klasik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;mulai 621 untuk fisika terapan</FONT></P>
+<P><STRONG><FONT face=Arial size=2>530.01 Philosophy 
+of&nbsp;Physics/Filsafat&nbsp;Fisika</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>530.02 Miscellany of Physics/Aneka Ragam 
+tentang Fisika</FONT></STRONG></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>530.0285 
+Data Processing and Analysis of Physics/Pengolahan dan Analisa Data 
+di&nbsp;Bidang&nbsp;Fisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini proses komputerisasi fisika</SPAN></P><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'">
+<P><FONT face=Arial size=2><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"></SPAN></SPAN></SPAN></SPAN></STRONG></FONT><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>530.03 
+Dictionaries and Encyclopedia of Physics/Kamus Fisika, Ensiklopedia 
+Fisika</STRONG></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>530.05 
+General Publications of Physics/Terbitan Berseri Fisika, Berkala 
+Umum&nbsp;Fisika<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini majalah fisika, jurnal fisika</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>530.06 
+Organization and Management of Physics/Organisasi dan Manajemen di Bidang 
+Fisika</STRONG></SPAN></SPAN></SPAN></SPAN></P></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN>
+<P><FONT face=Arial size=2><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'">530.072 
+Research and Statistical Methods of Physics/Metode&nbsp;Riset Penelitian Fisika, 
+Statistik&nbsp;Fisika</SPAN></STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>530.092 Physicists/Fisikawan, Ahli 
+Fisika<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 925.3 untuk biografi ahli fisika</FONT></P>
+<P><FONT face=Arial size=2><STRONG>530.1 Theories and Mathematical Physics/Teori 
+Fisika 
+Matematis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini teori-teori fisika,&nbsp;teori elektromagnetik 
+materi</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>530.11 
+Relativity Theory/Teori 
+Relativitas<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Hukum Kekekalan 
+Energi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk dimensi keempat</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>530.12 
+Quantum Mechanics, Quantum Theory/Mekanika Kuantum, Teori 
+Kuantum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini matrix mekanik</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>530.13 
+Statistical Mechanics/Mekanika 
+Statistikal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Boltzmann statistikal</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>530.4 
+States of Matter/Keadaan Zat, Materi<BR></STRONG></FONT><FONT face=Arial 
+size=2><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini fisika solid, fisika liquid, fisika Gaseous, fisika 
+plasma, struktur elektron 
+zat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk difusi fisika dan 
+transfer&nbsp;massa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk fase transformasi materi (menguap, mencair, mengembun, 
+membeku)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 
+543.2&nbsp;difusi&nbsp;kimia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 620.044 untuk teknik plasma</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>530.7 
+Instrumentation of 
+Physics/Instrumentasi&nbsp;Fisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Instrumentasi untuk pengukuran, pengawasan dan pencatatan tentang 
+fisika</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>530.8 
+Measurement of 
+Physics/Satuan-satuan&nbsp;Fisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini satuan metric system/SI, satuan British system, 
+sistem&nbsp;imperial</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>531 
+Classical Mechanics, Solid Mechanics/Mekanika Klasik,&nbsp;Mekanika Benda 
+Padat<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 620.105 untuk mekanika benda padat terapan/mekanika solid 
+terapan</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>531.1 
+Dynamics, Statics/Dinamika, 
+Statika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini kinematik,&nbsp;massa, partikel 
+mekanik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;gaya sentrifugal dan sentripetal,&nbsp;gerakan 
+rotasional,&nbsp;gelombang,&nbsp;shock wave/gelombang 
+kejut<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 620.103 untuk statika terapan dan 620.104 untuk dinamika 
+terapan</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>531.113 
+Kinetics/Kinetik</STRONG></FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>531.14 
+Gravitation, Earth Gravity/Gravitasi Bumi, Gaya Tarik 
+Bumi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 521.1 untuk gravitasi angkasa</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>531.2 Solid 
+Statics/Statika Benda 
+Padat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini statika grafik</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>531.3 Solid 
+Dinamics/Dinamika Benda 
+Padat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Termasuk&nbsp; vibration/getaran benda 
+padat,&nbsp;deformation/perubahan bentuk,&nbsp; elastisitas, stresses and 
+strain/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+tekanan dan&nbsp;tegangan</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>531.4 
+Friction and Viscosity of Solids/Pergeseran dan Sifat Merekat Benda 
+Padat</STRONG></FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>531.5 Mass 
+and Gravity of Solids/Massa dan Gravitasi Benda 
+Padat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini&nbsp;hukum benda 
+jatuh<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk gravitasi bumi; kelaskan di nomor 526.7</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>531.6 
+Energy/Energi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini momentum, gaya, konservasi energi, transformasi 
+energi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 118 untuk energi ditinjau dari segi 
+metafisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 333 untuk energi ditinjau dari segi ekonomi</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>532 Fluid 
+Mechanics, Liquid Mechanics/Mekanika Fluida, Mekanika Zat 
+Cair<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini hidraulik, 
+hidraulika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 620.106&nbsp;untuk mekanika&nbsp;zat&nbsp;cair terapan/mekanika 
+fluida terapan</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>532.2 
+Hydrostatics/Hidrostatika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini mengapung, tenggelam</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG><FONT face=Arial size=2>532.4 Mass, 
+Density, Specifics Gravity of Liquids/Massa, Kepadatan dan Gravitasi Zat 
+Cair</FONT></STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG><FONT face=Arial size=2>532.5 
+Hydrodynamics/Hidrodinamika</FONT></STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>533 
+Pneumatics, Gas Mechanics/Pneumatik, Mekanika 
+Gas<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini turbulent/turbulensi, subsonic, transonic, supersonic, 
+hypersonic<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 620.107 untuk mekanika&nbsp;gas terapan</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>533.5 
+Vacuums/Vakum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Ruang hampa udara</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>533.6 
+Aeromechanics/Aeromekanik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini aerostatik, aerodinamik</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>534 Sound 
+and Related Vibrations/Suara, Bunyi dan Getaran yang 
+Berkaitan</STRONG></FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>534.1 
+Generation of Sound/Pembangkit Bunyi, Pembangkit Suara</STRONG></FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>534.2 
+Transmission of Sound/Transmisi Bunyi, Penyebaran Bunyi, Transmisi Suara, 
+Penyebaran 
+Suara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini echo/pantulan bunyi/pantulan suara</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>534.3 
+Characteristics of Sound/Karakteristik Bunyi, Sifat-sifat Bunyi, Karakteristik 
+Suara, Sifat-sifat 
+Suara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Efek Doppler</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>534.5 
+Vibrations Related to Sound/Getaran yang Berhubungan dengan 
+Bunyi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini getaran yang tidak dapat didengan oleh telinga 
+manusia.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk getaran subsonik,&nbsp;getaran 
+ultrasonik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 620.3 untuk getaran mekanis</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>535 Light, 
+Infrared&nbsp;and Ultraviolet Phenomena/Cahaya Optik,&nbsp;Infra Merah 
+dan&nbsp;Fenomena&nbsp;Ultraviolet<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;optik,&nbsp;sinar infra merah,&nbsp;sinar ultra 
+ungu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 522.6 untuk&nbsp;sinar infra merah&nbsp;ditinjau dari segi 
+astronomi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN>778.34 untuk fotografi infra 
+merah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.362 untuk teknologi infra merah</SPAN></FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>535.012 
+Infrared Radiation/Radiasi Infra Merah</STRONG></FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>535.1 
+Theories of Light/Teori tentang 
+Cahaya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini corpuscular/teori korpuskular</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>535.2 
+Physical Optics/Fisika 
+Optik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini intensitas dan kecepatan 
+cahaya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 525.2 untuk sifat-sifat optik ditinjau dari segi 
+astronomi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 541.7 untuk 
+aktivitas&nbsp;optikal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.36 untuk optik 
+terapan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">681.4 untuk produksi 
+alat-alat optik</SPAN></FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>535.3 
+Transmission, Absorption,&nbsp;Emission of Light/Transmisi Cahaya, Penyerapan 
+dan&nbsp;Emisi 
+Cahaya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;refleksi/pantulan, refraksi/pembiasan, luminasi 
+cahaya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk pelangi, bianglala</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>535.4 
+Dispersion of Light/Penyebaran 
+Cahaya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini bayangan, difraksi cahaya</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>535.5 
+Beams/Sinar<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini polarisasi</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG><FONT face=Arial size=2>535.6 
+Color/Warna</FONT></STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>535.8 
+Special Development&nbsp;of Light/Perkembangan Khusus 
+Cahaya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini spectroscopy/spektroskopi fisika, spektrum 
+cahaya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk efek 
+Raman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN>543.5 untuk spektroskopi kimia</SPAN></FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>536 
+Heat/Panas<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.402&nbsp;untuk teknik panas</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG><FONT face=Arial size=2>536.1 
+Theories of Heat/Teori tentang Panas, Teori Kalor</FONT></STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>536.2 Heat 
+Transfer/Transmisi Kalor, Perpindahan 
+Panas<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini konduksi/perpindahan panas di benda padat, 
+konveksi/perpindahan panas di benda cair</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>536.4 
+Effects of Heat on Matter/Pengaruh, Efek Panas pada 
+Benda<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini&nbsp;pemuaian dan penyusutan, fusi,&nbsp;sublimasi</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>536.5 
+Temperature/Temperatur, 
+Suhu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Termasuk pengukuran suhu normal, pyrometry/pengukuran suhu tinggi, 
+cryometry/pengukuran suhu 
+rendah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.525&nbsp;untuk 
+temperatur udara, suhu udara ditinjau dari segi hidrologi</SPAN></FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG><FONT face=Arial size=2>536.6 
+Calorimetry, Heat Capacity/Kalorimetri, Kapasitas Kalor</FONT></STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>536.7 
+Thermodynamics/Termodinamika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini hukum Joule, Carnot Cycle, hukum termodinamika, 
+formula 
+Maxwell<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk entropy</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>537 
+Electricity/Fisika&nbsp;Listrik&nbsp;<BR></STRONG></FONT><FONT face=Arial 
+size=2><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini 
+elektromagnetik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk teori elektromagnetik materi; kelaskan di nomor 
+530.1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk elektrokimia; kelaskan di nomor 
+541.37<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.31 untuk teknik kelistrikan</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG><FONT face=Arial size=2>537.1 
+Theories of Electricity/Teori tentang Kelistrikan</FONT></STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG><FONT face=Arial size=2>537.2 
+Electrostatics/Elektrostatika</FONT></STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG>537.5 
+Electrophysics/Elektrofisika</STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>537.534 
+Radiowave and Microwave Electronics/Elektronika Gelombang Radio dan Gelombang 
+Pendek<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.381 untuk teknik elektronika</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG><FONT face=Arial size=2>537.56 
+Electron and Ion Optics/Elektron dan Ion Optik</FONT></STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>537.6 
+Electrodinamics, Electric Current/Elektrodinamik, Arus 
+Listrik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini direct current (DC), arus searah, konduktor, 
+resistansi, semikonduktor</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>538 
+Magnetism/Magnetisme<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.34 untuk teknik magnetik</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>538.3 
+Magnetic Properties/Sifat-sifat 
+Magnet<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Termasuk Nuclear Magnetic Resonance (NMR),&nbsp;Nuclear Quadrupole 
+Resonance 
+(NQR)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;Electron Nuclear Double Resonance (ENDOR),&nbsp;Electron 
+Paramagnetic Resonance 
+(EPR)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;Electron Spin Resonance (ESR)</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG>538.4 Magnetic Phenomena/Fenomena 
+Magnet<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini diamagnetisme, paramagnetisme, ferromagnetisme, 
+ferrimagnetisme</P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG><FONT face=Arial size=2>538.6 
+Magnetohydrodynamics/Magnetohidrodinamika</FONT></STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>538.7 
+Geomagnetism and Related Phenomena/Geomagnetisme dan Gejala yang 
+Berkaitan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Termasuk paleomagnetisme, magnetosfer, Sabuk Van Allen, ionosfer, 
+Lapisan Kennely-Heaviside, aurora</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG>538.78 Magnetic Surveys/Survey 
+Magnet</STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG>538.781 - 538.789 Geographic 
+Treatment/Survey Magnet di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 538.78 notasi 1 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: survey magnet di Irlandia 538.78415</P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG>538.78598 Magnetic Surveys of 
+Indonesia/Survey Magnet di Indonesia</STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG>538.79 Magnetic 
+Observations/Penelitian Magnet</STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG>538.791 - 538.799 Geographic 
+Treatment/Penelitian Magnet di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 538.79 notasi 1 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>:&nbsp;penelitian magnet di Rusia 538.7947</P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG>538.79 Magnetic Observations of 
+Indonesia/Penelitian Magnet di Indonesia</STRONG></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>539 Modern 
+Physics/Fisika 
+Modern<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini fisika kuantum</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>539.1 
+Structure of Matter/Struktur Materi 
+Fisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini struktur molekul, struktur atom</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>539.2 
+Radiation/Radiasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini spektrum, radiasi elektromagnetik</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>539.6 
+Molecular Physics/Fisika 
+Molekular<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Hubungan atom-atom dan molekul-molekul</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>539.7 
+Atomic and Nuclear Physics/Fisika Atom, Fisika 
+Nuklir<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">355.825119</SPAN> 
+untuk&nbsp;senjata 
+nuklir<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 541.3 untuk kimia 
+nuklir<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.48 untuk teknik nuklir</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>539.72 
+Particle/Partikel<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini proton, neutron, quark, deutron, akselerasi partikel, 
+antipartikel</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial 
+size=2><STRONG>539.7222&nbsp;Gamma Rays, X Rays/Sinar Gamma, Sinar 
+X<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 522.6 untuk sinar gamma dan sinar x astronomi </FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><FONT face=Arial size=2><STRONG>539.74 
+Nuclear Structure/Struktur 
+Nuklir<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini model nuklir</FONT></P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG>539.75 Nuclear Activity/Aktivitas 
+Nuklir<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini reaksi fotonuklir, reaksi berantai, fusi nuklir, reaksi thermonuklir</P>
+<P dir=ltr style="MARGIN-RIGHT: 0px"><STRONG>539.752 
+Radioactivity/Radioaktif<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.7289&nbsp;untuk sampah 
+radioaktif<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 523.7 untuk radioaktif 
+matahari<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.483 untuk radioaktif isotop</P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

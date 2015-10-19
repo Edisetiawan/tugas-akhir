@@ -1,0 +1,415 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='770 - 779'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>770 - 779 Seni Fotografi dan Foto</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>770 - 779 Seni Fotografi dan Foto</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><FONT face=Arial size=4><STRONG><EM>Photography and 
+Photographs (Seni Fotografi dan Foto)</EM></STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>770 Photography and 
+Photographs/</STRONG><FONT face="Times New Roman" size=3><FONT face=Arial 
+size=2><STRONG>Seni Fotografi dan 
+Foto<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 621.36 untuk teknologi optik 
+terapan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 927.7 untuk biografi ahli fotografi</FONT></FONT></FONT></P>
+<P><FONT face=Arial size=2><STRONG>770.1 Philosophy and Theory of Photography 
+and Photographs/Filsafat dan Teori</STRONG><FONT face="Times New Roman" size=3> 
+<STRONG><FONT face=Arial size=2>Seni Fotografi dan 
+Foto</FONT></STRONG></FONT></FONT></P>
+<P><FONT face=Arial size=2><STRONG>770.2 Miscellany of Photography and 
+Photographs/Aneka Ragam tentang Seni Fotografi dan 
+Foto<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini fotografi sebagai profesi, fotografi sebagai 
+hobi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 790.13 untuk hobi</FONT></P>
+<P><STRONG><FONT face=Arial size=2>770.3 Dictionaries 
+and&nbsp;Encyclopedia/Kamus Seni Fotografi dan Foto, Ensiklopedia Seni Fotografi 
+dan Foto</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>770.5 General Publications/Terbitan Berseri 
+Seni Fotografi dan Foto, Berkala&nbsp;Seni Fotografi dan 
+Foto<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini majalah fotografi dan foto, jurnal fotografi dan 
+foto</FONT></P>
+<P><FONT face=Arial size=2><STRONG>770.7 Education, Research, Related 
+Topics/Pendidikan, Riset Penelitian Seni Fotografi dan Foto</STRONG></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>771 Techniques and Procedures/Teknik 
+Seni Fotografi dan Foto, Prosedur&nbsp;Seni Fotografi dan 
+Foto<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini alat-alat, perlengkapan, dan bahan&nbsp;seni 
+fotografi</FONT></FONT></P>
+<P><FONT face=Arial size=2><STRONG>771.1 Studios, Laboratories, Darkrooms/Studio 
+Foto, Laboratorium Foto, Kamar 
+Gelap<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Jangan gunakan untuk laboratorium kimia; kelaskan di nomor 
+<SPAN>542.1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk proses pencucian foto di studio foto dan kamar gelap; 
+kelaskan di nomor 771.4</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>771.3 Cameras and Accessories/Kamera 
+dan Asesoris 
+Kamera<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;kamera 35 mm single-lens reflex,&nbsp;kamera 
+otomatis,&nbsp;kamera manual,&nbsp;kamera 
+digital<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk bagian-bagian lensa kamera, filter kamera, pengatur fokus dan exposure 
+kamera, 
+blitz/flash<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+tripod/penyangga 
+kamera<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">681.4 untuk produksi 
+alat-alat optik dan kamera</SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>771.4 
+Darkroom and Studio Practice/Proses Pencucian dan Pencetakan Foto di Studio dan 
+Kamar 
+Gelap<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini klise/negatif foto</SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>771.5 
+Chemical Materials of Photography/Bahan-bahan Kimia 
+Fotografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini backing selulose, kertas foto, plate, film untuk 
+foto</SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>772 Metallic 
+Salt Processes/Proses Fotografi dengan Garam 
+Metalik</STRONG></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>772.1&nbsp;Early 
+Photographic&nbsp;Processes/Proses 
+Fotografi&nbsp;Kuno<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;proses&nbsp;daguerreotype, ferrotype, 
+tintype,&nbsp;proses well-collodion, proses kallitype</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>772.3 Platinotype Processes/Proses 
+Platinotype</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>773 Early Photographic&nbsp;Printing 
+Processes/Proses Pencetakan 
+Foto&nbsp;Kuno<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;proses&nbsp;proses&nbsp;pencetakan dengan 
+pigmen</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>773.1 Carbon and Carbro 
+Processes/Proses&nbsp;Karbon dan 
+Carbro<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini mariotype, ozotype, ozobrome</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>773.2 Powder (Dusting-on) 
+Processes/Proses&nbsp;Menggunakan 
+Bubuk<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini&nbsp;proses peppertype</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>773.3 Imbibition 
+Processes/Proses&nbsp;Imbibisi</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>773.5 Gum-bichromate 
+Processes/Proses&nbsp;Gum-bichromate</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>773.6 Photoceramic and Photoenamel 
+Processes/Proses&nbsp;Fotokeramik dan Fotoenamel</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>773.7 Diazotype 
+Processes/Proses&nbsp;Diazotype</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>773.8 Oil 
+Processes/Proses&nbsp;Pencetakan Foto&nbsp;Menggunakan Minyak 
+Khusus</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>774 
+Holography/Holografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Holografi: fotografi dengan menggunakan pola interferens yang 
+dihasilkan oleh gelombang 
+cahaya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di&nbsp;sini hologram</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>774.0153 Holography 
+Principles/Prinsip-prinsip Holografi</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>776 Computer Arts, Digital Arts/Seni 
+Komputer, Seni 
+Digital</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 004.1 untuk komputer 
+digital<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 006.5 untuk suara digital; 006.6 komputer grafis dan&nbsp;006.7 
+sistem 
+multimedia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.39 untuk teknik komputer</P>
+<P></SPAN></FONT><FONT face=Arial size=2><SPAN><STRONG>777 Unassigned/Belum 
+Digunakan</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778 Specific Fields of 
+Photography/Bidang-bidang Khusus Seni Fotografi</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.2 Photographic Projection/Fotografi 
+Proyeksi, Proyeksi 
+Fotografis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;filmstrip, 
+slide<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan&nbsp;untuk film dokumenter dan film pendidikan; kelaskan di nomor 
+070.18<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan&nbsp;untuk pembuatan dan produksi film; kelaskan di nomor 
+778.2<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan&nbsp;untuk movie/film hiburan; kelaskan di 
+nomor&nbsp;791.43</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.3 
+Photopsychography/Fotopsikografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Kirlian fotografi</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.31 
+Photomicrography/Fotomikrografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini mikrofilm</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.32 Photography in Term of 
+Focus/Fotografi Fokus 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini telefotografi, close-up 
+fotografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk photomacrography/fotomakrografi</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.34 Infrared Photography/Fotografi 
+Infra 
+Merah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 522.6 untuk&nbsp;sinar infra merah&nbsp;ditinjau dari segi 
+astronomi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 535 untuk sinar infra merah ditinjau dari segi 
+fisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.362 untuk teknologi infra merah</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.35 Aerial and Space 
+Photography/Fotografi&nbsp;Udara, Fotografi Angkasa</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.36 Panoramic 
+Photography/Fotografi&nbsp;Panorama</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.37 High-speed Photography/Fotografi 
+Kecepatan Tinggi</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.4 Stereoscopic Photography 
+Projection/Fotografi&nbsp;Proyeksi Stereoskopis</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.53 
+Cinematography/Sinematografi</STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Sinematografi: pembuatan dan produksi film-film, fotografi gambar 
+bergerak/gambar 
+hidup<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jangan 
+gunakan&nbsp;untuk film dokumenter dan film pendidikan; kelaskan di nomor 
+070.18<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan&nbsp;untuk filmstrip dan slide; kelaskan di nomor 
+778.2<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan&nbsp;untuk movie/film hiburan; kelaskan di 
+nomor&nbsp;791.43</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.534 Specific 
+Types&nbsp;Cinematography/Tipe-tipe Khusus 
+Sinematografi</STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini spesial efek sinematografi, editing 
+film<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk titling/pemberian judul, dubbing/sulih suara</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.59 Video Production, Television 
+Photography/Produksi Video, Fotografi 
+Televisi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pembuatan home video/video&nbsp;amatir, studio 
+produksi, rumah produksi</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.5993 Recorders/Alat 
+Perekam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini camcorder, kamera video, handycam, kamera 
+shooting</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.6 
+Color&nbsp;Photography/Fotografi&nbsp;Warna, Fotografi 
+Berwarna</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG><SPAN><STRONG>778.62 Photography 
+Monochrome/Fotografi&nbsp;Monokrom</STRONG></SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini orthochromatic, panchromatic</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.7 Photography under Specific 
+Conditions/Fotografi&nbsp;dengan Kondisi Khusus</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><STRONG>778.71 Outdoor 
+Photography/Fotografi&nbsp;Luar 
+Ruangan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini fotografi di bawah sinar matahari langsung, fotografi 
+di malam hari</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><SPAN><STRONG>778.72 Indoor 
+Photography/Fotografi&nbsp;Dalam 
+Ruangan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini fotografi dengan cahaya buatan, fotografi di dalam 
+studio</SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><SPAN><SPAN><STRONG>778.73&nbsp;Underwater 
+Photography/Fotografi&nbsp;di Bawah 
+Air<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini fotografi sambil 
+menyelam</SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><SPAN><SPAN><SPAN><STRONG>778.75 Photography 
+under Extreme Condition/Fotografi&nbsp;pada Kondisi 
+Ekstrem<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini fotografi pada suhu sangat dingin, fotografi di daerah 
+bersalju, fotografi di daerah gurun</SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial 
+size=2><SPAN><SPAN><SPAN><SPAN><SPAN><STRONG>778.8&nbsp;Special&nbsp;Effect and 
+Trick&nbsp;Photography/Spesial Efek Fotografi dan Trik 
+Fotografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini efek 
+foto</SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><SPAN><SPAN><SPAN><SPAN><SPAN><STRONG>778.9 
+Photography of Specific Subject/Fotografi&nbsp;dengan Subjek 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini karya komprehensif tentang teknik fotografi 
+</SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><SPAN><SPAN><SPAN><SPAN><SPAN><STRONG>779 
+Photographs/Hasil-hasil 
+Fotografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini foto, album foto, kumpulan 
+foto</SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN><SPAN><SPAN><SPAN><SPAN><SPAN><STRONG>779.2 
+Photographs with Human Figures/Foto dengan Bentuk Dasar&nbsp;Figur 
+Manusia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;foto laki-laki, foto perempuan, foto 
+anak-anak<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 704.942&nbsp;untuk seni dengan bentuk dasar figur 
+manusia</SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial 
+size=2><SPAN><SPAN><SPAN><SPAN><SPAN><SPAN><SPAN><SPAN><SPAN><SPAN><SPAN><SPAN><STRONG>779.3 
+Photographs with Nature and Still Life/Foto dengan Bentuk Dasar&nbsp;Alam, Hewan 
+dan 
+Tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;foto 
+pemandangan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 704.943&nbsp;untuk seni dengan bentuk dasar&nbsp;alam, hewan dan 
+tumbuhan</SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

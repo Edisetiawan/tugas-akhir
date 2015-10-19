@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='180 - 189'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>180 - 189 Filsafat Kuno</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>180 - 189 Filsafat Kuno</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><STRONG><FONT face=Arial size=4><EM>Ancient, 
+Medieval, Oriental Philosophy (Filsafat Zaman Kuno, Abad Pertengahan dan 
+Filsafat Timur)</EM></FONT></STRONG></P>
+<P><FONT size=2><FONT face=Arial><STRONG>181&nbsp;Oriental Philosophy/Filsafat 
+Timur<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Lihat 
+juga 921 untuk biografi filsuf</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>181.043 Buddhist Philosophy/Filsafat 
+Buddha&nbsp;</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>181.1 Far East and South Asia 
+Philosophy/Filsafat&nbsp;Timur Jauh dan Asia 
+Selatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Jangan gunakan untuk filsafat Indonesia: kelaskan di nomor 
+181.16<STRONG> </STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>181.11 Philosophy of China/Filsafat 
+China Tiongkok</STRONG></FONT></FONT></P>
+<P><FONT face=Arial size=2><STRONG>181.112 Confucian Philosophy/Filsafat 
+Konfusius<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 299.512&nbsp;untuk Agama Konfusius </FONT></P>
+<P><FONT face=Arial size=2><STRONG>181.114&nbsp;Taoist Philosophy/Filsafat 
+Tao<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 299.514 untuk&nbsp;Agama Tao</FONT></P>
+<P><STRONG><FONT face=Arial size=2>181.119 Philosophy 
+of&nbsp;Korea/Filsafat&nbsp;Korea</FONT></STRONG></P><FONT face=Arial size=2>
+<P><FONT face=Arial size=2><STRONG>181.12 Philosophy 
+of&nbsp;Japan/Filsafat&nbsp;Jepang</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>181.15 Philosophy of&nbsp;Pakistan and 
+Bangladesh/Filsafat&nbsp;Pakistan dan Bangladesh</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>181.16 Philosophy 
+of&nbsp;Indonesia/Filsafat&nbsp;Indonesia<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini filsafat Jawa, 
+Kejawen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk filsafat 
+Pancasila<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 320.509598 untuk ideologi 
+Pancasila<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">330.12 
+untuk ekonomi Pancasila</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>181.17 Philosophy 
+of&nbsp;Philippines/Filsafat&nbsp;Filipina</STRONG></FONT></P>
+<P><STRONG>181.19&nbsp;</STRONG><FONT face=Arial size=2><STRONG>Philosophy 
+of&nbsp;Other Southeast Asia Countries/Filsafat&nbsp;Negara-negara di Asia 
+Tenggara 
+Lainnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 181.19 notasi 591 - 597 <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: filsafat Thailand 181.193, filsafat Malaysia 181.195 
+1</FONT></P>
+<P><STRONG><FONT face=Arial size=2>181.2 Philosophy 
+of&nbsp;Egypt/Filsafat&nbsp;Mesir</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>181.3 Philosophy of&nbsp;Palestine, 
+Israel/Filsafat&nbsp;Palestina, 
+Israel<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan filsafat Yahudi di nomor 181.06</FONT></P>
+<P></FONT><FONT size=2><FONT face=Arial><STRONG>181.4 Philosophy of 
+India/Filsafat 
+India<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini filsafat Hindu Brahma</FONT></FONT></P>
+<P><FONT face=Arial size=2><STRONG>181.45 Yoga/Filsafat 
+Yoga<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 204 untuk yoga ditinjau dari segi ilmu 
+agama&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat untuk <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.7 untuk yoga 
+ditinjau dari segi ilmu kesehatan</SPAN></FONT></P>
+<P><STRONG><FONT face=Arial size=2>181.5 Philosophy of Iran, Persia/Filsafat 
+Iran, Filsafat Persia</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>181.6 Philosophy of Iraq/Filsafat 
+Iraq<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini filsafat Assyria, Babylonia, Chaldea, Mesopotamia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>181.8 Philosophy of Syria and 
+Lebanon/Filsafat Syria, Filsafat&nbsp;Lebanon</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>181.9 Philosophy of Other Areas of 
+Orient/Filsafat di Negara Timur 
+Lainnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini filsafat negara-negara bekas Uni Soviet, filsafat 
+negara-negara Afrika Utara selain Mesir</FONT></P>
+<P><FONT face=Arial size=2><STRONG>181.92 Philosophy of&nbsp;Arabia/Filsafat 
+Arab<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini filsafat Arab Islam</FONT></P>
+<P><FONT face=Arial size=2><STRONG>182&nbsp;Pre Socratic Greek 
+Philosophies/Filsafat&nbsp;Yunani Sebelum 
+Socrates<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini filsafat Ionik, Phythagoras, Eleatic, Hreaclitean, Empedoclean, 
+Democritean, Anaxagorean</FONT></P>
+<P><FONT face=Arial size=2><STRONG>183&nbsp;Sophistic, Socrates, Related 
+Greek&nbsp;Philosophy/Sofistik, Socrates, Filsafat&nbsp;Yunani 
+Terkait<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini filsafat Elian dan Eretrian</FONT></P>
+<P><FONT face=Arial size=2><STRONG>184&nbsp;Platonic&nbsp;Philosophy/Filsafat 
+Plato<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga&nbsp;141.2&nbsp;untuk Neo Platonisme/Platonisme Modern 
+</FONT></P>
+<P><FONT face=Arial 
+size=2><STRONG>185&nbsp;Aristotelian&nbsp;Philosophy/Filsafat 
+Aristoteles<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 149.91&nbsp;untuk Neo Aristotelisme/Aristotelisme 
+Baru</FONT></P>
+<P><FONT face=Arial size=2><STRONG>186&nbsp;Skeptic and Neoplatonic 
+Philosophy/Filsafat&nbsp;Skeptik dan 
+Neoplatonik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga&nbsp;141.2&nbsp;untuk Neo Platonisme/Platonisme 
+Modern</FONT></P>
+<P><STRONG><FONT face=Arial size=2>187&nbsp;Epicurean&nbsp;Philosophy/Filsafat 
+Epikurea</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>188&nbsp;Stoic&nbsp;Philosophy/Filsafat 
+Stoik</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>189&nbsp;Medieval 
+Western&nbsp;Philosophy/Filsafat Barat Abad 
+Pertengahan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini filsafat masa-masa awal Kristen, filsafat Patristik, 
+Scholastic/Skolastik</FONT></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

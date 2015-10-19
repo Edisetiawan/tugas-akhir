@@ -1,0 +1,1258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='790 - 799'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>790 - 799 Olah Raga dan Seni Pertunjukan</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>790 - 799 Olah Raga dan Seni Pertunjukan</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><STRONG><I><SPAN 
+style="FONT-SIZE: 13.5pt; FONT-FAMILY: 'Arial','sans-serif'">Recreational and 
+Performing Arts (Olah Raga&nbsp;dan Seni Pertunjukan)</SPAN></I></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">790.1 Recreational 
+Activities, Games/Aktivitas Rekreasi, Permainan </SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kegiatan yang berhubungan dengan rekreasi dan&nbsp;kegiatan yang bersifat 
+rekreatif<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini permainan pada 
+umumnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Temasuk piknik, pelesir, pergi 
+berlibur<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 175 untuk etika di bidang 
+rekreasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 642.3<STRONG> </STRONG>makanan untuk piknik<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">790.13 Hobby, 
+Hobbies/Hobi, Kegemaran</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini aneka ragam 
+hobi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk 
+mainan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk&nbsp;hobi fotografi; kelaskan di nomor 
+770.2<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga&nbsp;649.5 untuk&nbsp;bermain dengan mainan ditinjau dari 
+segi&nbsp;aktivitas untuk 
+anak<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 688.7 untuk produksi mainan<BR><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">790.2 The Performing 
+Arts/Seni Pertunjukan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 927.9 
+untuk biografi tokoh&nbsp;seni pertunjukan<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791 
+Public Performances/Pertunjukan Umum</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk pertunjukan musik; kelaskan di nomor 
+780.78&nbsp;<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.069 Management of 
+Public Performances/Manajemen Pertunjukan Umum</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.092 
+Entertainers/Penghibur</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.1 Travelling 
+Shows/Pertunjukan Keliling</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;penjual obat keliling, topeng monyet, kuda lumping, 
+pengamen keliling<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.3 
+Circuses/Sirkus</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini sirkus akrobat, trapeze, pertunjukan hewan terlatih, 
+pertunjukan 
+badut<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk pertunjukan qi gong/chi kung<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.43 Motion 
+Pictures, Movies/Bioskop, Movie,&nbsp;Film Hiburan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;film drama, film kartun, film komedi, film cerita boneka, 
+film&nbsp;action, film horor, film fiksi 
+ilmiah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk film 
+3&nbsp;dimensi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan&nbsp;untuk film dokumenter dan film pendidikan; kelaskan di nomor 
+070.18<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jangan 
+gunakan untuk sinematografi/pembuatan dan produksi film; kelaskan di nomor 
+778.53<O:P></O:P><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 688.7 untuk produksi 
+boneka<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 725.8 untuk arsitektur gedung 
+bioskop<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 741.5&nbsp;untuk menggambar kartun 
+animasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 781.54&nbsp;untuk musik untuk film/theme song</SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.437 
+Filmscripts/Skenario Film</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.4375 Film 
+Reviews/Tinjauan Film</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.43092 Movie Actor 
+and Actress/Aktor dan Artis Film</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+pemain film, bintang 
+film<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk penyiar radio, penyiar televisi<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.430233092 
+Directors/Sutradara Film</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.44 Radio 
+Show/Pertunjukan di Radio</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;384.54 untuk&nbsp;siaran 
+radio<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.384 untuk teknik radio<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.45&nbsp;Television 
+Show/Pertunjukan di&nbsp;Televisi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;384.55 untuk&nbsp;siaran 
+radio<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.388 untuk teknik televisi<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.5 Puppetry 
+Show/Pertunjukan Wayang Kulit</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini karya komprehensif tentang wayang kulit dan perdalangan 
+wayang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk dalang wayang 
+kulit<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 792.2 untuk wayang orang<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.6 Pageantry 
+Show/Pertunjukan&nbsp;Parade</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini pawai, 
+arak-arakan&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk cheerleader/pemandu sorak 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 394.5 untuk pawai dan arak-arakan ditinjau dari segi adat 
+istiadat<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">791.8 Animal 
+Performances Show/Pertunjukan Hewan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;sabung ayam, adu banteng, matador, 
+rodeo<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk olah raga balapan hewan; kelaskan di 
+nomor&nbsp;798<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 598.163&nbsp;untuk lomba kicau burung&nbsp;<BR><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">792 
+Stage Presentation, Theater/Seni Pertunjukan Panggung, 
+Teater</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">792.028 
+Acting/Akting</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">792.1 Drama/Drama, 
+Sandiwara</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini drama tragedi,&nbsp;drama 
+religius<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 781.55&nbsp;untuk musik untuk 
+drama<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 808.2 untuk retorik 
+drama<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 812 untuk drama berbahasa Indonesia<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">792.2 Comedy and 
+Melodrama/Komedi dan Melodrama</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini drama humor, parodi, lawak, dagelan, drama misteri, 
+suspense/drama 
+pembunuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk ludruk, lenong, ketoprak, wayang 
+orang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 791.5 untuk wayang 
+kulit<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 808.7 untuk retorik&nbsp;humor,&nbsp;satire dan retorik 
+parodi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 817 untuk humor dan satire berbahasa Indonesia<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">792.3 
+Pantomime/Pantomim</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Pantomim:&nbsp;pertunjukan sandiwara bisu dengan&nbsp;gerak 
+tubuh<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini mime/mimik<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">792.5092 Drama 
+Player/Pemain Drama, Pemain Sandiwara</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+pelawak<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">792.62 Dancing, 
+Choreography/Tari-tarian, Koreografi</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Termasuk 
+penari<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk tarian daerah; kelaskan di nomor 
+793.3<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">792.7 Variety 
+Show/Aneka Ragam Pertunjukan</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini burlesque, kabaret, vaudeville<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">792.78 Theatrical 
+Dancing/Tarian Teatrikal</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini tap dancing<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">792.8 Ballet and 
+Modern Dancing/Balet dan Tarian Modern</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelaskan 
+di sini&nbsp;break dance/tari 
+kejang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk pemain balet, breakdancer<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">792.9 Stage 
+Productions/Produksi Seni Pertunjukan Panggung</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini pembuatan naskah/script cerita, deskripsi dan pedoman tata 
+setting 
+panggung<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk kritik dan apresiasi seni pertunjukan panggung<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">793 
+Indoor Game and Amusements/Permainan dalam Ruangan, Hiburan dalam 
+Ruangan</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">793.2 Parties dan 
+Entertainment/Pesta dan Hiburan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini pesta anak-anak, pesta ulang 
+tahun<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 392.5 untuk adat istiadat pesta 
+pernikahan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 641.568 untuk masakan 
+pesta<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 646.4 untuk kostum pesta<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">793.3 Folk 
+Dancing/Tari-tarian Daerah</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini tarian rakyat, tarian 
+nasional<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai 398 untuk 
+folklor<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 781.55&nbsp;untuk musik untuk tarian<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">793.319 Geographic 
+Treatment of Folk Dancing/Tari-tarian Daerah di Lokasi 
+Tertentu</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Tambahkah nomor dasar 793.319 notasi 001 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM><SPAN style="FONT-FAMILY: 'Arial','sans-serif'">Contoh</SPAN></EM>: tarian 
+daerah dari Jerman 793.31943<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">793.319598 Folk 
+Dancing of Indonesia/Tari-tarian Daerah&nbsp;dari Indonesia</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Kelaskan di sini&nbsp;tari-tarian dari berbagai daerah di 
+Indonesia&nbsp;(tari pendhet, tari saman, tari remo, dan 
+lain-lain)<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">793.4 Games of 
+Action/Permainan dengan Gerakan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+permainan tradisional (kelereng, lompat tali, congklak/dakon, gobak sodor, dan 
+lain-lain)<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">793.7 Games not 
+Characterized by Action/Permainan yang Tidak Dibatasi 
+Gerakan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+puzzle, teka-teki silang/TTS, scrabble<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">793.734 
+Anagrams/Anagram</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">793.8 Magic and 
+Related Activities/Permainan Sulap dan&nbsp;Aktivitas 
+Terkait</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+sulapan kartu dan berbagai macam trik sulapan, juggling, ventriloquism/bicara 
+dalam 
+perut<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 795.4 untuk permainan kartu<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">793.9 Other Indoor 
+Diversions/Hiburan dalam Ruangan Lainnya</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+permainan perang-perangan/permainan war zone<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">794 
+Indoor Games of Skill/Permainan Ketangkasan dalam 
+Ruangan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 927.9 
+untuk biografi tokoh olah raga<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">794.1 
+Chess/Catur</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+strategi dan taktik permainan catur, turnamen dan kejuaraan 
+catur<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">794.2 
+Checkers/Dam-daman</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">794.3 Darts/Lempar 
+Anak Panah</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">794.6 
+Bowling/Bowling</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">794.72 
+Billiards/Billiard, Bola Sodok</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+pool, snooker<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">794.75 Pinball 
+Games/Pinball</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">794.8 Electronic 
+Game/Permainan Elektronik</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+permainan video game, arcade game, gamewatch, play 
+station<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 005.5 untuk game komputer<O:P></O:P></SPAN></P>
+<P><B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">795 Game 
+of Chance/Permainan 
+Untung-untungan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+judi, sistem bertaruh dan pertaruhan, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga<SPAN><STRONG> </STRONG>364.172<STRONG> </STRONG></SPAN>untuk 
+perjudian ditinjau dari segi permasalahan moral<O:P></O:P></SPAN></P>
+<P><B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">795.1 
+Game with Dice/Permainan dengan 
+Dadu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+backgammon, permainan ular tangga, permainan monopoli<O:P></O:P></SPAN></P>
+<P><B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">795.2 
+Roulette/Rolet, Rollet</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">795.3 
+Games with Numbers/Permainan dengan 
+Angka-angka<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+bingo, domino, mahjong, lotere, lotto, sudoku<O:P></O:P></SPAN></P>
+<P><B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">795.4 
+Card Games/Permainan 
+Kartu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+cribbage, poker, bridge, trump/truf, rummy/remi, canasta, baccarat, faro, 
+blackjack, 
+heart,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+pinochle, 
+solitaire<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 793.8 untuk sulapan kartu<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796 
+Athletic and Outdoor Sports/Atletik dan Olah Raga Luar 
+Ruangan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini untuk atletik saja<O:P></O:P></SPAN></P>
+<P><B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.01 
+Philosophy and Theory of Sports/Filsafat dan Teori Olah 
+Raga<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat 
+juga<STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'"> 175 untuk etika 
+olah raga</SPAN></STRONG><BR><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.1 untuk program keamanan terhadap kecelakaan olah 
+raga</SPAN></STRONG><B><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B>Lihat juga<STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'"> 617.1 untuk 
+cedera olah raga ditinjau dari segi ilmu 
+kedokteran</SPAN></STRONG><B><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B>Lihat juga 646.4<B> </B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'">untuk konstruksi 
+pakaian olah 
+raga<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 688.7 untuk produksi alat-alat olah 
+raga</SPAN></STRONG><O:P></O:P></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>796.092 
+Athletes/Atlet<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">927.9 untuk biografi 
+atlet</SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></P>
+<P><B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.03 
+<STRONG><SPAN style="FONT-FAMILY: 'Arial','sans-serif'">Dictionaries and 
+Encyclopedia of Sports/Kamus&nbsp;Olah Raga,&nbsp;Ensiklopedia&nbsp;Olah 
+Raga</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.04 General Kinds 
+of Sports/Jenis-jenis Umum Olah Raga</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini olah raga untuk amatir, olah raga untuk professional, olah raga untuk 
+penyandang 
+cacat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 305.908 orang cacat ditinjau dari segi 
+sosiologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 371.9 untuk pendidikan untuk orang cacat</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.05 General 
+Publications of Sports/Terbitan Berseri Olah Raga, Berkala&nbsp;Olah 
+Raga</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"> <BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+majalah dan jurnal olah raga<O:P></O:P></SPAN></P>
+<P><B><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.06 
+Organizations, Management/Organisasi Olah Raga,&nbsp;Manajemen Olah 
+Raga<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+organisasi olah raga&nbsp;internasional&nbsp;(<EM><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">contoh</SPAN></EM>: FIFA,&nbsp;FIA, 
+IBF, WBA, WBC dan 
+sebagainya),<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+organisasi olah raga di Indonesia (<EM><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">contoh</SPAN></EM>: PSSI, PBSI, IPSI, 
+Percasi, dan 
+sebagainya)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk stadion dan fasilitas-fasilitas olah 
+raga&nbsp;<B><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 725.8 
+untuk arsitektur stadion dan gedung olah 
+raga</SPAN></STRONG><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.07 Education, 
+Research of Sports/Pendidikan Olah Raga, Riset Olah Raga</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini pendidikan pelatih dan kepelatihan olah raga</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.1 Miscellaneous 
+Games/Aneka Ragam Olah Raga Permainan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini olah raga permainan laying-layang/layangan</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.2 Games with 
+Equipment/Permainan Olah Raga yang Menggunakan Alat</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini frisbee, marble, yo-yo, roller skating, skateboard, sepatu 
+roda</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.312 Handball/Bola 
+Tangan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan bola tangan</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.323 
+Basketball/Bola Basket</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan bola basket</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.325 
+Volleyball/Bola Voli&nbsp;&nbsp; </SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan bola voli</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk voli pantai</SPAN></STRONG><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.332 American 
+Football/Sepak Bola Amerika</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan sepak bola 
+Amerika</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk sepak bola; kelaskan di 
+796.334</SPAN></STRONG><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.333 
+Rugby/Rugby</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan rugby</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.334 Soccer/Sepak 
+Bola, Bola Kaki&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan sepak bola</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk futsal, sepak takraw</SPAN></STRONG><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.33464 Cup 
+Competition/Kompetisi Sepak Bola</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini kompetisi dan liga sepak bola tingkat lokal, tingkat 
+nasional&nbsp;sampai dengan&nbsp;tingkat dunia</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk World Cup/Piala Dunia, Piala Eropa, Piala Asia,&nbsp;Liga Champion, 
+Piala Libertadores, dan lain-lain</SPAN></STRONG><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.342 
+Tennis/Tenis</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan tenis</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.343 
+Squash/Squash</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan squash</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.345 
+Badminton/Bulu Tangkis</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan bulu tangkis</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.346 Table 
+Tennis/Tenis Meja</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan tenis meja</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.352 
+Golf/Golf</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan golf</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.353 
+Polo/Polo</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan polo</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk polo air; kelaskan di nomor 
+797.25</SPAN></STRONG><STRONG><SPAN style="FONT-FAMILY: 'Arial','sans-serif'"> 
+</SPAN></STRONG><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.355 
+Hockey/Hoki</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan hoki</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk hoki es; kelaskan di 
+796.962</SPAN></STRONG><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.357 
+Baseball/Baseball</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan baseball</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk kasti, softball</SPAN></STRONG><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.358 
+Criket/Kriket</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan kriket</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.41 Weight 
+Lifting/Angkat Berat, Angkat Besi, Angkat Beban</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.42 Track and 
+Field/Olah Raga Lintasan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan permainan olah raga 
+lintasan</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.422 Sprints/Lari 
+Cepat Jarak Pendek</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.423 
+Middle-distance Races/Lari Jarak&nbsp;Menengah</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini lari 
+10 K<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.424 Distance 
+Races/Lari Jarak Jauh</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelaskan 
+di sini&nbsp;marathon/maraton, triathlon/triatlon<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.426 Hurdles/Lari 
+Rintangan</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.428&nbsp;Cross-Country 
+Race/Lari Lintas Alam</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.429 Race 
+Walking/Jalan Cepat</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.432 
+Jumping/Lompat</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+lompat jauh, lompat tinggi, triple jump, pole vault/lompat 
+galah<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.435 
+Throwing/Lempar</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+lempar lembing, lempar cakram, lempar bumerang<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.44 Sport 
+Gymnastics/Senam</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+senam lantai, senam palang<STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">, 
+</SPAN></STRONG>senam&nbsp;kuda-kuda<STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.47 
+Acrobatics/Olah Raga Akrobat</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+trampolin, parkour<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.48 Olympic 
+Games/Pertandingan Olimpiade</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan 
+di sini taktik, strategi dan aturan olimpiade</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.51 Walking/Olah 
+Raga Berjalan</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+backpacking, hiking<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.522 
+Mountaineering/Olah Raga Mendaki Gunung</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini rock 
+climbing, wall climbing/panjat dinding, caving/susur gua<BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG>Lihat juga 369 untuk perkumpulan pecinta 
+alam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga </SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-size: 11.0pt">910.4 
+untuk kisah<STRONG><SPAN style="FONT-FAMILY: 'Arial','sans-serif'"> 
+</SPAN></STRONG>ekspedisi ke gunung</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><SPAN><STRONG>796.522092 Mountaineers/Pendaki Gunung</STRONG></SPAN></P>
+<P><SPAN><STRONG>796.54 Camping/Kemping, Kemah, 
+Bekemah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 642.3 untuk makanan bekal kemping<O:P></O:P></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>796.58 
+Orienteering, Outbond/Kegiatan Luar 
+Ruangan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 371.36 untuk outbond ditinjau dari segi 
+pendidikan</SPAN><O:P></O:P></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.62 Bicycle 
+Racing/Balap Sepeda</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini rali 
+sepeda<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: Tour de France, Tour de Java, dan 
+lain-lain<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.63 Mountain 
+Biking, All-terrain Cycling/Sepeda Lintas Alam</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.72 Automobile 
+Racing/Balap Mobil</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+balap Formula 1, NASCAR/stock car 
+race<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 629.2 untuk teknik otomotif<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.73</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;<STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">Automobile Rally/Reli 
+Mobil</SPAN></STRONG><B><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></B>Kelaskan di sini rally Paris - Dakkar, rally 
+Dakkar<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.75 Motorcycle 
+Racing/Balap Motor</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+motocross, balap motoGP, balap superbike/WSBK<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.76 Karting/Balap 
+Go Kart</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.8 Martial 
+Arts/Olah Raga Bela Diri</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+silat, pencak silat<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.812 
+Wrestling/Gulat</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+freestyle wrestling/gulat bebas, sumo<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.815 
+Jujitsu/Jujitsu</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.8152 
+Judo/Yudo</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.8153 
+Karate/Karate</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.8154 
+Aikido/Aikido</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.8155 
+Kungfu/Kungfu, Kung Fu</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.8159 
+Kempo/Kempo</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.83 
+Boxing/Tinju</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.84 
+Fencing/Anggar</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+kendo, bojutsu<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.9 Snow 
+Sports/Olah Raga Salju</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+snowboarding<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.91 Ice 
+Skating/Ice Skating</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.93 
+Skiing/Ski</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Jangan gunakan untuk 
+ski air; kelaskan di nomor 797.35<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">796.962 Ice 
+Hockey/Hoki Es</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797 
+Air Sports/Olah Raga Air</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797.1 Boating/Olah 
+Raga Berperahu</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+rafting, canoeing, 
+kayaking<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 623.88&nbsp;untuk teknik kehalian berlayar<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797.14 Boat 
+Racing/Balap Motor Boat</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797.2 Swimming and 
+Diving/Olah Raga Renang, Berenang dan Menyelam</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+scuba, snorkeling<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797.25 Water 
+Polo/Polo Air</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797.32 Surfing/Olah 
+Raga Selancar, Berselancar</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797.35 Water 
+Skiing/Ski Air</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797.37 Jet Skiing/Jet 
+Ski</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797.5 Air Sport/Olah 
+Raga Udara</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+bungee jumping<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797.51 Ballon 
+Fliying/Olah Raga Balon Udara</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797.54 
+Aerobatics/Aerobatik</SPAN></STRONG></P>
+<P><SPAN><STRONG>797.55 Gliding/Glider, 
+Gantole<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini paralayang<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">797.56 
+Parachuting/Terjun Payung, Parasut</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">798.2 
+Horsemanship/Olah Raga Berkuda</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 599.6 
+untuk kuda ditinjau dari segi 
+zoologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 636.1 untuk peternakan kuda<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">798.4 Horse 
+Racing/Balap Kuda, Pacuan Kuda</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">798.8&nbsp;Other 
+Animals&nbsp;Racing/Balapan Hewan Lainnya</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+balap anjing, balap rusa kutub, dan 
+sebagainya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk karapan sapi<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">799.1 Fishing/Olah 
+Raga Memancing</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 639.2 
+untuk peternakan ikan untuk tujuan 
+komersial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;688.7 untuk produksi alat memancing<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">799.2 Hunting/Olah 
+Raga Berburu</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 639.1 untuk&nbsp;berburu untuk tujuan 
+komersial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;688.7 untuk produksi alat-alat untuk 
+berburu<O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">799.3 Shooting/Olah 
+Raga Menembak</SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><O:P></O:P></SPAN></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">799.32 
+Archery/Panahan</SPAN></STRONG></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

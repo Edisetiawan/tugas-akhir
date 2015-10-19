@@ -1,0 +1,449 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='020 - 029'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>020 - 029 Perpustakaan dan Ilmu Informasi</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>020 - 029 Perpustakaan dan Ilmu Informasi</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><FONT face=Arial size=2><STRONG><FONT face=Arial 
+size=4><EM>Library and Information Science&nbsp;(Perpustakaan dan Ilmu 
+Informasi)</EM></FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>020 Library and Information 
+Sciences/Perpustakaan dan Ilmu 
+Informasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini ilmu arsip, ilmu 
+kearsipan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 658.4038 untuk manajemen informasi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>020.1 Philosophy and Theory of Library and 
+Information Sciences/Filsafat dan Teori Ilmu 
+Perpustakaan,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Filsafat dan Teori Ilmu 
+Informasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini psikologi 
+perpustakaan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P><STRONG>020.2 Miscellany of LibrariesAneka Ragam tentang Ilmu Perpustakaan 
+dan Ilmu 
+Informasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pengolahan dan analisa data di bidang perpustakaan dan 
+ilmu informasi</P>
+<P><STRONG>020.3&nbsp;</STRONG><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>Dictionaries 
+and Encyclopedia of Library Sciences/Kamus&nbsp;Ilmu Perpustakaan dan Ilmu 
+Informasi, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Ensiklopedia Ilmu Perpustakaan dan Ilmu Informasi</STRONG></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>020.5 
+General Publications/Terbitan Berseri, Berkala Umum&nbsp;Ilmu Perpustakaan dan 
+Ilmu 
+Informasi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini majalah dan jurnal ilmu perpustakaan dan ilmu 
+informasi</SPAN></P></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>020.6 
+Organization of Libraries/Organisasi di Bidang 
+Perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini organisasi perpustkaan internasional, regional dan 
+nasional<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: International Federation of Library Associations and 
+Institutions, Ikatan Pustakawan 
+Indonesia/IPI,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;ATPUSI<STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><FONT face=Arial 
+size=2><STRONG>020.7&nbsp;Education and&nbsp;Related Topics/Pendidikan, 
+Penelitian dan Topik Terkait&nbsp;tentang 
+Perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pelatihan perpustakaan, training 
+perpustakaan</FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>020.72 
+Library 
+Research/Riset&nbsp;Perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini statistik perpustakaan</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>020.9 
+History of Libraries/Sejarah 
+Perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Termasuk sejarah arsip dan kearsipan</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>020.92 
+Archivists/Arsiparis<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 920.2 untuk biografi arsiparis</SPAN></P>
+<P><FONT face=Arial size=2><STRONG>021&nbsp;Relationship of 
+Libraries/Hubungan-hubungan Perpustakaan, Arsip dan 
+Kearsipan,&nbsp;Pusat&nbsp;Informasi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 651.5 untuk arsip dan kearsipan ditinjau dari segi manajemen 
+perkantoran</FONT></P>
+<P><FONT face=Arial size=2><STRONG>021.2&nbsp;Relationship with the 
+Community/Hubungan Perpustakaan dengan Masyarakat</STRONG></FONT></P>
+<P><FONT face=Arial size=2><FONT size=3><FONT 
+size=2><STRONG>021.3&nbsp;Relationship with&nbsp;Other Educational 
+Institutions/Hubungan Perpustakaan dengan Lembaga 
+Pendidikan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini hubungan perpustakaan dengan 
+museum</FONT></FONT></FONT>&nbsp;</P>
+<P><FONT face=Arial size=2><FONT face=Arial 
+size=2><STRONG>021.6&nbsp;Cooperation and Networks/Kerja&nbsp;Sama dan Jaringan 
+Antar&nbsp;Perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini bibliographic centers, union 
+catalogs</FONT></FONT></P><FONT face=Arial size=2>
+<P><FONT face=Arial size=2><FONT face=Arial size=2><STRONG>021.7&nbsp;Promotion 
+of Libraries/Promosi 
+Perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini humas 
+perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 659.2 untuk humas ditinjau dari segi ilmu manajemen</FONT></FONT></P>
+<P><FONT face=Arial size=2><FONT face=Arial 
+size=2><STRONG>021.8&nbsp;Relationships with Government/Kerja&nbsp;Sama 
+Perpustakaan dengan 
+Pemerintah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini bantuan pemerintah untuk 
+perpustakaan</FONT></FONT></P>
+<P><FONT face=Arial size=2><STRONG>022&nbsp;Administration&nbsp;of The Physical 
+Plant/Administrasi dan Fisik 
+Perpustakaan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini ruang dan&nbsp;gedung perpustakaan, rak buku&nbsp;dan meja baca 
+perpustakaan, furnitur 
+perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 
+727.8 untuk arsitektur gedung perpustakaan</SPAN></P></FONT>
+<P><STRONG>023&nbsp;Personnel Administration/Personalia 
+Perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan&nbsp; di sini &nbsp;manajemen personalia perpustakaan,&nbsp; 
+job deskripsi perpustakaan,&nbsp; peraturan 
+perpustakaan,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+kode etik 
+perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;peraturan 
+fungsional&nbsp;pustakawan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 658.3 untuk manajemen 
+personalia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 920.2 untuk biografi 
+pustakawan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </P>
+<P><FONT face=Arial size=2><STRONG>023.2 
+Librarian/Pustakawan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;konsultan perpustakaan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>025&nbsp;Operations, Archieves, Information 
+Centers/Operasional Perpustakaan, Arsip&nbsp;dan&nbsp;Pusat 
+Informasi,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Pelayanan dan Pengelolaan 
+Perpustakaan<BR>&nbsp;</STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelaskan 
+di sini 
+dokumentasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;610.28 untuk&nbsp;dokumentasi 
+medis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 651.5 untuk dokumen ditinjau dari segi manajemen 
+perkantoran</FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>025.000285 Libraries 
+Automation/Automasi 
+Perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sistem automasi/otomasi perpustakaan, 
+sistem&nbsp;informasi&nbsp;perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;komputerisasi perpustakaan dan ilmu informasi, komputerisasi 
+arsip<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh: </EM>Senayan Library&nbsp;Management System/SLiMS, LASer/Library 
+Automation Service, dan lain-lain</FONT></FONT></P>
+<P><STRONG>025.042 Digital Library/Perpustakaan 
+Digital<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini situs web perpustakaan</P>
+<P><FONT size=2><FONT face=Arial><STRONG>025.1&nbsp;Administration and Library 
+Management/Administrasi dan Manajemen 
+Perpustakaan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini keuangan 
+perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk reprografi</FONT></FONT></P>
+<P><FONT face=Arial size=2><STRONG>025.2 Acquisitions and Collection 
+Developtment/Akuisisi dan Pengembangan 
+Koleksi&nbsp;Perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini akuisisi koleksi bahan pustaka, sensor dan weeding 
+koleksi bahan pustaka</FONT></P>
+<P><FONT face=Arial size=2><STRONG>025.3 Bibliographic Analysis and 
+Control/Bibliografi Analisis dan Kontrol 
+Perpustakaan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini katalogisasi, mengindeks, penyusunan kartu 
+(filling)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk ISBN (Internasional Standard Book Numbers), ISSN (Internasional 
+Standard&nbsp;Serial 
+Numbers),<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ISBD (International Standard Bibliographic Description)</FONT></P>
+<P><FONT face=Arial size=2><STRONG>025.31 Library Catalog/Katalog 
+Perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini bentuk katalog, struktur katalog, machine readable 
+record 
+format<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk kartu katalog, katalog online, online public access catalog/OPAC 
+</FONT></P>
+<P><FONT face=Arial size=2><STRONG>025.342 Clippings, Broadsides, 
+Pamphlets/Kliping, Selebaran, Pamflet</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>025.4&nbsp;Subject Analysis and 
+Control/Subjek Analisis dan Kontrol 
+Perpustakaan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini sistem klasifikasi umum, penentuan tajuk subjek</FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>025.428 
+Shelflisting/Shelfing</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>025.431 Dewey Decimal Classification, 
+DDC/Klasifikasi Persepuluhan Dewey</STRONG></FONT></FONT></P>
+<P><STRONG>025.432&nbsp;Universal Decimal Classification, UDC/Klasifikasi 
+Persepuluhan Universal</STRONG></P>
+<P><FONT size=2><FONT face=Arial><STRONG>025.433&nbsp;Library of 
+Congress&nbsp;Classification, LCC/Klasifikasi Library of Congress&nbsp; 
+</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>025.434&nbsp;Bliss 
+Bibliographic&nbsp;Classification, BBC/Klasifikasi&nbsp;Bibliografi 
+Bliss&nbsp;</STRONG></FONT></FONT></P>
+<P><STRONG>025.435&nbsp;Colon&nbsp;Classification, 
+CC/Klasifikasi&nbsp;Colon</STRONG></P>
+<P><FONT size=2><FONT face=Arial><STRONG>025.46&nbsp;Classification of Specific 
+Subject/Klasifikasi&nbsp;Khusus<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Termasuk sistem klasifikasi perluasan Agama Islam</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>025.5&nbsp;Service to Users/Layanan 
+Kepada 
+Pengguna&nbsp;Perpustakaan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini layanan referensi dan informasi perpustakaan</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>025.6&nbsp;Circulation 
+Services/Layanan&nbsp;Sirkulasi 
+Perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Layanan peminjaman, pengembalian dan perpanjangan koleksi 
+perpustakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk interlibrary loans</FONT></FONT></P>
+<P><FONT face=Arial size=2><STRONG>025.8&nbsp;Preservation of 
+Collections/Pemeliharaan Bahan 
+Pustaka<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini preservasi koleksi bahan pustaka</FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>026&nbsp;Specific Subjects Libraries, 
+Archeves, Information Centers Devoted to Specific Subjects and 
+Disciplines/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Perpustakaan, Kearsipan, Pusat Informasi&nbsp;untuk&nbsp;Subjek Disiplin 
+Tertentu</STRONG>&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tambahkan 
+nomor dasar 026 notasi 001 - 
+999<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>Contoh</EM>: 
+perpustakaan kedokteran 021.61, perpustakaan&nbsp;Agama Islam&nbsp;021.297, dan 
+seterusnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 2X6.8 untuk perpustakaan dan museum Islam</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>027&nbsp;General Libraries, General 
+Archieves, Information Centers Devoted to&nbsp;General Subjects and 
+Disciplines/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Perpustakaan, Kearsipan, Pusat Informasi untuk Disiplin Ilmu secara 
+Umum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 351 untuk kearsipan negara</FONT></FONT></P>
+<P><STRONG>027.01 - 027.09 Geographic Treatment of Libraries/Perpustakaan 
+di&nbsp;Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Tambahkan 
+nomor dasar 027.0 notasi 1 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk perpustakaan di Indonesia; kelaskan di nomor&nbsp;027.4 - 
+027.8 sesuai dengan 
+jenisnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: perpustakaan di Perancis 020.044</P><FONT face=Arial size=2>
+<P><FONT size=2><FONT face=Arial><STRONG>027.1&nbsp;Private and Family 
+Libraries/Perpustakaan Pribadi dan Perpustakaan 
+Keluarga</STRONG></FONT></FONT></P>
+<P><STRONG>027.3 Rental Libraries/Penyewaan 
+Buku<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini penyewaan komik</P>
+<P><FONT size=2><FONT face=Arial><STRONG>027.4&nbsp;Public 
+Libraries/Perpustakaan Publik, Perpustakaan Umum,&nbsp;Taman 
+Bacaan&nbsp;Rakyat</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>027.5&nbsp;Government 
+Libraries/Perpustakaan 
+Pemerintah<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan&nbsp;di sini perpustakaan nasional, perpustakaan provinsi, perpustakaan 
+daerah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Perpustakaan Nasional Republik Indonesia</FONT></FONT></P>
+<P><STRONG>027.6&nbsp;Libraries for Special Groups and 
+Organizations/Perpustakaan&nbsp;untuk Kelompok atau Organisasi 
+Tertentu<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk perpustakaan anak, perpustakaan, perpustakaan&nbsp;penjara, 
+perpustakaan untuk bisnis dan 
+industri,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+perpustakaan keagamaan (perpustakaan masjid, perpustakaan 
+gereja),&nbsp;perpustakaan rumah sakit</P>
+<P><STRONG>027.7&nbsp;College and University 
+Libraries/Perpustakaan&nbsp;Perguruan Tinggi dan Universitas</STRONG></P>
+<P><STRONG>027.8&nbsp;School Libraries/Perpustakaan&nbsp;Sekolah</STRONG></P>
+<P><FONT face=Arial size=2><STRONG>028&nbsp;Use of Other Information 
+Media/Membaca</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>028.1&nbsp;Reviews/Review Buku, Tinjauan 
+Buku, Resensi 
+Buku<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 002 untuk deskripsi buku</FONT></P>
+<P><FONT face=Arial size=2><STRONG>028.5&nbsp;Reading and Use of Other 
+Information Media by Young People/Bacaan Anak dan 
+Remaja<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini buku untuk anak, buku untuk remaja</FONT></P>
+<P><FONT face=Arial size=2><STRONG>028.9&nbsp;Reading&nbsp;Interest and 
+Habits/Kebiasaan Membaca, Minat 
+Baca<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 372.4 untuk&nbsp;belajar 
+membaca<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 418.4 untuk membaca dalam bahasa Indonesia</FONT></P>
+<P><STRONG>029 Unassigned/Belum 
+Digunakan</STRONG></FONT></FONT></P></FONT></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

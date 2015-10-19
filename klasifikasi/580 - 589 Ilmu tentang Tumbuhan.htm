@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='580 - 589'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>580 - 589 Ilmu Tumbuhan</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>580 - 589 Ilmu Tumbuhan</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><STRONG><FONT face=Arial size=4><EM>Plants (Ilmu 
+Tumbuhan, Ilmu Tanaman)</EM></FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>580 Plants, Botany/Tumbuh-tumbuhan, Tanaman, 
+Botani, 
+Flora<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Botani: Ilmu yang mempelajari tentang tumbuhan, Ilmu yang mempelajari 
+tentang 
+tanaman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini karya-karya tentang tumbuh-tumbuhan embryophyta/embriopita, 
+tracheophytes/traceopita, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+spermatophyta/spermatopita, angiospermae, vegetasi</FONT></P><FONT face=Arial 
+size=2><FONT face=Arial size=2>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>580.285 
+Data Processing and Analysis of Botany/Pengolahan dan Analisa Data 
+di&nbsp;Bidang&nbsp;Botani<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini proses komputerisasi botani</SPAN></P><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'">
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>580.3 
+Dictionaries and Encyclopedia of Botany/Kamus Botani, Ensiklopedia 
+Botani<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;kamus tumbuhan, ensiklopedia tumbuhan, kamus 
+tanaman, ensiklopedia 
+tanaman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk kamus flora, ensiklopedia flora</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>580.5 
+General Publications of Botany/Terbitan Berseri Botani, Berkala 
+Umum&nbsp;Botani<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;majalah tumbuhan, jurnal tumbuhan, majalah tanaman, jurnal 
+tanaman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk majalah&nbsp;botani, jurnal botani, majalah flora, 
+jurnal&nbsp;flora</SPAN></P></SPAN>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>580.6 
+Organization and Management of Botany/Organisasi dan Manajemen di Bidang 
+Botani</STRONG></SPAN></P></FONT>
+<P><FONT face=Arial size=2><STRONG>580.7 Research of Plants/Riset tentang Ilmu 
+Tumbuhan, Riset tentang Ilmu 
+Tanaman<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini eksperimen botani, percobaan botani, eksperimen flora, 
+percobaan 
+flora<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk metode statistik botani, metode statistik flora</FONT></FONT><FONT 
+face=Arial size=2><STRONG></P></STRONG></FONT>
+<P><FONT face=Arial size=2><STRONG>580.73 Botanical Garden/Kebun Botani, Kebun 
+Raya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 712.5 untuk perencanaan kebun raya<FONT face=Arial 
+size=2>&nbsp;</FONT><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 580.73 notasi 1 - 9&nbsp;dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: kebun botani di Jerman 580.7343</FONT></P>
+<P><FONT face=Arial size=2><STRONG>580.73598 Botanical Garden of Indonesia/Kebun 
+Botani di 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG><EM>Contoh</EM>: Kebun Raya Bogor</FONT></P>
+<P><FONT face=Arial size=2><STRONG>580.92 Botanists/Ahli Botani, Ahli Ilmu 
+Tumbuhan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 925.8 untuk biografi ahli ilmu tentang tumbuhan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>581 Specific Topics of Plants/Topik Khusus 
+tentang Perkembangan Tumbuhan, Perkembangan 
+Tanaman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini tumbuhan nontaksonomik khusus</FONT></P>
+<P><FONT face=Arial size=2><STRONG>581.3 Genetics and Evolution of 
+Plants/Genetika dan Evolusi Tumbuhan, Genetika dan Evolusi 
+Tanaman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 576 untuk&nbsp;genetika&nbsp;dan 576.8 untuk evolusi 
+ditinjau dari segi biologi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>581.4 Adaptation of Plants/Adaptasi Tumbuhan, 
+Adaptasi 
+Tanaman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 578.4 untuk adaptasi ditinjau dari segi biologi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>581.464 Fruits Plants/Tumbuhan Buah-buahan, 
+Tanaman 
+Buah-buahan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga mulai 634 untuk perkebunan 
+buah-buahan<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 641.34&nbsp;untuk&nbsp;buah-buahan ditinjau dari segi 
+makanan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">664.8 untuk teknologi 
+pembuatan makanan dari buah-buahan</SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>581.6 Nontaxonomic Kinds of Plants/Jenis 
+Tumbuhan Nontaksonomik, Jenis Tanaman 
+Nontaksonomik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini economic botany/tumbuhan yang bernilai ekonomis, 
+tumbuhan langka, tanaman 
+langka<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk myrmecodia/sarang semut, rosella, ling zhe/daun dewa, buah merah, 
+curcuma/temu lawak, 
+pace/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+mengkudu, habbatus sauda/jintan hitam, 
+sambiloto<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">344.04&nbsp;untuk 
+undang-undang perlindungan tanaman 
+langka</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 615 untuk apotek ditinjau dari segi kedokteran umum</FONT></P>
+<P><FONT face=Arial size=2><STRONG>581.7 Plant Ecology/Ekologi Tumbuhan, 
+Ekologi&nbsp;Tanaman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 577 untuk ekologi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>581.9 Plants by specific Localities/Tumbuhan 
+di Lokasi Tertentu, Tanaman di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 581.9 notasi&nbsp;1 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh Tabel 2 notasi 1 - 3</EM>: tumbuhan air tawar/tanaman air tawar 
+581.916 (teratai, enceng 
+gondok)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh Tabel 2 notasi 3 - 9</EM>: tumbuhan di Argentina 581.982</FONT></P>
+<P><STRONG><FONT face=Arial size=2>581.598 Plants of Indonesia/Tumbuhan di 
+Indonesia, Tanaman&nbsp;di Indonesia&nbsp;&nbsp;&nbsp; </FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>582 Specific Vegetative 
+Characteristics/Tumbuhan, Tanaman dengan Karakteristik 
+Khusus&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini tumbuhan berbunga, tanaman berbunga</FONT></P>
+<P><FONT face=Arial size=2><STRONG>582.1 Woody Plants/Tumbuhan Berkayu, Tanaman 
+Berkayu<BR></STRONG></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 561 untuk fosil 
+kayu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 575.4 untuk kayu</FONT></P>
+<P><FONT face=Arial size=2><STRONG>582.12 Herbaceous/Tumbuhan Herbal, Tanaman 
+Herbal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini tanaman obat, tumbuhan obat,&nbsp;tumbuhan jamu, 
+tanaman jamu, apotek 
+hidup<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 635.7 untuk pertanian tanaman herbal</FONT></P>
+<P><FONT face=Arial size=2><STRONG>582.13 Interdisciplinary Works on Wild 
+Flowers/Karya tentang Bunga-bungaan 
+Liar<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini puspa 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 635.9 untuk bunga dan tanaman hias</FONT></P>
+<P><FONT face=Arial size=2><STRONG>583 Magnoliopsida, 
+Dicotyledons/Magnoliopsida, 
+Dikotil<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Dikotil: tumbuhan berbiji ganda, tanaman berbiji 
+ganda<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 561.3 untuk fosil magnoliopsida, fosil dikotil</FONT></P>
+<P><FONT face=Arial size=2><STRONG>583.2 Magnoliidae/Magnoliidae, Pohon 
+Berbunga<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini refflesiacae/bunga rafflesia, bunga bangkai, bunga 
+monster, magnoliales, laurales, 
+piperales,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+piperaceae/merica, aristolochiaceae, nymphaeaceae, tulip</FONT></P>
+<P><FONT face=Arial size=2><STRONG>583.3 Ranunculidae/Ranunculidae, Pohon dengan 
+Daun 
+Terbagi-bagi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini illiciales, nelumbonales, lotus, magnolia vine, 
+ranunculales, papaverales, sarraceniales</FONT></P>
+<P><FONT face=Arial size=2><STRONG>583.4 
+Hamamelididae/Hamamelididae<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini balanopales, urticales, marijuana/mariyuana, fagales, 
+cork oak, betulades, hazelnuts, walnut, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+juglandales,&nbsp;butternut</FONT></P>
+<P><FONT face=Arial size=2><STRONG>583.5 
+Caryophyllidae/Caryophyllidae<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini plumbaginales, sea lavenders, caryophyllales, beets, 
+bougainvilleas/bougenvil,&nbsp;cactaceae,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+lithops, kaktus, polygonaceae</FONT></P>
+<P><FONT face=Arial size=2><STRONG>583.6 
+Dilleniidae/Dilleniidae<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini dilleniales, paeoniales/peony, theales,&nbsp;violales, 
+passiflorales, begoniales/begonia, 
+tamaricales,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;cucurbitales, capparales, salicales, ercales,&nbsp;ebenaceae, primulaceae, 
+malvales, malvaceae, euphorbiales, 
+kapas<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 633.5 untuk&nbsp;kapas ditinjau dari segi tanaman 
+perkebunan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>583.7 
+Rosidae/Rosidae<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini saxifragales, rosales, mawar, fabales, nepenthales, 
+myrtales, eucalyptus, rutales, 
+sapindales,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;geraniales</FONT></P>
+<P><FONT face=Arial size=2><STRONG>583.8 Other Rosidae/Rosidae Jenis 
+Lainnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini connarales, cornaceae, araliaceae/ginseng, 
+sarsaparilla, celastrales, rhamnales, 
+oleaceae,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+olive, jasmine/melati, proteales</FONT></P>
+<P><FONT face=Arial size=2><STRONG>583.9 
+Asteridae/Asteridae<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini calycerales, dipsacales, gentianales, polemoniales, 
+scrophulariales, lamiales, asterales, mint/<BR>&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+menthol/lamiaceae, campalunales</FONT></P>
+<P><FONT face=Arial size=2><STRONG>584 Liliopsida, Monocotyledons/Liliopsida, 
+Monokotil<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Monokotil: tumbuhan berbiji&nbsp;tunggal, tanaman 
+berbiji&nbsp;tunggal<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga&nbsp;561.4 untuk fosil liliopsida, fosil 
+monokotil</FONT></P>
+<P><FONT face=Arial size=2><STRONG>584.3 
+Liliidae/Liliidae<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini liliaceae/lily, alliaceae, amaryllidaceae, agavaceae, 
+triuridales, iridales, zingiberales, 
+ginger/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+jahe</FONT></P>
+<P><FONT face=Arial size=2><STRONG>584.4 Orchidales/</STRONG></FONT><FONT 
+face=Arial 
+size=2><STRONG>Orchidales<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini vanili, orchidaceae/anggrek</FONT></P>
+<P><FONT face=Arial size=2><STRONG>584.5 
+Arecidae/Arecidae<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pohon kelapa, nipa, 
+palem<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk trembesi, lamtoro, akasia, dan 
+lain-lain<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 633.5 untuk&nbsp;kelapa, nipa, palem&nbsp;ditinjau dari segi tanaman 
+perkebunan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>584.6 Cyclanthales, Arales, Pandanales, 
+Typhales/Cyclanthales, Arales, Pandanales, 
+Typhales<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini cyclanthaceae, araceae, pandanaceae, 
+typhaceae</FONT></P>
+<P><FONT face=Arial size=2><STRONG>584.7 
+Alismidae/Alismidae<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini alismales, hydrocharitales, najadales</FONT></P>
+<P><FONT face=Arial size=2><STRONG>584.8 
+Commelinidae/Commelinidae<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini restionales, juncales, cyperales, bromeliales, 
+commelinales, papyrus, 
+eriocaulales<STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>584.9 Poales, Graminales, Grass/Poales, 
+Graminales, 
+Rumput-rumputan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini bambuseae, bambu, poaceae, 
+panicoideae<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 561.4 untuk 
+fosil&nbsp;rumput<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 633.2 untuk rumput ditinjau dari segi pakan 
+ternak<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 633.5 untuk bambu ditinjau dari segi tanaman perkebunan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>585 Pinophyta, Gymnosperms, 
+Coniferales/Pinophyta, Gymnosperms, 
+Coniferales<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Gymnosperm: tumbuhan berbiji telanjang, tanaman berbiji 
+telanjang<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pinicae</FONT></P>
+<P><FONT face=Arial size=2><STRONG>585.2 Pinaceae, Pine Family/Pinaceae, 
+Pinus</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>585.3 Padoca<FONT face=Arial size=2>rpaceae, 
+Plum-yew Family/Padoca<FONT face=Arial 
+size=2>rpaceae</FONT></FONT></STRONG></FONT></P>
+<P><STRONG><FONT face=Arial size=2>585.4 Cupressaceae, Cypress 
+Family/Cupressaceae, Cypress </FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>585.5 
+Taxodiaceae/Taxodiaceae</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>585.6 Taxales/Taxales</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>585.7 Ginkgoales/Ginkgo</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>585.8 Gneticae/Gneticae</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>585.9 Cycadales/Cycads</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>586 Cryptogamia, Seedless 
+Plants/Kriptogamia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kriptogamia: tumbuhan tidak berbiji, tanaman tidak berbiji</FONT></P>
+<P><FONT face=Arial size=2><STRONG>587 Pteridophyta, Vascular Seedless 
+Plants/Pteridofita<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Pteridophyta: tumbuhan yang berkembang biak dengan spora,&nbsp;tanaman 
+yang berkembang biak dengan spora&nbsp;</FONT></P>
+<P><FONT face=Arial size=2><STRONG>587.2 Sphenopsida, Horsetail/Sphenopsida, 
+Tumbuhan Ekor Kuda, Tanaman Ekor Kuda</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>587.3 Polypodiopsida, Fern/Polypodiopsida, 
+Tumbuhan Pakis, Tanaman 
+Pakis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 561.5 untuk fosil pakis</FONT></P>
+<P><FONT face=Arial size=2><STRONG>587.4 Psilopsida, Whisk Ferns/Psilopsida, 
+Tumbuhan Kumis Kucing, Tanaman Kumis Kucing</STRONG></FONT></P>
+<P><STRONG><FONT face=Arial size=2>587.9 Lycopsida/Lycopsida</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>588 Bryophyta/Briofita</STRONG></FONT></P>
+<P><STRONG><FONT face=Arial size=2>588.2 Bryopsida, Musci/Bryopsida, 
+Musci</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>588.3 
+Hepatopsida/Hepatopsida</FONT></STRONG></P>
+<P><STRONG>589 Unassigned/Belum Digunakan</STRONG></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

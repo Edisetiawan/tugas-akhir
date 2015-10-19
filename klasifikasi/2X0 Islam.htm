@@ -1,0 +1,1045 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='2X0 Islam'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>2X0 Islam</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>2X0 Islam</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT size=2><STRONG><FONT size=4><EM><FONT face=Arial>Islam Under 2X0 (Agama 
+Islam dengan Nomor Dasar 2X0)<FONT 
+color=#ff0000>*</FONT></FONT></EM></FONT></STRONG></P>
+<P><FONT face=Arial><STRONG>2X0 Islam Umum</STRONG></FONT></P>
+<P><FONT face=Arial><STRONG>2X0.01 Karangan-karangan tentang 
+Islam</STRONG></FONT></P>
+<P><FONT face=Arial><STRONG>2X0.03 Kamus Agama Islam, Ensiklopedia Agama 
+Islam</STRONG></FONT></P>
+<P><FONT face=Arial><STRONG>2X0.04 Kecaman-kecaman terhadap 
+Islam</STRONG></FONT></P>
+<P><STRONG><FONT face=Arial>2X0.05 Majalah Agama Islam, Jurnal Agama Islam, 
+Penerbitan-penerbitan Berkala Islam</FONT></STRONG></P>
+<P>
+<P><FONT face=Arial></FONT></P>
+<P><FONT face=Arial><STRONG>2X0.092 Muslim, Orang Islam, 
+Imam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini biografi tokoh Agama Islam umum</FONT></P>
+<P><FONT face=Arial><STRONG>2X0.1 Islam&nbsp;dan 
+Filsafat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pandangan Islam terhadap parapsikologi dan ilmu 
+ghaib<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar<STRONG>&nbsp;</STRONG>2X0 notasi 100 - 
+199<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh:</EM> Islam dan astrologi<STRONG>&nbsp;</STRONG>2X0.1335,&nbsp;Islam 
+dan filsafat Jawa 
+2X0.18116<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jangan 
+gunakan untuk filsafat Islam; kelaskan di nomor 
+2X7.1<STRONG>&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Jangan gunakan untuk filsafat Islam; kelaskan di 
+nomor&nbsp;2X7.15<STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></FONT></P>
+<P></P>
+<P><FONT face=Arial><STRONG>2X0.3 Islam dan Ilmu 
+Sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pandangan Islam terhadap permasalahan sosial, teologi 
+sosial 
+Islam<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar<STRONG>&nbsp;</STRONG>2X0 notasi 300 - 
+399<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh:</EM> sosiologi Islam 2X0.301; Islam dan perubahan sosial 
+2X0.3034</FONT></P>
+<P><FONT face=Arial><STRONG>2X0.5&nbsp;Islam dan Ilmu 
+Murni<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Tambahkan nomor dasar<STRONG>&nbsp;</STRONG>2X0 notasi 500 - 
+599<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh:</EM>&nbsp;Islam dan sains 2X0.5, Islam dan matematika 2X0.51, 
+astronomi Islam 
+2X0.52<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh:</EM> sistem kalender Islam, kalender hijrah/hijriyah 
+2X0.5293,&nbsp;Islam dan teori evolusi 
+2X0.5768&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk&nbsp;sejarah hijrah; kelaskan di 
+nomor&nbsp;2X9.1&nbsp;</FONT></P>
+<P><FONT face=Arial><STRONG>2X0.6 Islam dan Ilmu Terapan, Islam dan 
+Teknologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar<STRONG>&nbsp;</STRONG>2X0 notasi 600 - 
+699<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh:</EM>&nbsp;Islam dan kedokteran, kedokteran Islam&nbsp;2X0.61, Islam 
+dan ilmu teknik 2X0.62</FONT></P>
+<P><FONT face=Arial><STRONG>2X0.7 Islam dan 
+Kesenian<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Islam dan hiburan, Islam dan olah 
+raga<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Tambahkan nomor dasar<STRONG>&nbsp;</STRONG>2X0 notasi&nbsp;700 - 
+799<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh:</EM>&nbsp;Islam dan seni musik, musik menurut 
+Islam&nbsp;2X0.78<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 781.7 untuk musik Islam&nbsp;</FONT></P>
+<P><FONT face=Arial><STRONG>2X0.9 Islam dan Bidang Lainnya</STRONG></FONT></P>
+<P><FONT face=Arial><STRONG>2X1 Al-Qur'an (Al Qur'an, Alquran, Quran) dan Ilmu 
+yang 
+Berkaitan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini Mushaf 
+Al-Qur'an<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 2X3.3 untuk iman kepada kitab sebelum Al-Qur'an</FONT></P>
+<P><FONT face=Arial><STRONG>2X1.1 Ilmu-ilmu 
+Al-Qur'an<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;bacaan Al-Qur'an</FONT></P>
+<P><FONT face=Arial><STRONG>2X1.11 Asbabun 
+Nuzul<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Sebab-sebab turunnya 
+Al-Qur'an<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini kemurnian Al-Qur'an</FONT></P>
+<P><FONT face=Arial><STRONG>2X1.12 Ilmu Qiraat dan 
+Tajwid<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini hafalan Al-Qur'an, bacaan Al-Qur'an, membaca 
+Al-Qur'an</FONT></P>
+<P><FONT face=Arial><STRONG>2X1.2 Al-Qur'an&nbsp;dan 
+Terjemahannya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Tambahkan 
+nomor dasar&nbsp;2X1 notasi&nbsp;bahasa dari </FONT><A href="Table%206%20Languages.htm"><FONT 
+face=Arial>Tabel 6</FONT></A><BR><FONT 
+face=Arial>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: Al-Qur'an terjemahan bahasa Inggris 2X1.221</FONT></P>
+<P><STRONG><FONT face=Arial>2X1.21 Al-Qur'an&nbsp;dan Terjemahan dalam Bahasa 
+Indonesia</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X1.3 Tafsir Al-Qur'an&nbsp;</FONT></STRONG></P>
+<P><FONT face=Arial><STRONG>2X1.4 Kumpulan Ayat-ayat dan Surat-surat Tertentu 
+dalam 
+Al-Qur'an<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Termasuk tafsir surat atau ayat tertentu dalam Al-Qur'an, 
+misalnya&nbsp;tafsir Surat Al-Baqarah</FONT></P>
+<P><STRONG><FONT face=Arial>2X1.5 Kritik dan Komentar Mengenai 
+Al-Qur'an&nbsp;</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X1.6 Kandungan Al-Qur'an</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X1.61 Cerita dan Kisah dari 
+Al-Qur'an</FONT></STRONG></P>
+<P><FONT face=Arial><STRONG>2X1.7 Musabaqah Tilawatil Qur'an, 
+MTQ<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini lomba-lomba yang berkaitan dengan Al-Qur'an, lomba 
+hafalan Al-Qur'an&nbsp;</FONT></P>
+<P><FONT face=Arial><STRONG>2X1.9 Sejarah Al-Qur'an</STRONG></FONT></P>
+<P><FONT face=Arial><STRONG>2X2 Al-Hadits dan yang 
+Berkaitan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini As-Sunnah, Sunnah&nbsp;Rasulullah Muhammad 
+SAW&nbsp;</FONT></P>
+<P><STRONG><FONT face=Arial>2X2.1 Ilmu Hadits</FONT></STRONG></P>
+<P><FONT face=Arial><STRONG>2X2.11 Dirayah/Ilmu tentang Keotentikan 
+Hadits<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini ilmu riwayah, Asbab Wurud Hadits, Nasikh dan 
+Mansukh</FONT></P>
+<P><STRONG><FONT face=Arial>2X2.2 Kumpulan Hadits Menurut 
+Perawi</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X2.21 Kumpulan Hadits Bukhari</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X2.22 Kumpulan Hadits Muslim</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X2.23 Kumpulan Hadits Abu Daud</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X2.24 Kumpulan Hadits Nasa'i</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X2.25 Kumpulan Hadits Turmuzi</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X2.26 Kumpulan Hadits Ibnu 
+Majah</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X2.27 Kumpulan Hadits Ahmad bin Hanbal, 
+Hambali</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X2.28 Kumpulan Hadits Malik bin 
+Anas</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X2.29 Kumpulan Hadits Lainnya</FONT></STRONG></P>
+<P><FONT face=Arial><STRONG>2X2.3 Kumpulan Hadits Menurut Bidang 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 2X2.3 notasi 2X0 - 
+2X9<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: hadits mengenai aqidah 2X2.33, hadits mengenai ibadah 
+2X2.341<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Tambahkan nomor dasar 2X2.3 notasi 000 - 999 dengan menambahkan 
+"0"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: hadits tentang&nbsp;astronomi 2X2.3052, hadits tentang 
+kedokteran 2X2.3061</FONT></P>
+<P><FONT face=Arial><STRONG>2X2.4 Kumpulan Hadits Menurut Derajat 
+Hadits<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini hadits sahih, hadits&nbsp;hasan, hadits muttasil, 
+hadits da'if, hadits mursal, hadits mawdu', 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+hadits mutawatir</FONT></P>
+<P><FONT face=Arial><STRONG>2X2.5 Kritik terhadap 
+Hadits<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini hadits 
+Syiah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk hadits lemah, hadits palsu</FONT></P>
+<P><STRONG><FONT face=Arial>2X2.6 Cerita-cerita Hadits</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X2.7 Sejarah Pengumpulan, Penulisan dan Pembukuan 
+Hadits</FONT></STRONG></P>
+<P><FONT face=Arial><STRONG>2X3 Aqaid (Aqidah, Akidah) dan Ilmu 
+Kalam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Rukun Iman, Rukun 
+Islam<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini syahadat, syahadatain</FONT></P>
+<P><FONT face=Arial><STRONG>2X3.1 Iman Kepada Allah SWT (Alloh 
+SWT)<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini tauhid</FONT></P>
+<P><STRONG><FONT face=Arial>2X3.11 Sifat-sifat Allah</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X3.12 Nama-nama Allah, Asmaul 
+Husna</FONT></STRONG></P>
+<P><FONT face=Arial><STRONG>2X3.2 Iman Kepada 
+Malaikat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Malaikat menurut Islam</FONT></P>
+<P><FONT face=Arial><STRONG>2X3.3 Iman Kepada Kitab-kitab 
+Allah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Taurat, Zabur, 
+Injil<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk&nbsp;Al-Qur'an; kelaskan&nbsp;di nomor 
+2X1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jangan 
+gunakan untuk&nbsp;Al-Qur'an dan terjemahan; kelaskan&nbsp;di nomor 
+2X1.2</FONT></P>
+<P><FONT face=Arial><STRONG>2X3.4 Iman Kepada Nabi dan 
+Rasul<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sejarah dan kisah Nabi sebelum Nabi Muhammad 
+SAW<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini sejarah 25 Nabi dan Rasul (Adam, Ibahim, Nuh, Yusuf, Musa, 
+Daud, Isa, dan 
+lain-lain)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk mukjizat nabi-nabi, karamah, ulul 
+azmi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jangan 
+gunakan untuk sejarah dan riwayat hidup Nabi Muhammad SAW; kelaskan di nomor 
+2X9<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk mukjizat Nabi Muhammad SAW; kelaskan di nomor 
+2X9</FONT></P>
+<P><FONT face=Arial><STRONG>2X3.5 Iman Kepada Hari Kemudian, 
+Akhirat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini hari kiamat, hari pembalasan, surga, neraka, alam 
+barzah, alam kubur</FONT></P>
+<P><STRONG><FONT face=Arial>2X3.6 Iman Kepada Qadha dan Qadar, 
+Takdir</FONT></STRONG></P>
+<P><FONT face=Arial><STRONG>2X3.7 Kepercayaan Mengenai Hal-hal 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini iblis, setan, jin menurut Islam, Al Masih, Imam Mahdi, 
+dajjal, ya'juj dan ma'juj</FONT></P>
+<P><STRONG><FONT face=Arial>2X3.8 Perbandingan Kepercayaan Aliran dan 
+Sekte-sekte dalam Islam</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X3.9 Islam tentang Agama dan Aliran Lain, Hubungan 
+Islam dengan Agama dan Aliran Lain&nbsp;</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X3.91 Islam dan Pagan</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X3.92 Islam dan Yahudi</FONT></STRONG></P>
+<P><FONT face=Arial><STRONG>2X3.93 Islam dan Kristen, Islam dan 
+Katholik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Kristologi</FONT></P>
+<P><STRONG><FONT face=Arial>2X3.94 Islam dan Buddha</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X3.95 Islam dan Hindu</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X3.96 Islam dan Atheisme, Islam dan 
+Komunisme</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial>2X3.97 Islam dan Kapitalisme</FONT></STRONG></P>
+<P><FONT face=Arial><STRONG>2X3.98 Islam dan Sekularisme, Islam dan 
+Orientalisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Islam dan Konfusius</FONT></P>
+<P><FONT face=Arial><STRONG>2X3.99 Islam dan Aliran 
+Lain<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Islam dan Sinkh, Islam dan Jaini, Islam dan 
+Zoroaster</FONT></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4 
+Fikih (Fiqih, Fiqh), Hukum Islam</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"></SPAN><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">2X4.01 Filsafat 
+Tasyri'</SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">2X4.02 Usul 
+Fikih</SPAN></SPAN></STRONG></P>
+<P><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">2X4.03 Ijtihad dan 
+Taqlid</SPAN></SPAN></SPAN></STRONG></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.04 Ijma' 
+dan Qiyas</STRONG></SPAN></SPAN></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.044 
+Tarjih<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Tarjih 
+Muhammadiyah</SPAN></SPAN></SPAN></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.05 Sunnah 
+dan Bid'ah</STRONG></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.09 
+Sejarah Pembinaan Fiqih, Tarikh 
+Tasyri'</STRONG></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.1 
+Ibadah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini ritual Agama Islam, praktik Agama Islam</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.1 
+Bersuci<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;thaharah, wudhu, tayamum, istinja', mandi wajib</SPAN></P>
+<P><SPAN><FONT face=Arial><STRONG>2X4.12 Shalat, 
+Sholat<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk azan dan iqamat</FONT></SPAN></P>
+<P><SPAN><FONT face=Arial><STRONG>2X4.121 Shalat Wajib</STRONG><BR></FONT><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;shalat wajib lima waktu</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.1212</STRONG>&nbsp;<STRONG>Shalat 
+Jumat</STRONG></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.1213 
+Shalat Jenazah</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.122 
+Shalat 
+Sunnah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini&nbsp;shalat gerhana, shalat dhuha, shalat Id, sholat istisqa, shalat 
+istikharah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk shalat-shalat sunnah 
+lainnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk shalat taraweh, shalat tarawih, shalat tahajjud, shalat 
+malam;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kelaskan 
+di nomor 2X4.133</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.123&nbsp;Shalat 
+Jamaah</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.125 
+Masjid<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini musholla, langgar, 
+surau<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk menara masjid, bedug 
+masjid<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 726.2 untuk arsitektur masjid</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.126 
+I'tikaf</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.13 
+Puasa</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.131 Puasa 
+Wajib<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;puasa Ramadhan</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.132 Puasa 
+Sunnah</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini puasa senin kamis, puasa-puasa sunnah lainnya</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.133 
+Qiyamul 
+Lail<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini shalat taraweh, shalat 
+tarawih<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk shalat tahajjud, shalat malam</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.134 
+Lailatul Qadar</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.135 
+Fidyah dan Kifarat</STRONG></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.14 
+Zakat</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.141 Zakat 
+Fitrah</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.142 Zakat 
+Mal</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.143 Zakat 
+Pendapatan, Zakat Profesi</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.144 
+Penerima Zakat, 
+Mustahiq<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pengelola zakat, amil zakat</SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.15 
+Haji<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini manasik 
+haji<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk ongkos naik haji/ONH</SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.154 
+Umrah</STRONG></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.157 Kota 
+dan Tempat Suci dalam Agama 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Mekkah, Makkah, 
+Madinah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Ka'bah,&nbsp;Masjidil Haram,&nbsp;Baitullah,&nbsp;Hajar 
+Aswad,&nbsp;Shafa,&nbsp;Marwa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Jerusalem, 
+Yerusalem<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Masjid Nabawi,&nbsp; Masjid Quba, Masjidil Aqsa, Qubbat As-Sakhrah/the 
+Dome of Rock&nbsp;&nbsp;</SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"></SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.16 
+Pengurusan 
+Jenazah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini pengurusan orang sakit, pengurusan mayat&nbsp;menurut 
+Islam<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Jangan 
+gunakan untuk shalat jenazah; kelaskan di 
+nomor&nbsp;2X4.1213&nbsp;</SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.163 
+Ta'ziah</STRONG></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.164 
+Ziarah Kubur</STRONG></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.168 
+Talqin dan 
+Tahlil<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini tahlilan, peringatan kematian&nbsp;</SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.17 
+Kurban, Qurban dan Aqiqah</STRONG></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.18 
+Khitan</STRONG></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.19 Aspek 
+Ibadah 
+Lainnya</STRONG></SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+khotbah, khutbah dan ceramah 
+agama&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk pahala, dosa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"></SPAN><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">2X4.2 Muamalat, 
+Muamalah/Hukum Perdata Islam</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+hukum dagang dan perdagangan, hukum jual beli dan perniagaan menurut 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346.07 
+untuk hukum dagang dan <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346 
+untuk hukum perdata</SPAN></SPAN></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.222 
+Riba</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.23 Hukum 
+Perjanjian dalam Islam</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.24 
+Syarikah</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.251 
+Shadaqah, 
+Sedekah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di sini 
+infaq, infak, amal jariyah, wakaf, hibah</SPAN></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.27 Bank 
+Islam, Baitul Mal Wat Tamlil</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.295 
+Jizyah, Pajak dalam Islam</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.3 Hukum 
+Keluarga dan Hukum&nbsp;Perkawinan, Pernikahan menurut 
+Islam</STRONG><BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 306.81&nbsp;untuk pernikahan dan 306.85 untuk keluarga 
+ditinjau dari segi 
+sosiologi<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Lihat 
+juga&nbsp;<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346.01 
+untuk hukum keluarga dan hukum pernikahan</SPAN></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.3028 
+Bimbingan Perkawinan BP4</STRONG></SPAN></STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.31 
+Nikah</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.311 
+Memilih Jodoh dan Penetapan Nasab&nbsp;</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.312 Rukun 
+Nikah, Akad Nikah</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.313 Mas 
+Kawin</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.315 
+Poligami Menurut Islam</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.33 
+Perceraian Menurut Islam</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.34 
+Iddah</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.35 
+Ruju'</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.36 Hak 
+dan Kewajiban Suami Istri Menurut Islam</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.4 Hukum 
+Waris Islam, 
+Faraid<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini ahli waris, pembagian warisan, 
+wasiat<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Lihat 
+juga&nbsp;<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346.05 
+untuk hukum waris</SPAN></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.41 Harta 
+Pusaka</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.42 Ahli 
+Waris</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.43 
+Pembagian Harta Warisan</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.45 
+Wasiat</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.5 Hukum 
+Pidana Islam, 
+Jinayat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini 
+qishas<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Lihat 
+juga&nbsp;<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">345 
+untuk hukum pidana</SPAN></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.57 
+Murtad</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.58 
+Perbandingan Hukum Pidana Islam dengan Hukum Lain</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.6 Hukum 
+Pengadilan Islam, 
+Qada'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pengadilan 
+agama<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Kantor Urusan Agama (KUA)</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.68 
+Perbandingan Hukum&nbsp;Pengadilan Islam dengan Hukum 
+Lain</STRONG></SPAN></STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.69 
+Sejarah Pengadilan 
+Islam&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 2X4.69 notasi wilayah dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Contoh: sejarah pengadilan Islam di Arab Saudi 2X4.69538</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.69598 
+Pengadilan Islam di Indonesia</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.7 Hukum 
+Internasional 
+Islam<BR></STRONG><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">341 
+untuk hukum internasional</SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>2X4.74 
+Jihad</STRONG></SPAN></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.76 Hukum 
+Perang dan Damai</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.77 Hukum 
+Islam tentang 
+Terorisme<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 303.625 untuk terorisme ditinjau dari segi 
+sosiologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.3 untuk pengamanan dari tindakan 
+terorisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN>345.02 untuk terorisme ditinjau dari segi ilmu 
+hukum</SPAN><STRONG>&nbsp;</STRONG></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.8 Fikih 
+dari Berbagai Paham, 
+Mahzab<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini perbandingan mahzab, hubungan antar mahzab, hubungan 
+antar sunni dan syiah</SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.81&nbsp;Mahzab 
+Hanafi</STRONG></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.82&nbsp;Mahzab 
+Maliki</STRONG></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.83&nbsp;Mahzab 
+Syafi'i, Syafii&nbsp;</STRONG></SPAN></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.84&nbsp;Mahzab 
+Hambali, Hanbal</STRONG></SPAN></SPAN></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X4.86&nbsp;Mahzab 
+Syiah, Syi'ah</STRONG></SPAN></SPAN></SPAN></SPAN></SPAN></P>
+<P><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X8.88 Fatwa 
+Ulama</STRONG></SPAN></SPAN></SPAN></SPAN></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"></SPAN><STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">2X4.9 Aspek Fikih 
+Lainnya</SPAN></STRONG><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><BR><STRONG><SPAN 
+style="FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></STRONG></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Kelaskan di 
+sini&nbsp;bid'ah, syirik, musyrik, munafik, kafir, nazar, 
+sumpah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Termasuk&nbsp;halal 
+dan haram, makanan minuman halal</SPAN></P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">
+<P><STRONG>2X4.96 Fikih 
+Wanita<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini masalah fikih mengenai wanita</P>
+<P><STRONG>2X5.1 Akhlak 
+(Akhlaq)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini etika 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk etika keluarga&nbsp;Islam, budi pekerti dalam Islam, adab dalam 
+Islam</P>
+<P><STRONG>2X5.2 
+Tasawuf<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini sufi, sufisme, sufistik, mistik Islam</P>
+<P><STRONG>2X5.3 Tarekat 
+(Thariqat)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini aliran-aliran tarekat</P>
+<P><STRONG>2X5.31 Qadiriyah</STRONG></P>
+<P><STRONG>2X5.32 Naqsyabandiyah</STRONG></P>
+<P><STRONG>2X5.33 Syuhrawardiyah</STRONG></P>
+<P><STRONG>2X5.34 Syazaliyah</STRONG></P>
+<P><STRONG>2X5.35 Syatariyah</STRONG></P>
+<P><STRONG>2X5.36 Sanusiyah</STRONG></P>
+<P><STRONG>2X5.37 Rifa'iyah</STRONG></P>
+<P><STRONG>2X5.38 Perbandingan antar Tarekat</STRONG></P>
+<P><STRONG>2X5.39 Aliran Tarekat Lainnya</STRONG></P>
+<P><STRONG>2X5.4 Doa 
+dan&nbsp;Zikir<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;buku doa, kumpulan doa, wirid, 
+istighosah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk kiblat</P>
+<P><STRONG>2X6.1 Masyarakat Islam</STRONG></P>
+<P><STRONG>2X6.1522&nbsp;Kedudukan Wanita 
+dalam&nbsp;Islam<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini emansipasi menurut 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 326.8 untuk emansipasi</P>
+<P><STRONG>2X6.2 Politik 
+Islam<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini pandangan Islam terhadap 
+politik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk fundamentalisme Islam</P>
+<P><STRONG>2X6.21 Negara Islam, Darul Islam</STRONG></P>
+<P><STRONG>2X6.22 Sistem Pemerintahan Islam</STRONG></P>
+<P><STRONG>2X6.3&nbsp;Ekonomi Islam, Sistem Ekonomi 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sistem perbankan Islam,&nbsp;lembaga 
+keuangan&nbsp;Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk bank Islam; kelaskan di nomor 
+2X4.27<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 330 - 339 untuk ilmu ekonomi</P>
+<P><STRONG>2X6.6&nbsp;Organisasi 
+Islam<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini organisasi sosial Islam</P>
+<P><STRONG>2X6.61 Majelis Ulama Indonesia, MUI</STRONG></P>
+<P><STRONG>2X6.611 Muhammadiyah</STRONG></P>
+<P><STRONG>2X6.612 Nahdlatul Ulama, NU</STRONG></P>
+<P><STRONG>2X6.613 Jami'atul Wasliyah</STRONG></P>
+<P><STRONG>2X6.614 Al-Irsyad</STRONG></P>
+<P><STRONG>2X6.615 Persatuan Islam, Persis</STRONG></P>
+<P><STRONG>2X6.616 Mathla'ul Anwar</STRONG></P>
+<P><STRONG>2X6.617 Jami'atul Khoir</STRONG></P>
+<P><STRONG>2X6.619 Organisasi-organisasi&nbsp;Islam 
+Lainnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Hisbut Thahrir,&nbsp;Ikatan Cendekiawan Muslim 
+Indonesia (ICMI), 
+dan&nbsp;lain-lain<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini gerakan Muslim Hitam di Amerika, American Moslem Mission, 
+Nation of 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk organisasi-organisasi Islam lainnya di negara-negara Barat</P>
+<P><STRONG>2X6.62 Organisasi Politik Islam 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini partai politik 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 324.2 untuk partai politik ditinjau dari ilmu politik</P>
+<P><STRONG>2X6.7&nbsp;Kebudayaan 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini&nbsp;kesusastraan Islam, sastra 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;723.3 untuk arsitektur 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 781.7 untuk musik Islam</P>
+<P><SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-weight: bold"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>2X6.76 
+Kaligrafi 
+Islam<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga&nbsp;745.61 untuk kaligrafi ditinjau dari segi seni&nbsp;kerajinan 
+tangan&nbsp;</SPAN></SPAN></SPAN></SPAN></P>
+<P><STRONG>2X6.8 Perpustakaan Islam dan 
+Museum&nbsp;Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 021.297 untuk perpustakaan Islam</P>
+<P><STRONG>2X6.82 Perpustakaan Masjid</STRONG></P>
+<P><STRONG>2X6.9 Adat Istiadat dalam 
+Islam&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></P>
+<P><STRONG>2X6.91 Halal Bil 
+Halal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini silaturahmi</P>
+<P><STRONG>2X6.92 Peringatan Hari-hari Besar 
+Islam<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini Idul Fitri, Idul Adha, Maulid Nabi,&nbsp;Isra' Mi'raj/Isra 
+Mikraj, Tahun Baru 1 Muharram, Hari 
+Assyura,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Nuzulul Qur'an</P>
+<P><STRONG>2X7.1 Filsafat Islam</STRONG></P>
+<P><STRONG>2X7.15 Psikologi Islam</STRONG></P>
+<P><STRONG>2X7.2&nbsp;Dakwah (Da'wah) 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini dakwah oleh ustadz, kyai, sunan dan 
+wali<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk 
+pengajian<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk muallaf</P>
+<P><STRONG>2X7.29 Dakwah di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 2X7.29 notasi wilayah dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>Contoh</EM>: 
+dakwah di Perancis 2X7.2944</P>
+<P><STRONG>2X7.29598 Dakwah di Indonesia</STRONG></P>
+<P><STRONG>2X7.3&nbsp;Pendidikan Agama Islam, Sekolah 
+Islam</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai&nbsp;370 untuk pendidikan</P>
+<P><STRONG>2X7.321 Bustanul Atfal</STRONG></P>
+<P><STRONG>2X7.322 Madrasah Ibtidaiyah</STRONG></P>
+<P><STRONG>2X7.331 Madrasah Tsanawiyah</STRONG></P>
+<P><STRONG>2X7.332 Madrasah Aliyah</STRONG></P>
+<P><STRONG>2X7.341 Pondok Pesantren</STRONG></P>
+<P><STRONG>2X7.342 Tempat Pendidikan Al-Qur'an/TPA, Tempat Pendidikan 
+Qur'an/TPQ</STRONG></P>
+<P><STRONG>2X7.343 Majelis Ta'lim</STRONG></P>
+<P><STRONG>2X7.39 Pendidikan Agama Islam di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 2X7.39 notasi wilayah dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>Contoh</EM>: 
+dakwah di Inggris 2X7.3942</P>
+<P><STRONG>2X7.39598 Pendidikan Agama Islam di 
+Indonesia<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini sekolah, madrasah, pondok pesantren dan majelis ta'lim di 
+Indonesia</P>
+<P><STRONG>2X7.4&nbsp;Pemurnian dan Pembaharuan Pemikiran 
+dalam&nbsp;Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini gerakan tajdid, gerakan 
+puritan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: Jalaluddin Al-Afghani, Hasan Al-Banna, Muhammad Abduh, Rasyid 
+Ridha, Muhammad 
+Iqbal,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Harun Yahya, KH Ahmad 
+Dahlan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Wahhabiyah, gerakan Wahabi</P>
+<P><STRONG>2X7.41 Gerakan Pemurnian dalam Islam</STRONG></P>
+<P><STRONG>2X7.42 Gerakan Pembaharuan Pemikiran dalam Islam</STRONG></P>
+<P><STRONG>2X7.49 Pemurnian dan Pembaharuan di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 2X7.49 notasi wilayah dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>Contoh</EM>:&nbsp;pemurnian 
+dan pembaharuan di Asia&nbsp;2X7.495</P>
+<P><STRONG>2X7.49598 Pemurnian dan Pembaharuan di Indonesia</STRONG></P>
+<P><STRONG>2X7.5&nbsp;Pers dan Media 
+Massa&nbsp;Islam<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunankan untuk majalah dan jurnal Agama Islam; kelaskan di nomor 2X0.05 
+</P>
+<P><STRONG>2X7.59 Pers dan Media Massa&nbsp;Islam di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 2X7.59 notasi wilayah dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>Contoh</EM>:&nbsp;pers 
+dan media massa di Iran 2X7.5955</P>
+<P><STRONG>2X8.1 Sunni, Ahli Sunnah, Ahlussunnah wal Jamaah</STRONG></P>
+<P><STRONG>2X8.2&nbsp;Syiah (Syi'ah)</STRONG></P>
+<P><STRONG>2X8.3 Mu'tazilah</STRONG></P>
+<P><STRONG>2X8.4 Khawarij</STRONG></P>
+<P><STRONG>2X8.5 Qadariyah dan Jabariyah</STRONG>&nbsp;&nbsp;</P>
+<P><STRONG>2X8.6 Murjiah (Murji'ah)</STRONG></P>
+<P><STRONG>2X8.7 Ahmadiyah</STRONG></P>
+<P><STRONG>2X8.8 Bahaiyah,&nbsp;Babisme, Kepercayaan Bahai</STRONG></P>
+<P><STRONG>2X8.9 Aliran dan Sekte yang Lainnya Muncul 
+Kemudian<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini aliran kebatinan</P>
+<P><STRONG>2X9.1 Sejarah Islam pada&nbsp;Zaman Nabi Muhammad 
+SAW<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Sirah Nabawiyah, sejarah hidup Rasulullah Nabi 
+Muhammad 
+SAW<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk keluarga Nabi Muhammad, istri-istri dan anak-anak Nabi 
+Muhammad<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk mukjizat Nabi Muhammad 
+SAW&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk 
+hijrah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk&nbsp;kalender hijrah; kelaskan di 
+nomor&nbsp;2X0.5293<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 2X3.4 untuk iman kepada nabi dan 
+rasul<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-size: 11.0pt">953.9 
+untuk sejarah Saudi Arabia</SPAN>&nbsp;</P>
+<P><STRONG>2X9.2&nbsp;Khulafaurrasyidin<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini sejarah hidup Khalifah Abu Bakar, Umar bin Khattab, Utsman bin 
+'Affan, Ali bin Abi 
+Thalib<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Termasuk 
+Sahabat-sahabat Nabi lainnya (Abdurrahman bin Auf, Khalid bin Walid, dan 
+lain-lain)</P>
+<P><STRONG>2X9.3 Zaman Daulah Muawiyah</STRONG></P>
+<P><STRONG>2X9.4 Zaman Daulah Abbasiyah</STRONG></P>
+<P><STRONG>2X9.5 Zaman Daulah-daulah 
+Lain<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini karya komprehensif tentang Bani Saljuk dan Daulah 
+Islamiyah 
+lainnya<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-size: 11.0pt">956.1 
+untuk Kekhalifahan Ottoman di Turki</SPAN></P>
+<P><STRONG>2X9.6&nbsp;Sejarah Islam di Berbagai Negeri Setelah Tahun 
+1800<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini karya komprehensif tentang sejarah Agama 
+Islam<STRONG>&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 2X9 notasi wilayah dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>:&nbsp;sejarah Islam di Eropa 2X9.64</P>
+<P><STRONG>2X9.6598 Sejarah Islam di 
+Indonesia<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;sejarah wali songo/sembilan wali</P>
+<P><STRONG>2X9.8 Biografi Tokoh-tokoh Pemuka 
+Agama&nbsp;Islam<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<STRONG><FONT color=#ff0000><EM>Opsi&nbsp;pilihan</EM>:</FONT></STRONG>&nbsp; 
+berdasarkan&nbsp; Schedule&nbsp;DDC Edisi 23 nomor&nbsp;922.97&nbsp; dapat&nbsp; 
+juga&nbsp; digunakan&nbsp; untuk 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+biografi tokoh Agama 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk biografi Nabi Muhammad SAW, keluarga dan sahabat; 
+kelaskan&nbsp;mulai nomor 
+2X9.1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai 920 untuk biografi umum</P>
+<P><STRONG>2X9.9&nbsp;Peta Sejarah Islam, Atlas Sejarah 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 2X9.9 notasi wilayah dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>Contoh</EM>:&nbsp;peta 
+sejarah Islam&nbsp;di Timur Tengah 
+2x9.956&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp; <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">911 
+untuk atlas sejarah umum</SPAN></SPAN></SPAN></SPAN></P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"></SPAN></SPAN></SPAN></SPAN>&nbsp;</P>
+<P><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"></SPAN></SPAN></SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><EM><STRONG><FONT 
+color=#ff0000>*Keterangan: Lihat juga Agama Islam dengan nomor dasar <A href="297%20Islam.htm">297</A>. Gunakan salah satu 
+sesuai 
+keperluan.</FONT></STRONG></EM></SPAN></SPAN></SPAN></SPAN></SPAN></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

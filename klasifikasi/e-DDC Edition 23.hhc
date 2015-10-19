@@ -1,0 +1,698 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD>
+<BODY>
+   <OBJECT type="text/site properties"> 
+     <param name="FrameName" value="right">
+     <param name="WindowName" value="main">
+     <param name="Font" value=",8,0">
+     <param name="ImageType" value="Book">
+     <param name="Window Styles" value="0x27">
+     <param name="ExWindow Styles" value="0x0">
+   </OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Home">
+<param name="Local" value="Home.htm">
+<param name="ImageNumber" value="13">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="e-DDC Edition 23">
+<param name="Local" value="">
+<param name="ImageNumber" value="1">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Read This!">
+<param name="Local" value="Read%20This!.htm">
+<param name="ImageNumber" value="5">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Introduction">
+<param name="Local" value="Introduction.htm">
+<param name="ImageNumber" value="17">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="How to Use e-DDC">
+<param name="Local" value="How%20to%20Use%20e-DDC.htm">
+<param name="ImageNumber" value="41">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Quick Guide e-DDC">
+<param name="Local" value="Quick%20Guide%20e-DDC.htm">
+<param name="ImageNumber" value="19">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="About DDC">
+<param name="Local" value="About%20DDC.htm">
+<param name="ImageNumber" value="37">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="How to Class">
+<param name="Local" value="How%20to%20Class.htm">
+<param name="ImageNumber" value="10">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Note">
+<param name="Local" value="Notes.htm">
+<param name="ImageNumber" value="39">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Other References">
+<param name="Local" value="Other%20References.htm">
+<param name="ImageNumber" value="21">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Warning">
+<param name="Local" value="Warning.htm">
+<param name="ImageNumber" value="29">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Message">
+<param name="Local" value="Me.htm">
+<param name="ImageNumber" value="25">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Donation">
+<param name="Local" value="Donation.htm">
+<param name="ImageNumber" value="36">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="History">
+<param name="Local" value="History.htm">
+<param name="ImageNumber" value="23">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Links">
+<param name="Local" value="Links.htm">
+<param name="ImageNumber" value="27">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="000 Generalities">
+<param name="Local" value="000%20Generalities.htm">
+<param name="ImageNumber" value="1">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="000 - 009 Ilmu Umum dan Komputer">
+<param name="Local" value="000%20-%20009%20Ilmu%20Umum%20dan%20Komputer.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="010 - 019 Bibliografi">
+<param name="Local" value="010%20-%20019%20Bibliografi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="020 - 029 Perpustakaan dan Ilmu Informasi">
+<param name="Local" value="020%20-%20029%20Perpustakaan%20dan%20Ilmu%20Informasi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="030 - 039 Ensiklopedia">
+<param name="Local" value="030%20-%20039%20Ensiklopedi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="050 - 059 Terbitan Berseri Umum">
+<param name="Local" value="050%20-%20059%20Terbitan%20Berseri%20Umum%20.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="060 - 069 Organisasi Umum">
+<param name="Local" value="060%20-%20069%20Organisasi%20Umum.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="070 - 079 Jurnalisme">
+<param name="Local" value="070%20-%20079%20Jurnalisme%20dan%20Media%20Massa.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="080 - 089 Kumpulan Karya Umum">
+<param name="Local" value="080%20-%20089%20Kumpulan%20Karya%20Umum.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="090 - 099 Manuskrip">
+<param name="Local" value="090%20-%20099%20Manuskrip.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="100 Philosophy and Psychology">
+<param name="Local" value="100%20Philosophy%20and%20Psychology.htm">
+<param name="ImageNumber" value="1">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="100 - 109 Filsafat">
+<param name="Local" value="101%20-%20109%20Filsafat.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="110 - 119 Metafisika">
+<param name="Local" value="110%20-%20119%20Metafisika.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="120 - 129 Epistemologi">
+<param name="Local" value="120%20-%20129%20Epistemologi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="130 - 139 Fenomena Paranormal">
+<param name="Local" value="130%20-%20139%20Fenomena%20Paranormal.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="140 - 149 Filsafat Khusus dan Sistem Doktrin">
+<param name="Local" value="140%20-%20149%20Filsafat%20Khusus%20dan%20Sistem%20Doktrin.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="150 - 159 Psikologi">
+<param name="Local" value="150%20-%20159%20Psikologi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="160 - 169 Logika">
+<param name="Local" value="160%20-%20169%20Logika.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="170 - 179 Etika dan Filsafat Moral">
+<param name="Local" value="170%20-%20179%20Etika%20dan%20Filsafat%20Moral.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="180 - 189 Filsafat Kuno">
+<param name="Local" value="180%20-%20189%20Filsafat%20Kuno.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="190 - 199 Filsafat Modern">
+<param name="Local" value="190%20-%20199%20Filsafat%20Modern.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="200 Religion">
+<param name="Local" value="200%20Religion.htm">
+<param name="ImageNumber" value="1">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="200 - 209 Mitos Keagamaan, Teologi Sosial">
+<param name="Local" value="200%20-%20209%20Mitos%20Keagamaan,%20Teologi%20Sosial.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="210 - 219 Filsafat dan Teori Agama">
+<param name="Local" value="210%20-%20219%20Filsafat%20dan%20Teori%20Agama.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="220 - 229 Alkitab">
+<param name="Local" value="220%20-%20229%20Alkitab.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="230 - 239 Teologi Kristen">
+<param name="Local" value="230%20-%20239%20Teologi%20Kristen.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="240 - 249 Moral Kristen dan Teologi Kebaktian">
+<param name="Local" value="240%20-%20249%20Moral%20Kristen%20dan%20Teologi%20Kebaktian.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="250 - 259 Orde Keagamaan dan Gereja Setempat">
+<param name="Local" value="250%20-%20259%20Orde%20Keagamaan%20dan%20Gereja%20Setempat.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="260 - 269 Teologi Sosial Kristen">
+<param name="Local" value="260%20-%20269%20Teologi%20Sosial%20Kristen.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="270 - 279 Sejarah Gereja">
+<param name="Local" value="270%20-%20279%20Sejarah%20Gereja.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="280 - 289 Denominasi dan Sekte Kristen">
+<param name="Local" value="280%20-%20289%20Denominasi%20dan%20Sekte%20Kristen.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="290 - 299 Agama Selain Kristen">
+<param name="Local" value="290%20-%20299%20Agama%20Selain%20Kristen.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="297 Islam">
+<param name="Local" value="297%20Islam.htm">
+<param name="ImageNumber" value="12">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="2X0 Islam">
+<param name="Local" value="2X0%20Islam.htm">
+<param name="ImageNumber" value="12">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="300 Social Science">
+<param name="Local" value="300%20Social%20Science.htm">
+<param name="ImageNumber" value="1">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="300 - 309 Sosiologi dan Antropologi">
+<param name="Local" value="301%20-%20309%20Sosiologi%20dan%20Antropologi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="310 - 319 Statistik Umum">
+<param name="Local" value="310%20-%20319%20Statistik%20Umum.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="320 - 329 Ilmu Politik dan Pemerintahan">
+<param name="Local" value="320%20-%20329%20Ilmu%20Politik%20dan%20Pemerintahan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="330 - 339 Ilmu Ekonomi">
+<param name="Local" value="330%20-%20339%20Ilmu%20Ekonomi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="340 - 349 Ilmu Hukum">
+<param name="Local" value="340%20-%20349%20Ilmu%20Hukum.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="350 - 359 Administrasi Negara, Ilmu Kemiliteran">
+<param name="Local" value="350%20-%20359%20Administrasi%20Negara,%20Ilmu%20Kemiliteran.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="360 - 369 Permasalahan dan Kesejahteraan Sosial">
+<param name="Local" value="360%20-%20369%20Permasalahan%20dan%20Kesejahteraan%20Sosial.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="370 - 379 Pendidikan">
+<param name="Local" value="370%20-%20379%20Pendidikan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="380 - 389 Perdagangan, Komunikasi, Transportasi">
+<param name="Local" value="380%20-%20389%20Perdagangan,%20Komunikasi,%20Transportasi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="390 - 399 Adat Istiadat, Etiket, Folklor">
+<param name="Local" value="390%20-%20399%20Adat%20Istiadat,%20Etiket,%20Folklor.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="400 Language">
+<param name="Local" value="400%20Language.htm">
+<param name="ImageNumber" value="1">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="400 - 409 Terminologi, Bilingual">
+<param name="Local" value="401%20-%20409%20Terminologi,%20Bilingual.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="410 - 419 Linguistik, Bahasa Indonesia">
+<param name="Local" value="410%20-%20419%20Linguistik,%20Bahasa%20Indonesia.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="420 - 429 Bahasa Inggris, Anglo-Saxon">
+<param name="Local" value="420%20-%20429%20Bahasa%20Inggris,%20Anglo-Saxon.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="430 - 439 Bahasa Jerman">
+<param name="Local" value="430%20-%20439%20Bahasa%20Jerman.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="440 - 449 Bahasa Perancis">
+<param name="Local" value="440%20-%20449%20Bahasa%20Perancis.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="450 - 459 Bahasa Italia">
+<param name="Local" value="450%20-%20459%20Bahasa%20Italia.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="460 - 469 Bahasa Spanyol dan Portugis">
+<param name="Local" value="460%20-%20469%20Bahasa%20Spanyol%20dan%20Portugis.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="470 - 479 Bahasa Latin">
+<param name="Local" value="470%20-%20479%20Bahasa%20Latin.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="480 - 489 Bahasa Yunani Kuno">
+<param name="Local" value="480%20-%20489%20Bahasa%20Yunani%20Kuno.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="490 - 499 Bahasa-bahasa Lain">
+<param name="Local" value="490%20-%20499%20Bahasa-bahasa%20Lain.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="499.221 Bahasa Indonesia">
+<param name="Local" value="499.221%20Bahasa%20Indonesia.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="500 Natural Science and Mathematics">
+<param name="Local" value="500%20Natural%20Science%20and%20Mathematics.htm">
+<param name="ImageNumber" value="1">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="500 - 509 Ilmu Pengetahuan Alam">
+<param name="Local" value="501%20-%20509%20Ilmu%20Pengetahuan%20Alam.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="510 - 519 Matematika">
+<param name="Local" value="510%20-%20519%20Matematika.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="520 - 529 Astronomi">
+<param name="Local" value="520%20-%20529%20Astronomi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="530 - 539 Fisika">
+<param name="Local" value="530%20-%20539%20Fisika.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="540 - 549 Kimia">
+<param name="Local" value="540%20-%20549%20Kimia.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="550 - 559 Ilmu Bumi">
+<param name="Local" value="550%20-%20559%20Ilmu%20tentang%20Bumi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="560 - 569 Paleontologi, Paleozoologi">
+<param name="Local" value="560%20-%20569%20Paleontologi,%20Paleozoologi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="570 - 579 Biologi, Ilmu Hayat">
+<param name="Local" value="570%20-%20579%20Biologi,%20Ilmu%20Hayat.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="580 - 589 Ilmu Tumbuhan">
+<param name="Local" value="580%20-%20589%20Ilmu%20tentang%20Tumbuhan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="590 - 599 Ilmu Hewan">
+<param name="Local" value="590%20-%20599%20Ilmu%20tentang%20Hewan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="600 Technology and Applied Sciences">
+<param name="Local" value="600%20Technology%20and%20Applied%20Sciences.htm">
+<param name="ImageNumber" value="1">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="600 - 609 Aneka Ragam Teknologi dan Ilmu Terapan">
+<param name="Local" value="601%20-%20609%20Aneka%20Ragam%20Teknologi%20dan%20Ilmu%20Terapan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="610 - 619 Ilmu Kedokteran dan Ilmu Pengobatan">
+<param name="Local" value="610%20-%20619%20Ilmu%20Kedokteran%20dan%20Ilmu%20Pengobatan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="620 - 629 Ilmu Teknik dan Ilmu yang Berkaitan">
+<param name="Local" value="620%20-%20629%20Ilmu%20Teknik%20dan%20Ilmu%20yang%20Berkaitan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="630 - 639 Pertanian dan Teknologi yang Berkaitan">
+<param name="Local" value="630%20-%20639%20Pertanian%20dan%20Teknologi%20yang%20Berkaitan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="640 - 649 Kesejahteraan Rumah Tangga">
+<param name="Local" value="640%20-%20649%20Kesejahteraan%20Rumah%20Tangga.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="650 - 659 Manajemen dan Ilmu yang Berkaitan">
+<param name="Local" value="650%20-%20659%20Manajemen%20dan%20Ilmu%20yang%20Berkaitan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="660 - 669 Teknologi Kimia dan Ilmu yang Berkaitan">
+<param name="Local" value="660%20-%20669%20Teknologi%20Kimia%20dan%20Ilmu%20yang%20Berkaitan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="670 - 679 Pabrik-pabrik, Manufaktur">
+<param name="Local" value="670%20-%20679%20Pabrik-pabrik,%20Manufaktur.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="680 - 689 Produksi Khusus">
+<param name="Local" value="680%20-%20689%20Produksi%20Khusus.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="690 - 699 Teknik Bangunan">
+<param name="Local" value="690%20-%20699%20Teknik%20Bangunan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="700 The Art, Fine and Sport">
+<param name="Local" value="700%20The%20Art,%20Fine%20and%20Sport.htm">
+<param name="ImageNumber" value="1">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="700 - 709 Teori Kesenian">
+<param name="Local" value="701%20-%20709%20Teori%20Kesenian.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="710 - 719 Seni Perkotaan dan Pertamanan">
+<param name="Local" value="710%20-%20719%20Seni%20Perkotaan%20dan%20Pertamanan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="720 - 729 Arsitektur">
+<param name="Local" value="720%20-%20729%20Arsitektur.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="730 - 739 Seni Patung dan Seni Plastik">
+<param name="Local" value="730%20-%20739%20Seni%20Patung%20dan%20Seni%20Plastik.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="740 - 749 Menggambar dan Seni Dekorasi">
+<param name="Local" value="740%20-%20749%20Menggambar%20dan%20Seni%20Dekorasi.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="750 - 759 Seni Lukis dan Lukisan">
+<param name="Local" value="750%20-%20759%20Seni%20Lukis%20dan%20Lukisan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="760 - 769 Seni Grafika">
+<param name="Local" value="760%20-%20769%20Seni%20Grafika.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="770 - 779 Seni Fotografi dan Foto">
+<param name="Local" value="770%20-%20779%20Seni%20Fotografi%20dan%20Foto.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="780 - 789 Seni Musik">
+<param name="Local" value="780%20-%20789%20Seni%20Musik.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="790 - 799 Olah Raga dan Seni Pertunjukan">
+<param name="Local" value="790%20-%20799%20Olah%20Raga%20dan%20Seni%20Pertunjukan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="800 Literature">
+<param name="Local" value="800%20Literature.htm">
+<param name="ImageNumber" value="1">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="800 - 809 Teori Kesusastraan dan Retorika">
+<param name="Local" value="801%20-%20809%20Teori%20Kesusastraan%20dan%20Retorika.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="810 - 819 Sastra Indonesia">
+<param name="Local" value="810%20-%20819%20Sastra%20Indonesia.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="820 - 829 Sastra Inggris">
+<param name="Local" value="820%20-%20829%20Sastra%20Inggris.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="830 - 839 Sastra Jerman">
+<param name="Local" value="830%20-%20839%20Sastra%20Jerman.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="840 - 849 Sastra Perancis">
+<param name="Local" value="840%20-%20849%20Sastra%20Perancis.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="850 - 859 Sastra Italia">
+<param name="Local" value="850%20-%20859%20Sastra%20Italia.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="860 - 869 Sastra Spanyol dan Portugis">
+<param name="Local" value="860%20-%20869%20Sastra%20Spanyol%20dan%20Portugis.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="870 - 879 Sastra Latin">
+<param name="Local" value="870%20-%20879%20Sastra%20Latin.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="880 - 889 Sastra Yunani Kuno">
+<param name="Local" value="880%20-%20889%20Sastra%20Yunani%20Kuno.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="890 - 899 Sastra Lain-lain">
+<param name="Local" value="890%20-%20899%20Sastra%20Lain-lain.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="899.221 Sastra Indonesia">
+<param name="Local" value="899.221%20Sastra%20Indonesia.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="900 Geography and History">
+<param name="Local" value="900%20Geography%20and%20History.htm">
+<param name="ImageNumber" value="1">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="900 - 909 Teori Ilmu Sejarah">
+<param name="Local" value="901%20-%20909%20Teori%20Ilmu%20Sejarah.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="910 - 919 Geografi dan Perjalanan">
+<param name="Local" value="910%20-%20919%20Geografi%20dan%20Perjalanan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="920 - 929 Biografi dan Silsilah">
+<param name="Local" value="920%20-%20929%20Biografi%20dan%20Silsilah.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="930 - 939 Sejarah Dunia Kuno">
+<param name="Local" value="930%20-%20939%20Sejarah%20Dunia%20Kuno.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="940 - 949 Sejarah Umum Eropa">
+<param name="Local" value="940%20-%20949%20Sejarah%20Umum%20Eropa.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="950 - 959 Sejarah Umum Asia">
+<param name="Local" value="950%20-%20959%20Sejarah%20Umum%20Asia.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="960 - 969 Sejarah Umum Afrika">
+<param name="Local" value="960%20-%20969%20Sejarah%20Umum%20Afrika.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="970 - 979 Sejarah Umum Amerika Utara">
+<param name="Local" value="970%20-%20979%20Sejarah%20Umum%20Amerika%20Utara.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="980 - 989 Sejarah Umum Amerika Selatan">
+<param name="Local" value="980%20-%20989%20Sejarah%20Umum%20Amerika%20Selatan.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="990 - 999 Sejarah Umum Bagian Dunia Lainnya">
+<param name="Local" value="990%20-%20999%20Sejarah%20Umum%20Bagian%20Dunia%20Lainnya.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Tables">
+<param name="Local" value="Tables.htm">
+<param name="ImageNumber" value="3">
+</OBJECT>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Table 1 Standard Subdivisions">
+<param name="Local" value="Table%201%20Standard%20Subdivisions.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Table 2 Geographic Areas">
+<param name="Local" value="Table%202%20Geographic%20Areas.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Table 3 Subdivision for Specific Literary Forms">
+<param name="Local" value="Table%203%20Subdivision%20for%20Specific%20Literary%20Forms.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Table 4 Subdivision of Language">
+<param name="Local" value="Table%204%20Subdivision%20of%20Language.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Table 5 Racial, Ethnic, National Group">
+<param name="Local" value="Table%205%20Racial,%20Ethnic,%20National%20Group.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Table 6 Languages">
+<param name="Local" value="Table%206%20Languages.htm">
+<param name="ImageNumber" value="11">
+</OBJECT>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Thesaurus">
+<param name="Local" value="Thesaurus.htm">
+<param name="ImageNumber" value="9">
+</OBJECT>
+</UL></UL>
+</BODY>
+</HTML>

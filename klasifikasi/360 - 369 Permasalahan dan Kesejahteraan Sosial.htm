@@ -1,0 +1,812 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='360 - 369'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>360 - 369 Permasalahan dan Kesejahteraan Sosial</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>360 - 369 Permasalahan dan Kesejahteraan Sosial</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><FONT face=Arial size=4><STRONG><EM>Social Problems 
+and Services (Permasalahan dan&nbsp;Kesejahteraan 
+Sosial)</EM></STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>361.003 </STRONG><FONT face=Arial 
+size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>Dictionaries 
+and Encyclopedia/Kamus Permasalahan Sosial, Ensiklopedia Permasalahan 
+Sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini kamus&nbsp;layanan 
+sosial,&nbsp;ensiklopedia&nbsp;layanan sosial</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>361.005 
+General Publications/Terbitan Permasalahan Sosial, Berkala 
+Umum&nbsp;Permasalahan 
+Sosial<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini majalah permasalahan sosial,&nbsp;jurnal permasalahan 
+sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk majalah&nbsp;layanan sosial,&nbsp;jurnal layanan sosial</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>361.0072 
+Research and Statistical Methods/Metode&nbsp;Riset Permasalahan Sosial, 
+Statistik&nbsp;Permasalahan 
+Sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini metode riset&nbsp;layanan sosial, statistik layanan 
+sosial</SPAN></SPAN></P></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></FONT>
+<P><FONT face=Arial size=2><STRONG>361.1 Social Problems/Permasalahan Sosial, 
+Masalah 
+Sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini permasalahan sosial pada umumnya</FONT></P>
+<P><FONT face=Arial size=2><STRONG>361.2 Social Action/Aksi 
+Sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 303.6 untuk konflik sosial</FONT></P>
+<P><FONT face=Arial size=2><STRONG>361.24 Reform Movements/Gerakan 
+Reformasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;gerakan reformasi di 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 270.6 untuk reformasi Agama 
+Kristen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;333.31 untuk reformasi 
+agraria<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;340.3 untuk reformasi 
+hukum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 923.6 untuk biografi tokoh 
+reformasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold">Lihat 
+juga 959.8037 untuk reformasi Indonesia ditinjau dari segi ilmu sejarah 
+</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>361.3 Social Work/Kerja 
+Sosial<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'">302.14 
+untuk kerja bakti</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>361.4 
+Group Work/Kelompok Kerja</STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>361.6 Governmental Social Work Action/Aksi 
+Sosial 
+Pemerintah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini politik sosial</FONT></P>
+<P><STRONG><FONT face=Arial size=2>361.7&nbsp;Private Social Work Action/Aksi 
+Sosial Lembaga Swasta</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>361.77 International Red Cross Committee, 
+ICRC/Palang Merah Internasional<BR></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;Palang Merah 
+Indonesia/PMI<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;Medical Emergency Rescue Committe/Mer-C, Bulan Sabit Merah 
+Indonesia/BSMI<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">610.734 untuk 
+keperawatan publik</SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>361.8&nbsp;Community Social Work Action/Aksi 
+Sosial 
+Masyarakat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini penggalangan 
+dana<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'">302.14 
+untuk pengabdian masyarakat</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>361.9&nbsp;Historical, Geographic, Person 
+Treatment of&nbsp;Social Work Action/Aksi Sosial di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 361.9 notasi 01 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: aksi sosial di Arizona 361.9791</FONT></P>
+<P><FONT face=Arial size=2><STRONG>361.9598 Social Work Action in Indonesia/Aksi 
+Sosial di 
+Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini unjuk rasa di Indonesia, demonstrasi di Indonesia, 
+aksi massa di Indonesia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>362 Social Welfare, Problems&nbsp;and 
+Services/Kesejahteraan Sosial, Permasalahan&nbsp;dan Layanan 
+Sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;keamanan 
+sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">344.03 
+untuk hukum kesejahteraan sosial</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.1 Services&nbsp;of Physical 
+Illness/Permasalahan dan Layanan yang Berhubungan 
+dengan&nbsp;Sakit&nbsp;Fisik</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.1068 Medical Service Management/Manajemen 
+Layanan 
+Kesehatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini manajemen rumah sakit, manajemen puskesmas, manajemen 
+klinik layanan 
+kesehatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold">Lihat 
+juga 725.5 untuk arsitektur rumah sakit</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.12 Health Centers/Pusat Layanan 
+Kesehatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini layanan rumah sakit, layanan ambulans, layanan pusat 
+kesehatan 
+masyarakat,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+layanan dokter, puskesmas, 
+posyandu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk fasilitas kesehatan, fasilitas rumah sakit</FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.2 Services&nbsp;of&nbsp;Mental 
+Illness/Permasalahan dan Layanan yang Berhubungan 
+dengan&nbsp;Sakit&nbsp;Jiwa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini layanan dokter jiwa,&nbsp;layanan rumah sakit jiwa, 
+RSJ<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 362.3 untuk layanan yang berhubungan dengan keterbelakangan 
+mental<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.89 untuk sakit 
+jiwa ditinjau dari segi ilmu kedokteran</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.28 Suicide/Bunuh 
+Diri<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga&nbsp;394.8 untuk adat istiadat bunuh 
+diri<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga <SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.858 
+untuk perilaku bunuh diri ditinjau dari segi ilmu kedokteran</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.292 Alcohol Problems/Permasalahan 
+Alkohol, Permasalahan Minuman 
+Keras<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 344.04 untuk hukum peredaran minuman keras dan minuman 
+beralkohol<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 641.2 untuk minuman 
+beralkohol<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;663.1 untuk teknologi pembuatan minuman beralkohol</FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.293&nbsp;Narcotics Problems/Permasalahan 
+Narkotik, Narkoba, Narkotika dan Obat-obat 
+Terlarang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini NAPZA (narkotika, psikotropika dan zat 
+aditif)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk opium, heroin, morfin, ganja, cannabis, kokain, sabu-sabu, pil koplo, 
+ekstasi, candu, dan 
+lain-lain<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 344.04 untuk undang-undang psikotropika</FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.296&nbsp;Tobacco Problems/Permasalahan 
+Tembakau, Permasalahan 
+Rokok<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">613.8 untuk kecanduan 
+rokok dan 
+tembakau<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;633.7 untuk 
+perkebunan&nbsp;tembakau</SPAN>&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 679 untuk produk rokok dan tembakau</FONT></P>
+<P><STRONG>362.3 Services&nbsp;of&nbsp;Mental Retardation/Layanan yang 
+Berhubungan dengan&nbsp;Keterbelakangan 
+Mental<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 362.2 untuk layanan yang berhubungan dengan sakit 
+jiwa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.858</SPAN> 
+untuk&nbsp;keterbelakangan mental&nbsp;ditinjau dari segi ilmu 
+kedokteran</SPAN></P>
+<P><STRONG><FONT face=Arial size=2>362.4 Services to People with Physical 
+Disabilities/Permasalahan dan Layanan&nbsp;kepada Penyandang 
+C</FONT></STRONG><STRONG><FONT face=Arial size=2>acat</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>362.5 Problems and Services to The 
+Poor/Permasalahan dan Layanan kepada Orang Miskin, 
+Kemiskinan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini permasalahan pengangguran, gelandangan dan orang-orang 
+terlantar<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">331.137 
+untuk pengangguran ditinjau dari segi ekonomi perburuhan</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.6 Services to Persons in Late 
+Adulthood/Permasalahan dan Layanan kepada Orang 
+Lanjut&nbsp;Usia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Layanan kepada manusia usia 
+lanjut/manula<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.67 untuk 
+keperawatan usia lanjut</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.7 Problems and Services to Young 
+People/Permasalahan dan Layanan kepada Anak dan 
+Remaja<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini permasalahan&nbsp;anak jalanan, permasalahan anak yatim 
+piatu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk layanan panti anak jalanan, layanan panti asuhan yatim 
+piatu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.65 untuk 
+perkembangan anak ditinjau dari segi ilmu kedokteran</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.734 Adoption/Adopsi</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>362.8 Problems and Services to Other 
+Groups/Permasalahan dan Layanan kepada Kelompok 
+Lain<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini layanan kepada korban perang, tahanan politik, korban 
+kejahatan, dan lain-lain</FONT></P>
+<P><STRONG>362.8286 Marriage Counseling/Layanan Konsultasi 
+Pernikahan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 306.81 untuk pernikahan, 
+perkawinan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 392.5 untuk adat istiadat pernikahan</P>
+<P><STRONG>362.83 Problems and Services to Women/Permasalahan dan Layanan 
+kepada&nbsp;Wanita dan 
+Perempuan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;masalah&nbsp;kekerasan&nbsp;terhadap wanita dan perempuan, 
+pelecehan seksual, 
+pemerkosaan,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kejahatan 
+seksual<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;kekerasan dalam rumah tangga/KDRT</P>
+<P><FONT face=Arial size=2><STRONG>362.9 Historical, Geographic, Person 
+Treatment of&nbsp;Social Welfare/Kesejahteraan Sosial di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 362.9 notasi 01 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>:&nbsp;kesejahteraan sosial di&nbsp;Perancis 362.944</FONT></P>
+<P><STRONG><FONT face=Arial size=2>362.9598 Social Welfare&nbsp;in 
+Indonesia/Kesejahteraan Sosial di Indonesia</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>363.1 Public Safety Programs/Program Keamanan 
+Umum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini program keamanan terhadap kecelakaan 
+kerja,&nbsp;kecelakaan olah raga,&nbsp;kecelakaan 
+produksi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;(keracunan makanan, obat-obatan dan 
+kosmetik)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga <SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615 untuk 
+obat-obatan dan </SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.9 untuk bahan 
+makanan 
+beracun</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Lihat 
+juga <STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-weight: bold">617.1 
+untuk cedera olah raga&nbsp;ditinjau dari segi ilmu 
+kedokteran<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 646.72 untuk ilmu tentang 
+kosmetik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold">793&nbsp;- 
+799 untuk olah raga </SPAN></SPAN></STRONG></SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.125 Highway Safety, Safety 
+Riding/Keselamatan di Jalan 
+Raya<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini kecelakaan lalu lintas, 
+kecelakaan&nbsp;transportasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk macet dan kemacetan lalu 
+lintas<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 385 - 388 untuk 
+transportasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Lihat 
+juga <STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-weight: bold">617.1 
+untuk kecelakaan lalu lintas ditinjau dari segi ilmu 
+kedokteran</SPAN></STRONG></SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 625.7 untuk teknik jalan raya</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.2 Police Service/Layanan 
+Kepolisian<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di&nbsp;sini layanan pembuatan surat catatan kepolisian, 
+layanan pembuatan SIM/surat izin 
+mengemudi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk surat keterangan kelakuan 
+baik/SKKB<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Lihat 
+juga 725.1 untuk arsitektur gedung 
+kepolisian<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN><SPAN 
+style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-weight: bold"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">929.9 untuk 
+identifikasi kendaraan</SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.20601 Interpol, International 
+Police/Interpol, Polisi Internasional</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.2092 Personnel Police, Police 
+Officer/Personal Kepolisian, 
+Polisi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini brimob, akademi 
+polisi<STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Termasuk&nbsp;Kepolisian Negara Republik 
+Indonesia/Polri<STRONG>&nbsp;&nbsp;&nbsp;&nbsp; </STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.23 Police Functions/Fungsi 
+Kepolisian<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Termasuk patroli, penegak hukum, pencegah kejahatan, pengaturan lalu 
+lintas,&nbsp;detektif, investigasi, 
+penyidikan,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+penyelidikan kejahatan,&nbsp;interogasi, identifikasi kriminal</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.28 Special Kinds of Security and Law 
+Enforcement/Lembaga-lembaga&nbsp;Kepolisian&nbsp;Lainnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini marshall, sheriff, polisi rahasia, detektif 
+swasta<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini satuan polisi pamong praja/satpol PP</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.3 Other Aspects of Public Safety/Aspek 
+Keamanan Umum 
+Lainnya<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini pengamanan dari kekerasan dan 
+terorisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Termasuk 
+search and rescue/tim SAR, lembaga sensor,&nbsp;lembaga anti terorisme, 
+datasemen&nbsp;khusus anti 
+teror<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Badan SAR Nasional, Badan Nasional Penanggulangan 
+Bencana<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk terorisme; kelaskan di 
+nomor&nbsp;303.625&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">297.72&nbsp;dan 
+2X4.77 untuk hukum Islam tentang 
+terorisme</SPAN></SPAN></SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga <SPAN>345.02 untuk&nbsp;terorisme ditinjau dari segi ilmu 
+hukum</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.34936 Flood Disaster Services/Pengamanan 
+dari 
+Bencana&nbsp;Banjir<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;karya komprehensif 
+tentang&nbsp;banjir<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 627.4 untuk teknik penanggulangan banjir</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.3495 Earthquake Disaster 
+Services/Pengamanan dari Bencana 
+Alam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini gempa bumi, tanah 
+longsor<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 551.22 untuk gempa bumi dan <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.302 
+untuk tanah longsor </SPAN>ditinjau dari segi ilmu bumi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.35 Civil Defense/Pertahanan Sipil, 
+Hansip<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;perlindungan masyarakat/Linmas</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.37 Fire Stations/Petugas Pemadam 
+Kebakaran<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini bahaya kebakaran, pengamanan dari 
+kebakaran&nbsp;<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 628.9 untuk teknik pemadam kebakaran</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.4 Public Moral and 
+Customs/Masalah-masalah yang Berhubungan dengan 
+Moral&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;homoseks, perilaku seks menyimpang, sodomi, 
+onani, 
+masturbasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 616.858 untuk homoseksual, onani dan&nbsp;masturbasi ditinjau dari segi 
+ilmu kedokteran</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.46 
+Abortion/Aborsi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga&nbsp;<SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin">618.88&nbsp;untuk 
+bedah aborsi</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin"></SPAN></FONT><FONT 
+face=Arial size=2><STRONG>363.47 
+Pornography/Pornografi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 176 untuk pornografi ditinjau dari segi 
+etika<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 704.942 untuk pornografi ditinjau dari segi 
+kesenian</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.5 Housing/Masalah 
+Perumahan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini masalah penyediaan rumah, penggusuran 
+rumah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 643.1 untuk perumahan ditinjau dari segi kesejahteraan rumah 
+tangga<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<FONT face=Arial size=2>Lihat juga 711.5 untuk perencaan wilayah 
+pemukiman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">Lihat juga 
+728.3 untuk arsitektur rumah</SPAN></P></FONT></FONT>
+<P><FONT face=Arial size=2><STRONG>363.6 Public Utilities and Related 
+Topics/Masalah&nbsp;Utilitas 
+Umum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini masalah&nbsp;penyediaan taman dan layanan 
+rekreasi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.61 Water Supply/Persediaan 
+Air<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini masalah penyediaan air bersih,&nbsp;penyediaan air 
+minum</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.7 Enviromental Problems/Permasalahan 
+Lingkungan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini masalah sanitasi,&nbsp;permasalahan lingkungan 
+kumuh,&nbsp;pengawasan&nbsp;hama<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;pengurusan 
+jenazah,&nbsp;kremasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 297.385&nbsp;atau 2X4.8<STRONG> </STRONG>untuk pengurusan jenazah menurut 
+Agama 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 344.04 untuk regulasi perlindungan lingkungan&nbsp; 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 614.6 untuk pengurusan jenazah ditinjau dari segi ilmu 
+kedokteran<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 632.9 untuk pengendalian hama pada tanaman pertanian</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.7288 Garbage Disposal/Permasalahan 
+Pembuangan Sampah dan 
+Limbah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 628.4 untuk teknologi pengolahan sampah</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.7289 Radioactive Waste/Sampah 
+Radioaktif<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 539.752 untuk radioaktif ditinjau dari ilmu 
+fisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 523.7 untuk radioaktif 
+matahari<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 621.483 untuk radioaktif isotop</FONT></P>
+<P><FONT face=Arial size=2><STRONG>3</STRONG></FONT><FONT face=Arial 
+size=2><STRONG>63.73 Pollution/Masalah Pencemaran 
+Lingkungan,&nbsp;Polusi&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;pencemaran di darat,&nbsp;pencemaran di laut, 
+pencemaran di udara, polusi darat, polusi air, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+polusi 
+udara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai nomor 628 untuk teknik perlindungan lingkungan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.73874 Global Warming, Greenhouse 
+Effect/Masalah Pemanasan Global, Efek Rumah Kaca</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.8 Food Supply/Persediaan Bahan 
+Makanan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini masalah penyediaan makanan, kekurangan pangan, 
+penanggulangan 
+kelaparan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk masalah kurang 
+gizi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 344.04 untuk&nbsp;regulasi kontrol produksi 
+makanan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.39 untuk penyakit 
+kurang gizi ditinjau dari segi ilmu kedokteran</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.9 Population Problems/Permasalahan 
+Kependudukan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelaskan 
+di sini&nbsp;pengawasan pertumbuhan penduduk,&nbsp;masalah kelebihan dan 
+kepadatan 
+penduduk<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 304.6 untuk ilmu kependudukan/demografi </FONT></P>
+<P><FONT face=Arial size=2><STRONG>363.96 Birth Control, Family 
+Planning/Pengaturan Kelahiran, Pembatasan Kelahiran, Keluarga Berencana, 
+KB<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga&nbsp;613.9 untuk keluarga berencana ditinjau dari segi ilmu 
+kedokteran</FONT></P>
+<P><STRONG><FONT face=Arial size=2>364 
+Criminology/Kriminologi</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>364.1 Criminal Offenses/Tindakan Kriminal, 
+Kejahatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini kejahatan yang terorganisir (mafia, gangster, sindikat 
+kriminal),&nbsp;illegal logging/penebangan 
+liar,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+pembalakan liar, penggelapan 
+pajak<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jangan 
+gunakan untuk kejahatan seksual; kelaskan di nomor 
+362.83<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">336.2 
+untuk 
+perpajakan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga </SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">343.04&nbsp;untuk 
+hukum 
+pajak<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN>345.01&nbsp;untuk pengadilan tindak pidana 
+korupsi</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;<SPAN>345.03&nbsp;untuk pelaku kejahatan ditinjau dari segi ilmu 
+hukum</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 657.46 untuk akuntansi perpajakan<SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 923.4 untuk biografi pelaku kriminal </FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.1323 
+Corruption/Korupsi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini korupsi, kolusi, nepotisme 
+(KKN)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk suap-menyuap, penyuapan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.133 
+Smuggling/Penyelundupan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini barang selundupan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.135 International Crimes/Kejahatan 
+Internasional</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.1534 Prostitution/Prostitusi, 
+Pelacuran<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga&nbsp;176 untuk&nbsp;pelacuran, pornografi dan homoseksual 
+ditinjau dari segi 
+etika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;306.74 untuk prostitusi ditinjau dari segi sosiologi<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">&nbsp;</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"></SPAN></FONT><FONT 
+face=Arial size=2><STRONG>364.15554 Child Abuse/Kejahatan pada 
+Anak<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini perdagangan anak</FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.151 
+Genocide/Genosida<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pembunuhan massal, pembantaian</FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.1512 
+Murder/Pembunuhan</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.1552 
+Robbery/Perampokan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pembajakan, pencurian,&nbsp;pencurian dengan 
+kekerasan/curas</FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.163 Forgery/Pemalsuan</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.168 White Colar Crime/Kejahatan Kerah 
+Putih</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.172</STRONG> <STRONG>Gambling/Masalah 
+Judi dan 
+Perjudian<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini togel</FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.2 Criminal Anthropology/Antropologi 
+Kriminal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sebab-sebab tindakan kriminal</FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.3 Criminal Psychology/Psikologi 
+Kriminal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini kondisi kejiwaan pelaku, kenakalan anak dan 
+remaja<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk 
+residivis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 345.08 untuk pengadilan anak dan remaja</FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.4 Prevention of Crime and 
+Delinquency/Pencegahan Tindakan 
+Kejahatan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.23 untuk pencegahan kejahatan oleh kepolisian</FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.6 Penology/Penologi, Ilmu 
+Pidana<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Perlakuan dan penghukuman para pelaku kejahatan, 
+narapidana<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk penetapan hukuman, pemberian grasi, amnesti, hukuman mati, hukuman 
+badan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 345 untuk hukum pidana</FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.8 Discharged Offenders/Perlakuan terhadap 
+Mantan 
+Narapidana<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini 
+rehabilitasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">617.03 untuk 
+rehabilitasi ditinjau dari segi ilmu kedokteran</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>364.9 Historical, Geographic, Person 
+Treatment of&nbsp;Crime/Masalah Kriminalitas&nbsp;di 
+Lokasi&nbsp;Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 364.9 notasi 01 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>:&nbsp;masalah kriminlitas&nbsp;di&nbsp;Perancis 
+364.944</FONT></P>
+<P><STRONG><FONT face=Arial size=2>364.9598 Crime in Indonesia/Kriminalitas di 
+Indonesia</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>365 Penal and Related Institution/Penjara dan 
+Lembaga Permasyarakatan</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>365.3 Kinds of Penal Institution/Jenis-jenis 
+Penjara&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini penjara pengamanan maksimum/maksimum 
+sekuriti</FONT></P>
+<P><FONT face=Arial size=2><STRONG>365.4 Institution for Specifics Classes of 
+Inmates/Penjara untuk Golongan-golongan 
+Khusus<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini penjara khusus anak-anak dan remaja, penjara khusus 
+wanita, penjara khusus militer</FONT></P>
+<P><FONT face=Arial size=2><STRONG>365.5 Prison Plant/Bangunan Penjara, Gedung 
+Penjara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini perlengkapan 
+penjara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold">Lihat 
+juga 725.6 untuk arsitektur penjara</SPAN></FONT></P>
+<P><STRONG>365.6 Inmates/Orang 
+Tahanan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini pelarian 
+penjara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN>345.03 untuk penjahat</SPAN></P>
+<P><FONT face=Arial size=2><STRONG>365.9 Geographic Treatment of&nbsp;Penal 
+Institution/Penjara dan Lembaga Permasyarakatan&nbsp;di&nbsp;Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 365.9 notasi 01 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>:&nbsp;lembaga permasyarakatan di&nbsp;Perancis 
+365.944</FONT></P>
+<P><STRONG><FONT face=Arial size=2>365.9598&nbsp;Penal Institution in 
+Indonesia/Penjara di Indonesia, Lembaga Permasyarakatan&nbsp;di 
+Indonesia</FONT></STRONG></P>
+<P><STRONG>367 General Clubs/Klub-klub 
+Umum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini klub-klub 
+sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 060 untuk organisasi umum</P>
+<P><FONT face=Arial size=2><STRONG>368 
+Insurance/Asuransi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 332.3 untuk perusahaan 
+asuransi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 344.02 untuk hukum asuransi</FONT></P>
+<P><STRONG><FONT face=Arial size=2>368.014 Claims Insurance/Klaim 
+Asuransi</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>368.1 Insurance Againts Damage and Lost 
+Property/Asuransi Kerusakan dan Kerugian Hak Milik</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>368.2 Transportation Insurance/Asuransi 
+Transportasi</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>368.3&nbsp;Old Age, Death, Illness, 
+Injury&nbsp;Insurance/Asuransi Jiwa, Asuransi Kesehatan</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>368.384 Accident Insurance/Asuransi 
+Kecelakaan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">344.02 
+untuk hukum asuransi kecelakaan</SPAN></FONT></P>
+<P><STRONG><FONT face=Arial size=2>368.4&nbsp;Government Sponsored 
+Insurance/Asuransi Jaminan Sosial Pemerintah</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>368.5 Liability Insurance/Jaminan Asuransi 
+</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>368.7 Industrial&nbsp;Accidents 
+Insurance/Asuransi Kecelakaan Kerja</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>368.9 Insurance by Specific 
+Localities/Asuransi di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 368.9 notasi 4 -&nbsp;9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>:&nbsp;asuransi&nbsp;di&nbsp;Australia 368.994, asuransi di 
+wilayah benua Amerika Selatan&nbsp;368.98</FONT></P>
+<P><STRONG><FONT face=Arial size=2>368.9598&nbsp;Insurance in Indonesia/Asuransi 
+di Indonesia</FONT></STRONG><FONT face=Arial size=2>&nbsp;</FONT></P>
+<P><FONT face=Arial 
+size=2><STRONG>369&nbsp;Miscellaneous&nbsp;Associations/Aneka Ragam 
+Perkumpulan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini gerakan pramuka, kepanduan, pecinta alam, Lions 
+International, Rotary International, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Greenpeace, dharma wanita, dan 
+lain-lain<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 060 untuk organisasi 
+umum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 371.8 untuk kegiatan 
+ekstrakulikuler<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: bold">796.522 
+untuk olah raga mendaki 
+gunung<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">910.4 
+untuk kisah<STRONG> </STRONG>ekspedisi ke 
+gunung</SPAN></SPAN></SPAN></STRONG></FONT></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

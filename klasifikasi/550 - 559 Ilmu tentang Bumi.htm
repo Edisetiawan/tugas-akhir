@@ -1,0 +1,1169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='550 - 559'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>550 - 559 Ilmu Bumi</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>550 - 559 Ilmu Bumi</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><B><I><SPAN 
+style="FONT-SIZE: 13.5pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">Earth 
+Sciences (Ilmu Bumi)</SPAN></I></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">550 
+Earth Sciences/Ilmu tentang Bumi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini 
+geofisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 910.02 untuk bumi ditinjau dari segi geografi fisik</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">550.285 
+Data Processing and Analysis of Geology/Pengolahan dan Analisa Data 
+di&nbsp;Bidang&nbsp;Geologi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini proses komputerisasi geologi</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">550.3 
+Dictionaries and Encyclopedia of Geology/Kamus Geologi, Ensiklopedia 
+Geologi</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">550.5 
+General Publications of Geology/Terbitan Berseri Geologi, Berkala 
+Umum&nbsp;Geologi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini majalah geologi,<SPAN 
+style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN>&nbsp;jurnal 
+geologi</SPAN><SPAN 
+style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal"><SPAN><STRONG>550.6 
+Organization and Management of Geology/Organisasi dan Manajemen di Bidang 
+Geologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini karya&nbsp;komprehensif dari Badan Meteorologi Klimatologi dan 
+Geofisika/BMKG<O:P></O:P></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">550.72 
+Research and Statistical Methods of Geology/Metode&nbsp;Riset Penelitian dan 
+Statistik&nbsp;Geologi</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>550.92 
+Earth Scientists/Ahli Ilmu 
+Bumi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 925.5 untuk biografi ahli ilmu bumi<SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551 
+Geology/Geologi</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.1 
+Gross Structure and Properties of The Earth/Struktur dan Sifat-sifat 
+Bumi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini kulit bumi, inti bumi, kerak bumi, magma, lempeng 
+tektonik</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.21 
+Volcanoes/Gunung Berapi&nbsp;&nbsp; </SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN>Kelaskan di sini kawah, 
+kepundan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk erupsi, gunung 
+meletus<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk gunung; kelaskan di nomor 
+<SPAN>551.432&nbsp;</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">552.2 
+untuk lava, lahar, debu vulkanik</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.22 
+Earthquake, Seismology/Gempa Bumi, 
+Sismologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>S</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">eismologi: 
+ilmu yang mempelajari tentang gempa 
+bumi&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.3495 untuk gempa bumi ditinjau dari segi permasalahan sosial<SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><STRONG>555.220287 
+Seismography/Seismograf</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Seismograf: alat pengukur gempa 
+bumi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Termasuk 
+skala ritcher</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"></SPAN><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.23 
+Thermal Waters and Gasses, Geysers/Sumber Air Panas dan Gas 
+Bumi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+333.8 untuk gas alam ditinjau dari segi 
+ekonomi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+665.7 untuk teknologi industri gas alam</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.3 
+Surface and Exogenous Processes/Proses di Permukaan Bumi dan Eksogenus dan 
+Bahan-bahannya</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini formasi tanah, perubahan tanah karena angin, kawah 
+meteorit<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+523.5 untuk meteorit</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>551.302 
+Erosion/Erosi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini tanah 
+longsor<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.3495&nbsp;untuk tanah longsor ditinjau dari segi permasalah 
+sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 627.5 untuk teknik pengendalian erosi</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>551.303 
+Sedimentation/Sedimentasi</STRONG></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>551.31 
+Glaciology/Glasiologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Glasiologi: ilmu yang mempelajari sifat-sifat, formasi, pergerakan dari 
+es dan salju</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>551.312 
+Glaciers/Gletser<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini lapisan es</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>551.342 
+Icebergs/Gunung 
+Es<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini laut es</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.41 
+Geomorphology, Continents/Geomorfologi, Benua-benua</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Geomorfologi: 
+ilmu&nbsp;tentang perubahan topografi lapisan tanah karena erosi dan proses 
+endapan&nbsp;lumpur<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini geomorfologi gurun 
+pasir<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai 910.01 untuk geografi umum</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.42 
+Island and Reef/Pulau</SPAN></B><SPAN> <STRONG>dan Batu 
+Karang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini terumbu 
+karang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 577.6 untuk ekologi batu karang</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.43 
+Plateau</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">/Dataran 
+Tinggi</SPAN></B><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.432 
+Mountains/Gunung</STRONG></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.436 
+<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">Hills/Bukit</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></STRONG></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.44 
+Valley/Lembah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini canyon</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.447 
+Cave/Gua</SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.45 
+Plane Region, Coastal Region/Dataran Rendah dan Pantai</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini padang rumput, sabana, stepa, tundra, delta</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.456 
+Shorelines/Garis Pantai</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini laut dan 
+danau<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk perubahan di laut dan 
+danau<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk laut es; kelaskan di 
+551.342<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk danau; kelaskan di 551.482</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.46 
+Hydrosphere, Oceanography/Hidrosfer, Oseanografi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Oseanografi: 
+ilmu tentang lautan dan samudera</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.461 
+Atlantic Ocean/Samudera Atlantik</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini&nbsp;Laut Atlantik 
+Utara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-size: 11.0pt; mso-bidi-font-weight: bold">Lihat 
+juga 997.1 untuk sejarah umum negara-negara di Kepulauan 
+Atlantik<O:P></O:P></SPAN></P></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.4618 
+Lagoons/Lagoon</SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.462 
+Mediterranean Sea/Laut Tengah</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.4629 
+Black Sea/Laut Hitam</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.463 
+Gulf of Mexico and Carribean Sea/Teluk Meksiko dan Laut Karibia</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.4637 
+Tsunamis/Tsunami</SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.464 
+South Atlantic Ocean/Samudera Atlantik Selatan</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.465 
+Pacific Ocean/Samudera 
+Pasifik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-size: 11.0pt; mso-bidi-font-weight: bold">Lihat 
+juga 996 untuk sejarah umum negara-negara di Kepulauan 
+Pasifik<O:P></O:P></SPAN></P><O:P></O:P></SPAN>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.46572 
+South China Sea/Laut China Selatan</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.467 
+Indian Ocean/Samudera Hindia, Samudera Indonesia</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.468 
+Arctic Ocean, North Polar Sea/Samudera Arktik, Laut Es Utara, Laut Kutub 
+Utara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-size: 11.0pt; mso-bidi-font-weight: bold">Lihat 
+juga 998 untuk sejarah umum Kepulauan di sekitar 
+Arktik</SPAN><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<O:P></O:P></STRONG></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.469 
+Antartic Waters/Perairan Antartika, Laut Es Selatan, Laut Kutub 
+Selatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-size: 11.0pt; mso-bidi-font-weight: bold">Lihat 
+juga 998 untuk sejarah umum Kepulauan di sekitar Antartika</SPAN><SPAN 
+style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P><O:P></O:P></SPAN>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.47 
+Dynamic Oceanography/Oseanografi Dinamis</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini arus laut, gelombang laut, swell/gelombang besar, gempa dasar laut, 
+gelombang 
+pasang,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pasang 
+naik, pasang surut,&nbsp;palung laut</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.48 
+Hydrology/Hidrologi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Hidrologi: 
+ilmu tentang tata 
+air<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini mata air, air danau, air kolam, air sungai, air&nbsp;tanah, air 
+terjun, air sumur, 
+oase<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+627 untuk teknik hidraulik</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.482 
+Lakes/Danau</SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.5 
+Meteorology/Meteorologi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini prakiraan 
+cuaca<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk aerosol</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.51 
+Atmosphere/Atmosfer</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini lapisan atmosfer: troposfer, magnetosfer, mesosfer, stratosfer, 
+ionosfer</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.5113 
+Dust/Debu</SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.5142 
+Ozone Layer/Lapisan Ozon</SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.518 
+Wind/Angin</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini angin 
+muson<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk angin lokal; </SPAN><I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">contoh</SPAN></I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">:&nbsp;chinooks,&nbsp;angin-angin 
+lokal di Indonesia</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.525 
+Air Temperature/Temperatur Udara, Suhu&nbsp;Udara</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+536.5 untuk temperatur ditinjau dari segi fisika</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.54 
+Atnosphere Pressure/Tekanan Atmosfer</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini gangguan atmosfer</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>551.55 
+Storms/Badai</STRONG></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>551.552 
+Hurricane/Angin 
+Ribut<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini topan, angin puting beliung</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>551.553 
+Tornadoes/Tornado<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini twister</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>551.554 
+Thunderstorms/Petir<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini guruh, guntur</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>551.555 
+Snowstorms/Badai 
+Salju<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Jangan gunakan untuk salju; kelaskan di nomor 
+<SPAN>551.5784</SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>551.5632 
+Lightning/Kilat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Saint Elmo's Fire<SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.57 
+Hydrometeorology/Hidrometeorologi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini&nbsp;kelembaban, kondensasi</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.5744 
+Dew/Embun</SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.575 
+Fog and Mist/Kabut dan Halimun</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.576 
+Clouds/Awan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini jenis-jenis awan (kumulus nimbus, sirrus, stratus, dan 
+lain-lain)<O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.577 
+Precipitation, Rain, 
+Rainfall/Hujan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini curah hujan</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.5772 
+Geografic Distribution of Precipitation/Hujan dan Curah Hujan&nbsp;di Lokasi 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 551.5772 notasi 1 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Contoh: curah hujan di Nigeria 551.5772669</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.5772598 
+Precipitation in Indonesia/Hujan dan Curah Hujan di 
+Indonesia<O:P></O:P></STRONG></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>551.5784 
+Snow/Salju<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini lapisan salju, 
+icicles<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Icicles: untaian tetesan air yang membeku karena suhu yang sangat 
+dingin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan kelaskan untuk badai salju; kelaskan di nomor 
+551.54<O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.6 
+Climatology and Weather/Klimatologi, Iklim dan Cuaca</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini radar dan satelit cuaca, 
+mikroklimatologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 525.5 untuk 
+zona&nbsp;iklim<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 551.5 untuk prakiraan cuaca</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.6092 
+Climatologist/Ahli Klimatologi</SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.68 
+Control of Weather/Pengawasan Cuaca</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.69 
+Geographic Treatment of Climate/Iklim di Lokasi Tertentu</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini paleoklimatologi<BR></SPAN><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Tambahkan 
+nomor dasar 551.69 notasi 1 - 9&nbsp;dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">Contoh</SPAN></I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">: 
+climate of Australia 551.6994</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.69598 
+Climate of Indonesia/Iklim di Indonesia</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.7 
+Historical Geology/Geologi Historis</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini paleogeography/paleogeografi, stratigraphy/stratigrafi</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.71 
+Precambrian Era/Zaman Prekambrian</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini cryptozoic/kriptozoikum, archean era, protozoic era/zaman 
+protazoikum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 930.12 - 930.16 untuk pembagian zaman berdasarkan 
+arkeologi</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.72 
+Paleozoic Era/Zaman Paleozoikum</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini periode cambrian, periode ordovician, periode silurian</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.74 
+Devonian Period/Periode Devonian</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.75 
+Carboniferous and&nbsp;Permian Periods/Periode Karboniferus dan 
+Permian</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.76 
+Mesozoic Era/Zaman Mesozuikum</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini triassic/periode triasik, jurassic/periode jurasik</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.77 
+Cretaceous Period/Periode Kretaseus</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.78 
+Cenozoic Era, Tertiary Period/Zaman Senazoikum, Periode 
+Tersier</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini paleocene/periode paleosen, eocene/periode eosen, oligocene/periode 
+oligosen, 
+neocene/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+periode neosen, miocene/periode miosen, pliocene/periode pliosen</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.79 
+Quarternary Period/Periode Kuarter</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini</SPAN><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">pleistocene/periode 
+pleistosen, periode sekarang</SPAN><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.792 
+Ice Age/Zaman Es</SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.8 
+Structural Geology/Geologi Struktural</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini deformasi, diastrofisme, epeirogeni, orogeny</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.9 
+Geochemistry/Geokimia</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">552 
+Petrology/Petrologi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Ilmu 
+tentang komposisi, struktur dan asal-usul batu-batuan<BR></SPAN><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini petrography/petrografi (ilmu yang mempelajari klasifikasi sistematis 
+batu-batuan)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk lithology/litologi (ilmu tentang batu-batuan)</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">552.09 
+Geographic Distribution of Rocks/Distribusi Batu-batuan di Lokasi 
+Tertentu</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Tambahkan 
+nomor dasar 552.09 notasi 1 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">Contoh</SPAN></I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">: 
+batu-batuan di Gurun Sahara 552.0966</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">552.09598 
+Rock of Indonesia/Batu-batuan di Indonesia</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">552.1 
+Igneous Rocks/Batuan Api</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">552.2 
+Volcanic Rocks/Batuan Vulkanik</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Batuan 
+dari gunung 
+berapi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk aphanites, lava, obsidian, andesit, debu vulkanik, basalt, lahar 
+dingin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk gunung berapi; kelaskan di nomor <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.21&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 551.1 untuk magma</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"></SPAN><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">552.3 
+Plutonic Rocks/Batuan Plutonik</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini diorit, delorit, gabbros, granit, norit, peridotit, porfiris, 
+syenit</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">552.4 
+Metamorphic Rocks/Batuan Metamorfik</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini serpentinit, gneis, pualam, kuarsa, slat</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">552.5 
+Sedimentary Rocks/Batuan Sedimen</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini gypsum, batu pasir, tufa, pasir, lumpur, 
+tanah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk batuan karbonat, batu kapur, dolomit, oolit</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">552.8 
+Microscopic Petrology/Petrologi Mikroskopik</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">553 
+Economic Geology/Geologi Ekonomis</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;333.9 
+untuk ekonomi sumber&nbsp;daya alam</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">553.1 
+Formation and Structure of Deposits/Formasi dan Struktrur 
+Endapan</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">553.2&nbsp;Carbonaceous 
+Materials/Material Karbon</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini batu bara, grafit, minyak, aspal,&nbsp;fosil damar, 
+getah<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+333.8 untuk sumber daya alam ditinjau dari segi 
+ekonomi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+546.6 untuk karbon, ditinjau dari segi kimia 
+anorganik&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+547.8 untuk batu bara, aspal&nbsp;ditinjau dari segi kimia 
+organik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+662.6 untuk industri bahan bakar&nbsp;dan</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+662.9 untuk industri karbon bukan bahan bakar</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">553.3 
+Iron/Besi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+546.6 untuk besi ditinjau dari 
+segi&nbsp;kimia&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;620.17 
+untuk besi dan baja ditinjau dari segi material 
+teknik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+669.1 untuk metalurgi logam besi dan 
+baja<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Lihat 
+juga 739.4 untuk kerajinan besi</SPAN></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">553.4 
+Metals and Semimetals/Metal dan Semimetalan </SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini emas, perak, platinum, tembaga, timah, seng,&nbsp;merkuri, krom, kobalt, 
+nikel<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+333.8 untuk emas, perak, timah ditinjau dari segi ekonomi sumber daya 
+alam&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+546.6 untuk&nbsp;metal ditinjau dari 
+segi&nbsp;kimia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga </SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">620.16 
+untuk metal ditinjau dari segi material 
+teknik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+622.3 untuk teknik pertambangan&nbsp; timah, emas, perak, platinum&nbsp;dan 
+lain-lain<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+661.03 untuk metal ditinjau dari segi teknologi industri 
+kimia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+669 untuk 
+metalurgi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<STRONG><SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-weight: bold">Lihat 
+juga 739.2 untuk kerajinan emas, perak dan 
+platinum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-bidi-font-weight: bold; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Lihat 
+juga 739.5 untuk kerajinan tembaga, perunggu dan 
+alumunium</SPAN></SPAN></STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-weight: bold"><O:P></O:P></SPAN></P></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">553.5 
+Structural and Sculptural Stone/Struktur dan Pahatan Batu</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini marble/pualam, granit, batu pasir, slate/batu 
+tulis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 552.3 untuk batuan 
+plutonik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 552.4 untuk&nbsp;batuan metamorfik</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">553.6 
+Other Economic Geology Materials/Material&nbsp;Geologi Ekonomis 
+Lainnya</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Termasuk 
+pasir untuk bangunan, kerikil, garam dan&nbsp;material lain yang bernilai 
+ekonomis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+661.4 untuk teknologi industri 
+garam&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">553.7 
+Water, Fresh Water/Air</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+333.9 untuk air ditinjau dari segi ekonomi sumber daya alam</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">553.8 
+Gems/Batu Permata</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini intan, rubi, safir, zamrud, opal, jade, amber</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">553.9 
+Inorganic Gases/Gas Anorganik</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini hidrogen, nitrogen, oksigen, klorin, florin, 
+helium<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat&nbsp;juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+546.2 dan</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+546.7 untuk oksigen dan&nbsp;hidrogen ditinjau dari segi 
+kimia&nbsp;anorganik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+661.6 untuk teknologi industri garam 
+nitrogen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga </SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">665.8 
+untuk teknologi industri gas</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">554 
+- 559 Earth Science, Geology&nbsp;by Specific Localities/Geologi di Lokasi 
+Tertentu</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Tambahkan 
+nomor dasar 55 notasi 4 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">Contoh</SPAN></I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">: 
+geologi di Jepang 555.2; bukan 555.52</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">554 
+Geology of Europe/Geologi di Eropa</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">555 
+Geology of Asia/Geologi di Asia</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">555.98 
+Geology of Indonesia/Geologi di Indonesia</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Bukan 
+555.598</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">556 
+Geology of Africa/Geologi di Afrika</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">557 
+Geology of North America/Geologi di Amerika Utara</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">558 
+Geology of&nbsp;South America/Geologi di Amerika&nbsp;Selatan</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>559 
+Geology of Other Countries/Geology di Negara-negara Lain, Geologi di bagian 
+Dunia yang 
+Lain<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini geologi di kutub</SPAN></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='150 - 159'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>150 - 159 Psikologi</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>150 - 159 Psikologi</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><STRONG><FONT face=Arial size=4><EM>Psychology 
+(Psikologi/Ilmu Jiwa)</EM></FONT></STRONG></P><FONT face=Arial size=2><FONT 
+face=Arial size=2>
+<P><FONT face=Arial size=2><STRONG>150 Psychology/Psikologi, Ilmu 
+Jiwa</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>150.1 Philosophy and Theory of 
+Psychology/Filsafat dan Teori 
+Psikologi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk sistem-sistem fungsionalisme, behaviorisme, sistem Sigmund Freud, 
+Adler, Jungian&nbsp;dan Gestalt</FONT></P></FONT>
+<P><FONT face=Arial size=2><STRONG>150.195 
+Psychoanalysis/Psikoanalisis</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>150.2 Miscellany</STRONG><SPAN><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>&nbsp;of 
+Psychology/Aneka 
+Ragam&nbsp;di&nbsp;Bidang&nbsp;Psikologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini proses komputerisasi psikologi, teknik dan prosedur 
+psikologi</SPAN><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><FONT 
+face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>150.3 
+Dictionaries and Encyclopedia of Psychology/Kamus Psikologi, Ensiklopedia 
+Psikologi</STRONG></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>150.5 
+General Publications of Psychology/Terbitan Berseri, Berkala Umum 
+Psikologi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini majalah psikologi, jurnal 
+psikologi</SPAN></P></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></FONT></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN></SPAN>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>150.6 
+Organization and Management of Psychology/Organisasi dan Manajemen di Bidang 
+Psikologi</STRONG></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>150.7 
+Education of Psychology/Pendidikan Psikologi</STRONG></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>150.724 
+Experinmental Research/Riset Penelitian Eksperimental di Bidang 
+Psikologi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;m</SPAN><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'">etode 
+statistik&nbsp;psikologi</SPAN></P></FONT></FONT>
+<P><FONT face=Arial size=2><STRONG>150.92 
+Psychologist/Psikolog<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 921 untuk biografi psikolog&nbsp;</FONT></P>
+<P><FONT face=Arial size=2><STRONG>152 Sensory Perception, Movement, Emotions, 
+Physiological Drives/Psikologi Fisiologis</STRONG></FONT></P>
+<P><STRONG><FONT face=Arial size=2>152.1 Sensory Perception/Persepsi 
+Indera</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>152.3 Movement and Motor Functions/Fungsi 
+Gerak dan Motorik</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>152.4 Emotions and Feeling/Emosi dan 
+Perasaan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;kebahagiaan, ketakutan, kebencian, kecemburuan, marah dan 
+kemarahan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk sense of humor, 
+frustasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'">302.17 
+untuk ketakutan ditinjau dari segi psikoanalisa sosial</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>153 Conscious Mental Process and 
+Intelligence/Intelegensia, Kecerdasan Proses Intelektual dan 
+Mental<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 006.3 untuk kecerdasan buatan ditinjau dari segi ilmu 
+komputer</FONT></P>
+<P><STRONG><FONT face=Arial size=2>153.12 Memory/Ingatan</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>153.2 Formation and Association of Ideas/Ide, 
+Inspirasi</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>153.3 Imagination, Imagery, Creativity/Daya 
+Khayal, Imajinasi, 
+Kreativitas<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<FONT face=Arial size=2>Lihat juga mulai 704.9 untuk seni mewujudkan 
+imajinasi</P></FONT></FONT>
+<P><STRONG><FONT face=Arial size=2>153.4 Thought, Thinking, Reasoning, 
+Intuition, Value, Judgment/Pemikiran, Pertimbangan, Intuisi, 
+Nilai</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>153.6 Communication Psychology/Psikologi 
+Komunikasi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini psikologi komunikasi verbal dan non verbal</FONT></P>
+<P><FONT face=Arial size=2><STRONG>153.7 Perceptual Process/Proses 
+Persepsi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini perhatian, apresiasi, persepsi waktu, ruang dan 
+gerakan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>153.8 Will, 
+Volition/Kemauan</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini pengendalian diri, persuasi, brainwashing</FONT>/cuci otak</P>
+<P><FONT face=Arial size=2><STRONG>153.9 Intelligence and Aptitudes/Kecerdasan 
+dan 
+Bakat</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini Intelligence 
+Quotient/IQ<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Emotional Quotient/EQ, Emotional Spiritual 
+Quotient/ESQ<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 153 untuk intelektual</FONT></P>
+<P><FONT face=Arial size=2><STRONG>153.93 IQ Test/Tes 
+IQ<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;tes kecerdasan umum dan kemampuan, tes 
+IQ<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 155.25 untuk psikotest</FONT></P>
+<P><FONT face=Arial size=2><STRONG>154 Subconscious and Altered States and 
+Process/Psikologi Bawah Sadar</STRONG></FONT></P>
+<P><STRONG><FONT face=Arial size=2>154.2 The Subconscious/Alam Bawah 
+Sadar</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>154.22 Id, Ego, Superego/Id, Ego, 
+Superego</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>154.3 Fantasy/Fantasi</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>154.4 
+Hallucinations/Halusinasi</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>154.6 Sleep Phenomena/Fenomena 
+Tidur</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>154.64 Sleepwalking, Somnambulism/Berjalan 
+Dalam Tidur</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>154.7 Hypnotism/Hipnotis</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>155 Differential and Developmental 
+Psychology/Psikologi Diferensial dan Psikologi Perkembangan</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>155.2 Individual&nbsp;Psychology, 
+Characters/Psikologi Individual, 
+Karakter<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;perbedaan individu, watak, sifat, bakat, 
+tipologi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>155.25 Character Development/Perkembangan 
+Kepribadian, Perkembangan 
+Karakter<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp; pengembangan diri, motivasi 
+diri<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk psikotest, tes 
+kepribadian<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk pendidikan karakter; kelaskan di nomor 
+370.114<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 153.92 untuk tes IQ</FONT></P>
+<P><FONT face=Arial size=2><STRONG>155.3 Sex Psychology and Psychology of The 
+Sexes/P</STRONG></FONT><FONT face=Arial size=2><STRONG>sikologi 
+Seks<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 176 untuk etika 
+seks<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 306.77&nbsp;untuk sosiologi 
+seks<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.4 untuk perilaku seks 
+menyimpang<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Lihat 
+juga 613.9 untuk&nbsp;pendidikan seks ditinjau dari segi ilmu 
+kedokteran<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 649.6 pendidikan seks untuk 
+anak</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P><FONT face=Arial size=2><STRONG>155.4&nbsp;Child Psychology/Psikologi 
+Anak<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Psikologi anak hingga usia sebelas tahun</FONT></P>
+<P><FONT face=Arial size=2><STRONG>155.5 Psychology of Young People Twelve to 
+Twenty/Psikologi 
+Remaja</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Psikologi remaja dari dua belas sampai dua puluh tahun</FONT></P>
+<P><FONT face=Arial size=2><STRONG>155.6 Psychology of Adults/Psikologi 
+Dewasa</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>155.7 Evolutional Psychology/Psikologi 
+Evolusional<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelaskan 
+di sini&nbsp;psikologi evolusi mental dasar manusia dan karekteristik</FONT></P>
+<P><FONT face=Arial size=2><STRONG>155.8 Ethnopsychology and National 
+Psychology/Etnopsikologi, Psikologi&nbsp;Suatu Bangsa</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>155.9 Environmental Psychology/Psikologi 
+Lingkungan</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>155.9042 Stress/Stres, Tekanan 
+Jiwa<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.89 untuk penyakit 
+jiwa, gangguan jiwa&nbsp;dan psikologi abnormal</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>156 Comparative Psychology/Psikologi 
+Perbandingan</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>156.2 Comparative Psychology of Sensory 
+Perception, Movement, Emotions, Psychological Drives 
+of&nbsp;Animals/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Psikologi Fisiologis Perbandingan dari Hewan</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>156.9&nbsp;Comparative Psychology of 
+Plants/Psikologi Perbandingan dari Tumbuhan</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>158 Applied Psychology/Psikologi 
+Terapan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini psikologi perusahaan, psikologi 
+industri<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk psikologi kesusastraan; kelaskan di nomor 801.9</FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.1 Personal Improvement and 
+Analysis/Perbaikan Pribadi, Penghidupan yang Sukses</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.128 
+Meditations/Meditasi</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.2 Interpersonal Relations/Hubungan Antar 
+Individu</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.24 Interpersonal Relations with Family 
+Members/Hubungan Individu dengan Anggota Keluarga</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.25 Interpersonal Relations with Friends 
+and Neighbors/Hubungan Individu dengan&nbsp;Teman dan 
+Tetangga</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.26 Interpersonal Relations with Works 
+Associates/Hubungan Individu dengan&nbsp;Rekan Kerja</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.27 Interpersonal Relations with 
+Strangers/Hubungan Individu dengan&nbsp;Orang&nbsp;Tak 
+Dikenal</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.3 Counseling and Interviewing/Psikologi 
+Konseling, Penyuluhan, Pemberian&nbsp;Nasehat 
+dan&nbsp;Wawancara&nbsp;<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 371.4 untuk&nbsp;bimbingan konseling untuk siswa sekolah</FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.4 Leadership/Kepemimpinan yang 
+Berkaitan&nbsp;dengan Psikologi</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.5 
+Negotiation/Negosiasi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 658.405 untuk manajemen negosiasi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.7 Industrial Psychology/Psikologi 
+Industri, Psikologi Perindustrian</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>158.9 Systems and Schools of Applied 
+Psychology/Sistem dan Aliran-aliran Psikologi 
+Terapan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;analisis transaksional</FONT></P>
+<P><FONT size=2><STRONG><FONT face=Arial>159 Unassigned/Belum 
+Digunakan</FONT></STRONG></FONT></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

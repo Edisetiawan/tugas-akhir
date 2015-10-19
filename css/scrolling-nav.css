@@ -1,0 +1,218 @@
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+
+.navbar-default {
+    background-color: #824100;
+    border-color: #824100;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #000;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #aa6620;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+    
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #824100;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #F0B600;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: #fff;
+  background-color: #aa6620;
+  border-color: #000;
+}
+
+.navbar-default .navbar-brand {
+    color: #f0b600;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #f0b600;
+    background-color: transparent;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 3px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.intro-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: url(../images/bookshelf1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 800px;
+    /*height: 800px;*/
+    /*padding-bottom: 200px;*/
+
+}
+
+.about-section {
+    height: 100%;
+    padding-top: 80px;
+    text-align: center;
+    /*background: #977545;*/
+     background: url(../images/content.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 240%;
+}
+
+.services-section {
+    height: 100%;
+    padding-top: 80px;
+    text-align: center;
+    /*background: #fff;*/
+    background: url(../images/content2.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 140%;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 80px;
+    text-align: center;
+   /*background: #eee;*/
+    background: url(../images/content2.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #CCC;
+    border-color: #fff;
+}
+
+ h2 {
+    color: #fbbb7e;
+}
+
+.panel-info {
+    border-color: #824100;
+}
+
+.panel-info > .panel-heading {
+    color: #f0b600;
+    background-color: #824100;
+    border-color: #824100;
+}
+
+.panel-footer {
+    padding: 10px 15px;
+    background-color: #F5F5F5;
+    border-top: 1px solid #824100;  
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.well{
+    border: 1px solid #824100;
+}
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    background: #3276B1 none repeat scroll 0% 0%;
+    border-color: #3276B1;
+}
+
+.thumbnail {
+    border-color: #824100;
+}
+
+a:focus, a:hover {
+    color: #f1c334;
+    text-decoration: underline;
+}
+
+a {
+    color: #f0b600;
+    text-decoration: none;
+}
+
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857;
+    color: #f0b600;
+    text-decoration: none;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    z-index: 2;
+    color: #FFF;
+    cursor: default;
+    background-color: #f0b600;
+    border-color: #f0b600;
+}
+
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
+    color: #000;
+    background-color: #EEE;
+    border-color: #DDD;
+}

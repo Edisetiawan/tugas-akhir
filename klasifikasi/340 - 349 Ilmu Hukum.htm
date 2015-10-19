@@ -1,0 +1,900 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='340 - 349'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>340 - 349 Ilmu Hukum</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>340 - 349 Ilmu Hukum</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><B><I><SPAN 
+style="FONT-SIZE: 13.5pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">Law 
+(Ilmu Hukum)</SPAN></I></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">340 
+Law/Ilmu Hukum</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini jurisprudensi/yurisprudensi</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">340.3 
+Dictionaries and Encyclopedia of Law/Kamus Ilmu Hukum, Ensiklopedia Ilmu 
+Hukum</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">340.5 
+General Publications of Law/Terbitan Berseri Ilmu Hukum, Berkala Umum&nbsp;Ilmu 
+Hukum</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini majalah ilmu hukum, jurnal ilmu hukum</SPAN><SPAN 
+style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">340.06 
+Organization and Management of Law/Organisasi dan Manajemen di Bidang 
+Hukum</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">340.072 
+Research and Statistical Methods of Law/Metode&nbsp;Riset Penelitian Hukum, 
+Statistik&nbsp;Hukum</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal"><SPAN><STRONG>340.092 
+Lawyers/Pengacara<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">923.4 
+untuk biografi ahli hukum</SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal"><SPAN><STRONG>340.1 Philosophy 
+and Theory of &nbsp;Law/Filsafat dan Teori tentang Ilmu 
+Hukum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini hukum positif, hukum alam<O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">340.2 
+Comparative Law/Hukum Perbandingan</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>340.3 
+Law Reform/Pembaharuan Hukum, Reformasi 
+Hukum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 361.24 untuk gerakan reformasi<O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">340.5 
+Legal Systems/Sistem Hukum</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini&nbsp;</SPAN>hukum primitif, Hukum Romawi, hukum adat, hukum 
+feodal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 297.272 dan 2X4 untuk hukum Islam</SPAN><O:P></O:P></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 0pt; LINE-HEIGHT: normal"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">340.9 
+Conflict of&nbsp;Law/Konflik Hukum</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini hukum perdata internasional</SPAN><SPAN> <BR><BR><STRONG>341 
+International Law/Hukum 
+Internasional<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini traktat, konvensi, 
+protokol<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 297.272<STRONG> </STRONG>atau <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">2X4.7 untuk hukum 
+internasional Islam</SPAN><BR><BR><STRONG>341.1 Sources of&nbsp;International 
+Law/Sumber Hukum Internasional</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P><SPAN>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><BR><STRONG>341.23 
+United Nations Law/Hukum Perserikatan 
+Bangsa-bangsa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 352.113 untuk perserikatan bangsa-bangsa ditinjau dari segi 
+administrasi negara</P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><STRONG>341.3 
+Relations Between States/Hubungan Antar 
+Negara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini&nbsp;hubungan konsuler, konsul, 
+konsulat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk pakta 
+pertahanan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;327.2 untuk politik diplomasi dan 337.1 untuk hubungan kerja 
+sama dalam bidang ekonomi </SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>341.4 
+Jurisdiction and Jurisdictional Relations of States/Hubungan Jurisdiksi Antar 
+Negara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>K</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">elaskan 
+di sini&nbsp;wilayah dan batas negara, perarian teritorial, wilayah laut, 
+wilayah udara</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>341.48 
+Human Rights/Hak Asasi Manusia, 
+HAM<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini hukum&nbsp;hak asasi manusia<BR></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;323.4 untuk hak-hak&nbsp;sipil dan&nbsp;323.5 untuk hak-hak 
+politik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 353.4 untuk Depkumham dan Komnas HAM</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">341.5 
+Disputes and Conflicts Between States/Persengketaan dan Konflik Antar 
+Negara</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini&nbsp;</SPAN>perjanjian damai, arbitrase, mahkamah internasional, boikot, 
+blokade, sanksi, intervensi</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">341.552 
+World Court, International Court/Pengadilan Internasional</SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">341.62 
+Law of War/Hukum Perang</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini&nbsp;</SPAN>hukum perang internasional, penjahat perang, kejahatan 
+perang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;ganti rugi perang, 
+pampasan&nbsp;perang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;172.4 untuk etika 
+perang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;303.66 untuk perang ditinjau dari segi sosiologi</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">341.7 
+International Cooperation/Kerjasama Internasional</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini pertahanan dan keamanan bersama, hukum ekonomi 
+internasional</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">342 
+Constitutional and Administrative Law/Hukum Tata Negara</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">342.02 
+Basic Instrument of Government/Undang-undang Dasar</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>342.02598 
+Basic Instrument of Indonesia/Undang-undang Dasar Republik Indonesia, UUD 1945, 
+UUD 
+'45<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pembukaan, batang tubuh dan penjelasan UUD 
+1945<O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>342.03 
+Revision and Amandement/Revisi Undang-undang Dasar, Amandemen&nbsp;Undang-undang 
+Dasar<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Jangan gunakan untuk UUD 1945 dan amandemen; kelaskan di nomor 
+342.02598<O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">342.04 
+Structure, Powers, Functions of Government/Undang-undang&nbsp;Kekuasaan dan 
+Fungsi Pemerintah</SPAN></B></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>342.07 
+Election Law/Hukum Pemilihan Umum, Hukum 
+Pemilu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 324.6 untuk pemilihan umum</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>342.082 
+Deportation/Hukum Deportasi</STRONG></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>342.083 
+Asylum Law/Hukum Suaka 
+Politik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 323.631 untuk proses suaka politik<O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">342.3 
+- 342.9 Specific Jurisdictions and Areas/Jurisdiksi Wilayah 
+Tertentu</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Tambahkan 
+nomor dasar 342 notasi 3 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A>&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">Contoh</SPAN></I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">: 
+konstitusi dan hukum tata negara di Australia 342.94</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">342.598 
+Constitutional Law of Indonesia/Hukum Konstitusi di Indonesia, Hukum Tata Negara 
+Indonesia</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>343.01 
+Military, Defence, Veterans' Law/Hukum Militer, Pertahanan dan 
+Veteran<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pengadilan militer, mahkamah 
+militer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk keamanan nasional<BR></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 306.27 untuk 
+sosiologi&nbsp;militer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 355 untuk ilmu 
+kemiliteran<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;623 untuk teknik militer dan&nbsp;623.3 untuk teknik 
+pertahanan</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">343.02 
+Law of Public Property/Hukum tentang Hak Milik Umum</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">343.03 
+Monetary Law/Hukum Keuangan Negara</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga 332.4&nbsp;untuk politik dan kebijakan moneter</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">343.04&nbsp;Tax 
+Law/Hukum Pajak</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk penggelapan pajak; kelaskan di nomor 
+364.1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;336.2 untuk 
+pajak/perpajakan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga&nbsp;657.46 untuk akuntansi perpajakan</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"></SPAN><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">343.07 
+Regulation of Economic Activity/Regulasi Ekonomi, Peraturan Kegiatan Ekonomi, 
+Hukum Industri</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;339.5 untuk&nbsp;kebijakan makroekonomi</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">343.09 
+Control of Public Utilities/Pengawasan Utilitas Umum</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini&nbsp;</SPAN>pengawasan persediaan air dan tenaga, pengawasan 
+transportasi dan 
+komunikasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 380 untuk komunikasi 
+dan&nbsp;transportasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;628.1 untuk&nbsp;persediaan air ditinjau dari segi teknik 
+perlindungan lingkungan</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">344.0101 
+Labor Law/Hukum Buruh, Hukum Perburuhan</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;331 - 331.8 untuk buruh&nbsp;ditinjau dari segi&nbsp;ilmu 
+ekonomi<O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">344.02 
+Social Insurance Law/Hukum Asuransi Sosial</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini&nbsp;</SPAN>hukum asuransi kesehatan, hukum asuransi 
+kecelakaan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;332.2 untuk perusahaan 
+asuransi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;368 untuk asuransi dan topik terkait</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>344.022 
+Social Insurance/Asuransi Sosial</STRONG></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>344.03 
+Social Service Law/Hukum Kesejahteraan 
+Sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini undang-undang anak, undang-undang perlindungan 
+anak<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 353.4 untuk Komnas Perlindungan 
+Anak<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga&nbsp;362 untuk kesejahteraan sosial</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>344.0327 
+UNICEF, United Nations Children's Fund/Badan PBB untuk Perlindungan 
+Anak-anak<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 352.113&nbsp;untuk PBB</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">344.04 
+Public Health Law/Hukum Kesehatan&nbsp;Umum</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;regulasi kontrol produksi makanan, obat-obatan, bahan 
+kimia, zat adiktif 
+dan&nbsp;alkohol<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk regulasi perlindungan lingkungan, regulasi pengaturan sampah, regulasi 
+daur ulang dan polusi, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+undang-undang&nbsp;psikotropika/undang-undang penyalahgunaan narkotika dan 
+obat-obatan 
+terlarang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk undang-undang perlindungan hewan langka, binatang 
+langka<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk undang-undang perlindungan tumbuhan langka, tanaman 
+langka&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;362.292 untuk minuman beralkohol ditinjau dari segi permasalahan 
+sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 362.293&nbsp;untuk narkotika ditinjau dari segi permasalahan 
+sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai 577 untuk lingkungan 
+hidup<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai 580 untuk ilmu&nbsp;tumbuhan dan 590 untuk ilmu 
+hewan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai nomor&nbsp;628 untuk teknik perlindungan lingkungan, pengolahan 
+sampah&nbsp;dan teknologi polusi</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>344.04197 
+Euthanasia Law/Hukum 
+Euthanasia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Euthanasia: tindakan mematikan seseorang untuk meringankan penderitaan 
+sekarat</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">344.06 
+Public&nbsp;Works Law/Hukum&nbsp;Pekerjaan Umum</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>344.07 
+Educational Law/Hukum 
+Pendidikan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini 379.598&nbsp;untuk peraturan pendidikan</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">344.09 
+Cultural and Religion Law/Hukum Kebudayaan dan Hukum Agama</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;297.272 atau&nbsp;2X4 untuk hukum&nbsp;Islam</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>345 
+Criminal Law/Hukum 
+Pidana<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini hukum pidana 
+internasional<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga 297.272 atau&nbsp;2X4.5 untuk hukum&nbsp;pidana Islam</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>345.01 
+Criminal Courts/Pengadilan Pidana, Pengadilan 
+Kriminal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini pengadilan tindak pidana korupsi/pengadilan 
+tipikor<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk karya komprehensif tentang pengadilan; kelaskan di nomor 
+<SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">347.01&nbsp;</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 353.4 untuk Komisi Pemberantasan 
+Korupsi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 364.1 untuk korupsi ditinjau dari segi permasalahan sosial</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN></SPAN><SPAN><STRONG>345.02 
+Crimes/Kejahatan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini 
+terorisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">297.72&nbsp;dan 
+2X4.77 untuk hukum Islam tentang 
+terorisme</SPAN></SPAN></SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 303.625 untuk terorisme ditinjau dari segi 
+sosiologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 363.3 untuk pengamanan dari tindakan terorisme <O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>345.03 
+Criminals/Pelaku Kejahatan, 
+Penjahat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini terpidana, terdakwa, 
+terhukum<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 364.1 untuk tindakan 
+kriminal<STRONG>&nbsp;</STRONG>ditinjau<STRONG>&nbsp;</STRONG>dari segi 
+permasalahan 
+sosial<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 365.6 untuk tahanan<O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">345.05 
+Criminal Procedure/Hukum Acara Pidana</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini&nbsp;investigasi, penyelidikan, pengusutan perkara kriminal, penahanan, 
+hak-hak tersangka</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>345.06&nbsp;Criminal 
+Evidence/Bukti, Barang Bukti 
+Kriminal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini&nbsp;saksi </SPAN></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">dalam 
+kasus 
+pidana<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk hak perlindungan saksi</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">345.07 
+Trials, Criminal Courtroom Procedure/Sidang Pidana, Prosedur&nbsp;Pengadilan 
+Pidana</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">345.08 
+Juvenile Courts/Pengadilan Anak dan Remaja</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">345.3 
+- 345.9 Specific Jurisdictions and Areas/Jurisdiksi dan Wilayah Khusus Hukum 
+Pidana</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Tambahkan 
+nomor dasar 345 notasi 3 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">Contoh</SPAN></I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">: 
+hukum pidana Australia 345.94, hukum pidana Inggris 345.42</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">345.598 
+Criminal Procedure of Indonesia/Hukum Acara Pidana Indonesia</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini KUHP/Kitab Undang-undang Hukum Pidana</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346 
+Private Law/Hukum Privat, Hukum Perdata</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga&nbsp;297.273 atau&nbsp;2X4.2 untuk hukum perdata Islam</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346.01 
+Domestic Relations, Family Law, Marriage/Hukum Keluarga, Hukum 
+Pernikahan</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga&nbsp;297.577 atau&nbsp;2X4.3 untuk hukum&nbsp;keluarga dan 
+pernikahan&nbsp;menurut&nbsp;Islam&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 306.81 untuk pernikahan, perkawinan</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>346.02 
+Contracts/Hukum Kontrak</STRONG></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN></SPAN><SPAN><STRONG>346.03 
+Delicts/Delik 
+Hukum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+kealpaan, kelalaian, kecelakaan, tuduhan</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346.04 
+Property/Hukum Kepemilikan, Hak Milik Pribadi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kelaskan 
+di sini copy right, hak cipta, hak paten, trademark/merk 
+dagang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Undang-undang Hak Cipta, Undang-undang Hak Atas Karya Intelektual/UU 
+HAKI<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 343.02 untuk hukum tentang hak milik 
+umum<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 608 untuk inovasi, penemuan dan paten</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346.05 
+Inheritance/Hukum Waris, Warisan</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini surat 
+wasiat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga&nbsp;297.273 atau&nbsp;2X4.4 untuk 
+hukum&nbsp;waris&nbsp;menurut&nbsp;Islam</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346.06&nbsp;Organizations, 
+Associations Law/Hukum Organisasi, Hukum Asosiasi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini hukum perusahaan, hukum 
+korporasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai 060 untuk organisasi umum</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346.07&nbsp;Commercial 
+Law/Hukum Dagang</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Lihat 
+juga&nbsp;297.56 atau&nbsp;2X4.2 untuk hukum dagang 
+Islam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai&nbsp;381 untuk&nbsp;perdagangan dan 382.3 untuk politik 
+perdagangan</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346.08 
+Banking and Insurance Law/Hukum Bank, Hukum Perbankan dan Hukum 
+Asuransi</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga&nbsp;332.1 dan&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">332.3 
+untuk perbankan dan asuransi ditinjau dari segi ilmu ekonomi</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">346.09 
+Negotiable Instrument/Surat-surat Berharga</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">347.01 
+Courts/Pengadilan</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini&nbsp;judicial 
+review<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk kejaksaan, lembaga bantuan hukum/LBH,&nbsp;lembaga 
+pengacara<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Lihat 
+juga 725.1 untuk arsitektur gedung 
+pengadilan</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 923.4 untuk biografi ahli hukum</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>347.014 
+Judges/Hakim<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di 
+sini&nbsp;jaksa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">923.4 
+untuk biografi ahli hukum</SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">347.02 
+Courts with General Original Jurusdiction/Pengadilan Negeri</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">347.03 
+Appelete Courts/Pengadilan Tingkat Banding</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Kelaskan 
+di sini pengadilan tinggi</SPAN><O:P></O:P></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">347.05 
+Civil Procedure/Hukum Acara Perdata</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>347.06 
+Civil Evidance/Bukti, Barang Bukti 
+Perdata<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini</SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"> 
+saksi dalam kasus perdata</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">347.07 
+Trials, Civil Courtroom Procedure/Sidang Perdata, Prosedur&nbsp;Pengadilan 
+Perdata</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt"><STRONG>347.0752 
+Juries Criminal Law/Juri Pengadilan Kriminal</STRONG></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">347.08 
+Appellate/Banding</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">347.3 
+- 347.9 Specific Jurisdictions and Areas/Jurisdiksi dan Wilayah Khusus Hukum 
+Perdata</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Tambahkan 
+nomor dasar 347 notasi 3 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">Contoh</SPAN></I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">: 
+hukum pidana Australia 347.94, hukum pidana Inggris 347.42</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">347.598 
+Civil Procedure of Indonesia/Hukum Acara Perdata Indonesia</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini kitab undang-undang hukum perdata</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">348.004 
+Codification of Law/Kodifikasi Hukum</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">348.01 
+Preliminary Materials/Rencana Undang-undang, Rancangan 
+Undang-undang</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">348.02 
+Law, Statutes/Undang-undang, Peraturan-peraturan</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">348.04 
+Cases/Kasus Pengadilan, Perkara Pengadilan</SPAN></B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">348.3 
+- 348.9 Specific Jurisdictions and Areas/Jurisdiksi dan Wilayah 
+Khusus&nbsp;Undang-undang dan Peraturan</SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'"><BR></SPAN></B><B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN></B><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">Tambahkan 
+nomor dasar 347 notasi 3 - 9 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">Contoh</SPAN></I><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">: 
+undang-undang dan peraturan di Australia 348.94,&nbsp;undang-undang dan 
+peraturan di&nbsp;Inggris 348.42</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: 'Times New Roman'"><O:P></O:P></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN: 0in 0in 10pt; LINE-HEIGHT: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><SPAN><STRONG>348.598 
+Law of Indonesia/Undang-undang, Peraturan-peraturan 
+di&nbsp;Indonesia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan&nbsp; di sini&nbsp; peraturan pemerintahan,&nbsp; keputusan 
+presiden,&nbsp; peraturan menteri,&nbsp; peraturan 
+gubernur,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+peraturan walikota, peraturan bupati, peraturan-peraturan daerah/perda di 
+Indonesia<BR></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk Undang-undang Dasar&nbsp;Republik Indonesia; kelaskan di 
+nomor 342.02598 </SPAN></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>

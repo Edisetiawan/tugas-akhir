@@ -1,0 +1,735 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<SCRIPT>
+//mouse
+//Circling text trail- Tim Tilton
+//Website: http://www.tempermedia.com/
+//Visit http://www.dynamicdrive.com for this script and more
+function cursor_text_circle(){
+// your message here
+var msg='570 - 579'.split('').reverse().join('');
+
+var font='Verdana,Arial';
+var size=4; // up to seven
+var color='#DC143C';
+
+// This is not the rotation speed, its the reaction speed, keep low!
+// Set this to 1 for just plain rotation w/out drag
+var speed=.1;
+
+// This is the rotation speed, set it negative if you want
+// it to spin clockwise
+var rotation=-.1;
+
+// Alter no variables past here!, unless you are good
+//---------------------------------------------------
+
+
+var ns=(document.layers);
+var ie=(document.all);
+var dom=document.getElementById;
+msg=msg.split('');
+var n=msg.length;
+var a=size*13;
+var currStep=0;
+var ymouse=0;
+var xmouse=0;
+var props="<font face="+font+" size="+size+" color="+color+">";
+
+if (ie)
+window.pageYOffset=0
+
+// writes the message
+if (ns){
+for (i=0; i < n; i++)
+document.write('<layer name="nsmsg'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+msg[i]+'</font></center></layer>');
+}
+else if (ie||dom){
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px;z-index:30000;"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="iemsg'+(dom&&!ie? i:'')+'" style="position:absolute;top:0px;left:0;height:'+a+'px;width:'+a+'px;text-align:center;font-weight:normal;cursor:default">'+props+msg[i]+'</font></div>');
+document.write('</div></div>');
+}
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+ymouse = (ns||(dom&&!ie))?evnt.pageY+20-(window.pageYOffset):event.y; // y-position
+xmouse = (ns||(dom&&!ie))?evnt.pageX+20:event.x-20; // x-position
+}
+
+if (ns||ie||dom)
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+var y=new Array();
+var x=new Array();
+var Y=new Array();
+var X=new Array();
+for (i=0; i < n; i++){
+y[i]=0;
+x[i]=0;
+Y[i]=0;
+X[i]=0;
+}
+
+var iecompattest=function(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body;
+}
+
+var makecircle=function(){ // rotation properties
+if (ie) outer.style.top=iecompattest().scrollTop+'px';
+currStep-=rotation;
+for (i=0; i < n; i++){ // makes the circle
+var d=(ns)?document.layers['nsmsg'+i]:ie? iemsg[i].style:document.getElementById('iemsg'+i).style;
+d.top=y[i]+a*Math.sin((currStep+i*1)/3.8)+window.pageYOffset-15+(ie||dom? 'px' : '');
+d.left=x[i]+a*Math.cos((currStep+i*1)/3.8)*2+(ie||dom? 'px' : ''); // remove *2 for just a plain circle, not oval
+}
+}
+
+var drag=function(){ // makes the resistance
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+for (var i=1; i < n; i++){
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+makecircle();
+// not rotation speed, leave at zero
+setTimeout(function(){drag();},10);
+}
+if (ns||ie||dom)
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", drag, false );
+else if ( typeof window.attachEvent != "undefined" )
+window.attachEvent( "onload", drag );
+else {
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+drag();
+};
+}
+else
+window.onload = drag;
+}
+
+}
+cursor_text_circle();
+
+</SCRIPT>
+
+<title>570 - 579 Biologi, Ilmu Hayat</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+
+
+
+
+<link REL="StyleSheet">
+<style type="text/css">
+<!--
+body {
+	background-image: url(template/DDC%20ed%2023.jpg);
+	background-repeat: repeat-y;
+}
+-->
+</style></head>
+
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<TABLE style="WIDTH: 100%; HEIGHT: 29px" cellSpacing=0 cellPadding=0 
+width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD width=5></TD>
+    <TD><A href="Home.htm"><IMG style="WIDTH: 72px; HEIGHT: 46px" height=96 alt="" hspace=2 src="template/icon.gif" width=110 align=absMiddle border=0></A>&nbsp;<EM><FONT face=Arial color=#000000 
+      size=4><STRONG> 
+      <MARQUEE onmouseover=this.stop() onmouseout=this.start() 
+      scrollAmount=7><SPAN style="FONT-SIZE: 145%; COLOR: #800000"><SPAN 
+      style="FONT-WEIGHT: bold">electronic-Dewey Decimal Classification Edition 
+      23</SPAN></SPAN></MARQUEE></STRONG></FONT></EM></TD>
+    <TD align=right width=60></TD>
+    <TD width=12>&nbsp;</TD></TR></TBODY></TABLE>
+<DIV style="PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px"><FONT 
+face=Tahoma><FONT color=#ff0000 size=4><STRONG>570 - 579 Biologi, Ilmu Hayat</STRONG></FONT> </FONT>
+<P><FONT face=Arial><FONT size=2>
+<P><FONT face=Arial size=2><STRONG><FONT face=Arial size=4><EM>Biology (Biologi, 
+Ilmu Hayat)</EM></FONT></STRONG></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><FONT face=Arial 
+size=2><STRONG>570 Biology/Biologi, Ilmu 
+Hayat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Biologi: ilmu tentang makhluk hidup</FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><FONT face=Arial 
+size=2><STRONG>570.1 Philosophy and Theory of Biology/Filsafat dan Teori 
+Biologi</STRONG></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><FONT face=Arial 
+size=2><STRONG>570.15195 Biometrics, Biostatistics/Biometrik, 
+Biostatistik</STRONG></FONT></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><FONT face=Arial 
+size=2><STRONG>570.2 Auxiliary Techniques and Procedures of Biology, Apparatus, 
+Equipment, Procedures, 
+Microscopy/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Teknik dan Prosedur Biologi, Alat, Perlengkapan Biologi, 
+Mikroskopi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Jangan gunakan untuk mikroskop; kelaskan di 502.82</FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>570.285 
+Data Processing and Analysis of Biology/Pengolahan dan Analisa Data 
+di&nbsp;Bidang&nbsp;Biologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini proses komputerisasi biologi</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>570.3 
+Dictionaries and Encyclopedia of Biology/Kamus Biologi, Ensiklopedia 
+Biologi</STRONG></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>570.5 
+General Publications of Biologi/Terbitan Berseri Biologi, Berkala 
+Umum&nbsp;Biologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini majalah biologi, jurnal 
+biologi<BR></SPAN></P></SPAN></SPAN></FONT>
+<P><FONT face=Arial size=2><STRONG><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'">570.6 
+Organization and Management of Biology/Organisasi dan Manajemen di Bidang 
+Biologi</SPAN></STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>570.7 Education, Research, Related Topics of 
+Biology/Pendidikan, Riset dan Topik Terkait di 
+Bidang&nbsp;Biologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini eksperimen biologi, percobaan biologi</FONT></P><FONT 
+face=Arial size=2>
+<P class=MsoNormal style="MARGIN: 0in 0in 10pt"><SPAN 
+style="FONT-SIZE: 10pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><STRONG>570.72&nbsp;Statistical 
+Methods of Biology/Metode 
+Statistik&nbsp;Biologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Jangan gunakan untuk biostatistik; kelaskan di 570.1</SPAN></P></FONT>
+<P><FONT face=Arial size=2><STRONG>570.92 Biologist/Ahli 
+Biologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 925.7 untuk biografi ahli biologi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>571 
+Physiology/Fisiologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Fisiologi: ilmu tentang fungsi dan proses organisme, 
+makhluk&nbsp;hidup<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini biologi luar 
+angkasa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk fisiologi manusia;&nbsp;kelaskan di 
+nomor&nbsp;612</FONT></P>
+<P><FONT face=Arial size=2><STRONG>571.1 Animals Physiology/Fisiologi Binatang, 
+Fisiologi 
+Hewan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini komparatif fisiologi, fisilogi perbandingan 
+binatang/fisilogi perbandingan hewan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>571.2 Plants and Microorganisms 
+Physiology/Fisiologi Tumbuhan, Tanaman&nbsp;dan Fisiologi 
+Mikroorganisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini fisiologi tanaman pertanian</FONT></P>
+<P><FONT face=Arial size=2><STRONG>571.3 Anatomy and Morphology/Anatomi dan 
+Morfologi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Anatomi: Ilmu urai 
+tubuh<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Morfologi: Cabang dari biologi yang mempelajari bentuk dan susunan binatang dan 
+tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini komparatif anatomi, anatomi perbandingan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>571.4 
+Biophysics/Biofisika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini biomekanik, 
+radiobiologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Jangan gunakan untuk biofisika manusia; kelaskan di nomor 612.014 </FONT></P>
+<P><FONT face=Arial size=2><STRONG>571.49 Environmental 
+Biophysics/Biofisika</STRONG> 
+<STRONG>Lingkungan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini bioastronotika</FONT></P>
+<P><FONT face=Arial size=2><STRONG>571.5 Tissue Biology and Regional 
+Physiology/Biologi Jaringan dan 
+Fisiologi&nbsp;Region<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini histology/histologi, 
+histophysiology/histofisiologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Histologi: cabang ilmu biologi yang mempelajari jaringan 
+tubuh<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 611&nbsp;untuk anatomi manusia, biologi sel, biologi 
+jaringan&nbsp;</FONT></P>
+<P><FONT face=Arial size=2><STRONG>571.538 Tissue Culture/Kultur 
+Jaringan</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>571.6 Cell Biologi, Cytology/Biologi Sel, 
+Sitologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di<STRONG> </STRONG>sini fisiologi sel, eukaryotic, 
+protoplasma<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Sitologi: cabang ilmu biologi yang mempelajari&nbsp;pembentukan dan fungsi 
+sel</FONT></P>
+<P><STRONG><FONT face=Arial size=2>571.64 Membranes/Membran</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>571.65 
+Cytoplasm/Sitoplasma</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>571.66 Nucleus/Nukleus, Inti 
+Sel</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>571.7 Biological Control and 
+Secretions/Kontrol Biologikal dan 
+Sekresi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Sekresi: proses&nbsp;pengeluaran getah, darah, dan sejenisnya dari 
+tumbuhan maupun 
+hewan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini kontrol biokimia</FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.74 
+Hormones/Hormon<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan&nbsp;di 
+sini&nbsp;hormon hewan, hormon 
+binatang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">612.4 untuk hormon 
+manusia ditinjau dari segi ilmu kedokteran</SPAN></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.77 Biorhythms/Bioritme, 
+Bioritmik</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.8 Reproduction, Growth Animals and 
+Plants/Reproduksi Hewan dan Reproduksi Tumbuhan, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Pertumbuhan&nbsp;Hewan dan Pertumbuhan 
+Tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini alat reproduksi seksual hewan dan 
+tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk alat reproduksi seksual binatang dan tanaman</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.8374 Growth Hormones/Hormon 
+Pertumbuhan</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.86 
+Embryology/Embriologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Embriologi: ilmu yang mempelajari embrio, 
+janin<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini 
+zygot/zigot<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">611.01 untuk 
+embriologi ditinjau dari segi ilmu kedokteran</SPAN></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.864 Fertilization/Fertilitas, 
+Kesuburan 
+Reproduksi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 304.632 untuk fertilitas ditinjau dari segi 
+sosiologi</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.876 
+Larvae/Larva</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.89 
+Cloning/Kloning</STRONG></FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.9 Diseases Pathology of Animals and 
+Plants/Patologi Penyakit pada Hewan dan 
+Tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini patofisiologi pada&nbsp;hewan dan 
+tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk patologi penyakit pada binatang dan tanaman, patofisiologi pada 
+binatang dan 
+tanaman<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Lihat 
+juga 616.07 untuk patologi manusia dan patofisiologi manusia ditinjau dari segi 
+ilmu kedokteran</FONT></FONT></P>
+<P><STRONG><FONT face=Arial size=2>571.94 Pathological Biochemistry/Patologikal 
+Biokimia</FONT></STRONG></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.95 Toxicology of Animals and 
+Plants/Toksikologi pada Hewan dan 
+Tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini toksikologi pada&nbsp;binatang dan 
+tanaman<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Lihat 
+juga 615.9 untuk toksikologi ditinjau dari segi ilmu&nbsp;kedokteran&nbsp; 
+</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.96 Immunity, Immunology/Kekebalan 
+Tubuh, Imunitas, 
+Imunologi<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Imunologi: ilmu yang mempelajari kekebalan terhadap 
+penyakit<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini disease resistance/perlawanan terhadap penyakit, immune 
+system/sistem imun, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+sistem kekebalan tubuh, antibodi, immunobiologi, antigen</FONT></FONT></P>
+<P><FONT size=2><FONT face=Arial><STRONG>571.97 Miscellaneous Diseases/Aneka 
+Ragam Penyakit pada Hewan dan 
+Tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;penyakit yang disebabkan oleh mikroorganisme dan 
+jamur<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk penyakit 
+parasitik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk alergi hewan/binatang</FONT></FONT></P>
+<P><FONT face=Arial size=2><STRONG>571.98 Infectious Diseases/Penyakit yang 
+Disebabkan oleh 
+Infeksi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 616.9 infeksi ditinjau dari segi ilmu kedokteran</FONT></P>
+<P><FONT face=Arial size=2><STRONG>572 
+Biochemistry/Biokimia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini cytochemistry, histochemistry, 
+biochemical<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN><FONT size=2><FONT face=Arial>612.015&nbsp;untuk biokimia 
+ditinjau dari segi ilmu 
+kedokteran<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga </FONT></FONT></SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">660.63 untuk 
+teknologi biokimia</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>572.4 
+Metabolism/Metabolisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</STRONG>Kelaskan 
+di sini metabolisme hewan/binatang, energi 
+metabolisme,&nbsp;bioluminescence,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+photobiochemistry/fotobiokimia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>572.45</STRONG> 
+<STRONG>Biosynthesis/Biosintesis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini anabolism/anabolisme</FONT></P>
+<P><FONT face=Arial size=2><STRONG>572.46 Photosynthesis/Fotosintesis, 
+Fotosintesa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini chlorophyll/klorofil</FONT></P>
+<P><STRONG><FONT face=Arial size=2>572.48 
+Catabolism/Katabolisme</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>572.5 Miscellaneous Biochemicals/Lain-lain 
+yang Berhubungan dengan 
+Biokimia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini bioinorganic chemistry/kimia bioinorganik, 
+biomineralization/biomineralisasi</FONT></P>
+<P><FONT face=Arial size=2><STRONG>572.565 Insulin/Insulin</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>572.6 
+Proteins/Protein<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini komponen protein, asam amino, peptides, polypeptides, 
+albumins, globulins, 
+histones,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+collagen/kolagen, scleroproteins, cromoproteins, glycoprotein, lipoproteins, 
+phosphoproteins<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 547.7 untuk protein ditinjau dari segi senyawa 
+kimia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>572.7 
+Enzymes/Enzim<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini coenzymes, 
+cofactors<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 547.7 untuk&nbsp;enzim ditinjau dari segi senyawa 
+kimia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 660.634 untuk teknologi enzim</FONT></P>
+<P><FONT face=Arial size=2><STRONG>572.8 Biochemical Genetics/Biokimia 
+Genetik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp; cytogenetics/sitogenetik, molecular 
+biology/biologi molekular,&nbsp;nucleic/asam 
+nukleik,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+molecular genetics/genetik molekular, physiological genetics/genetik 
+fisiologikal&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 576&nbsp;untuk genetika</FONT></P>
+<P><FONT face=Arial size=2><STRONG>572.86 DNA, Deoxyribonucleic Acid/Asam 
+Deoksiribonukleik, 
+DNA<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>DNA: susuna kimia dalam sel-sel yang membawa informasi 
+genetika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini biosynthesis/biosintesis DNA, replika genetika</FONT></P>
+<P><FONT face=Arial size=2><STRONG>572.8633 Genetic Code/Kode 
+Genetik</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>572.87 
+Chromosomes/Kromosom<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini chromatin/kromatin, nucleosomes/nukleosom, struktur 
+kromosom</FONT></P>
+<P><FONT face=Arial size=2><STRONG>572.88 RNA, Ribonucleic Acid/Asam 
+Ribonukleik, 
+RNA<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>RNA: unsur kimia yang terdapat dalam semua sel-sel 
+hidup<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Kelaskan di sini biosynthesis/biosintesis RNA, transfer RNA</FONT></P>
+<P><FONT face=Arial size=2><STRONG>573 Specific Physiological Systems in 
+Animals/Sistem Fisiologi Spesifik 
+pada&nbsp;Hewan<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Sistem fisiologi spesifik pada binatang</FONT></P>
+<P><FONT face=Arial size=2><STRONG>573.1 Circulation System of Animals/Sistem 
+Sirkulasi Hewan,&nbsp;Sistem 
+Sirkulasi&nbsp;Binatang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Sirkulasi darah&nbsp;hewan/binatang, pembuluh darah 
+hewan/binatang</FONT></P>
+<P><FONT face=Arial size=2><STRONG>573.2 Respiratory System of Animals/Sistem 
+Pernafasan Hewan, Sistem 
+Pernafasan&nbsp;Binatang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini paru-paru hewan/binatang</FONT></P>
+<P><FONT face=Arial size=2><STRONG>573.3 Digestive System of Animals/Sistem 
+Pencernaan Hewan, Sistem 
+Pencernaan&nbsp;Binatang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini&nbsp;mulut, perut, pankreas, liver 
+hewan/binatang</FONT></P>
+<P><FONT face=Arial size=2><STRONG>573.4 Endocrine and</STRONG> 
+<STRONG>Excretory System of Animals/Sistem Endokrin dan Pembuangan pada 
+Binatang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini endokrinologi 
+hewan/binatang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.4 untuk 
+endokrinologi manusia ditinjau dari segi ilmu kedokteran</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>573.5 Integument of Animals/Kulit Hewan, 
+Kulit 
+Binatang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini warna kulit, rambut, bulu, ekor 
+hewan/binatang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk kuku hewan/binatang</FONT></P>
+<P><FONT face=Arial size=2><STRONG>573.6 Reproductive System of Animals/Sistem 
+Reproduksi Hewan, Sistem Reproduksi 
+Binatang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini organ genital, organ seksual, alat kelamin 
+hewan/binatang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk telur hewan/binatang</FONT></P>
+<P><FONT face=Arial size=2><STRONG>573.7 Musculoskeletal System of 
+Animals/Sistem Otot dan Tulang&nbsp;Hewan, Sistem Otot dan 
+Tulang&nbsp;Binatang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sayap</FONT></P>
+<P><FONT face=Arial size=2><STRONG>573.8 Nervous and Sensory System of 
+Animals/Sistem Syaraf dan 
+Sensor&nbsp;Hewan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini organ-organ sensitif hewan/binatang, peraba, perasa, 
+penciuman, pendengaran hewan/binatang</FONT></P>
+<P><FONT face=Arial size=2><STRONG>573.9 Miscellaneous System and Organ of 
+Animals/Sistem dan Organ&nbsp;Hewan 
+Lainnya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sistem komunikasi hewan/binatang, nyayian 
+hewan/binatang, organ&nbsp;berlistrik hewan/binatang</FONT></P>
+<P><FONT face=Arial size=2><STRONG>575 Specific Physiological Systems in 
+Plants/Sistem Fisiologi Spesifik pada 
+Tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sistem fisiologi spesifik pada tanaman</FONT></P>
+<P><FONT face=Arial size=2><STRONG>575.4 Stems/Batang Tumbuhan, Batang 
+Tanaman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini batang pohon, kayu, cambium/kambium, 
+bulb/umbi-umbian<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 620.12 untuk kayu ditinjau dari segi material 
+teknik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 674.1 untuk teknologi 
+kayu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 691.1 untuk kayu ditinjau dari segi material teknik 
+bangunan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">694 untuk pertukangan 
+kayu</SPAN></SPAN></SPAN></SPAN></SPAN></FONT></P>
+<P><STRONG><FONT face=Arial size=2>575.5 Roots and Leaves/Akar dan 
+Daun-daunan</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>575.6 Reproductive Organs and Flowers/Organ 
+Reproduksi Tumbuhan dan Organ Reproduksi Bunga</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>575.7 Circulation, Food Storage, Excretion 
+System of Plants/Sistem Sirkulasi, Sistem Penyimpanan Makanan, 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Sistem Pembuangan pada 
+Tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini ekskresi 
+tumbuhan/tanaman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 572.46&nbsp;untuk fotosintesis</FONT></P>
+<P><FONT face=Arial size=2><STRONG>575.8 
+Transpiration/Transpirasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini sistem pernafasan pada 
+tumbuhan/tanaman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Termasuk 
+pertukaran gas dari jaringan permukaan tumbuhan/tanaman</FONT></P>
+<P><FONT face=Arial size=2><STRONG>575.9 Behavior of Plants/Tingkah Laku 
+Tumbuhan, Tingkah 
+Laku&nbsp;Tanaman<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini gerakan tumbuhan/tanaman, sensitifitas 
+tumbuhan/tanaman, tumbuhan/tanaman 
+predator<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 156.9&nbsp;untuk psikologi perbandingan dari tumbuhan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>576 
+Genetics/Genetika</STRONG><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 304.5 untuk genetika ditinjau dari segi 
+sosiologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 581.3 untuk genetika 
+tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 591.3 untuk genetika hewan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>576.52 Laws of Genetics/Hukum 
+Genetika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini Hukum Mendel</FONT></P>
+<P><FONT face=Arial size=2><STRONG>576.53 Genotypes, Phenotypes/Genotypes, 
+Phenotypes<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Genotypes: susunan khusus suatu gen yang dimiliki setiap 
+organisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Phenotypes: ciri-ciri fisik suatu organisme yang diakibatkan pengaruh 
+lingkungan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>576.54 Variation of Genetics/Variasi 
+Genetika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini mutagen, mutasi gen, ecological genetics/genetika 
+ekologikal<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk rekayasa 
+genetika<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 571.89 untuk kloning<STRONG>&nbsp;</STRONG></FONT></P>
+<P><STRONG><FONT face=Arial size=2>576.58 Population Genetics/Genetika 
+Populasi</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>576.8 
+Evolution/Evolusi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini teori evolusi, teori asal-usul manusia,&nbsp;teori 
+seleksi 
+alam<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk Teori Darwin, Darwinisme, origin of species, Teori 
+Lamarckian<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 146.7 untuk 
+evolusionisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 581.3 untuk evolusi 
+tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 591.3 untuk evolusi binatang</FONT></P>
+<P><FONT face=Arial size=2><STRONG>577 Ecology/Ekologi 
+<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Ekologi:&nbsp;cabang ilmu biologi yang mempelajari hubungan antara makhluk hidup 
+dengan 
+lingkungannya<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk lingkungan hidup, biopori, biosfer, ekosistem, biota, 
+bioma&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">344.04&nbsp;untuk 
+regulasi perlindungan 
+lingkungan</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 581.7 untuk ekologi 
+tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 591.7 untuk ekologi 
+hewan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga mulai nomor 628 untuk teknik perlindungan lingkungan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>577.14 Environmental Chemistry/Kimia 
+Lingkungan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini biogeochemistry/biogeokimia</FONT></P>
+<P><STRONG><FONT face=Arial size=2>577.16 Food Chains/Rantai 
+Makanan</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>577.2 Specific Factors Affecting 
+Ecology/Faktor-faktor Khusus yang Mempengaruhi 
+Ekologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini faktor cuaca, faktor polusi, faktor-faktor lain yang 
+disebabkan 
+manusia<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lihat 
+juga 363.7 untuk permasalahan lingkungan</FONT></P>
+<P><STRONG><FONT face=Arial size=2>577.3 Forest Ecology/Ekologi Hutan, Ekologi 
+Kehutanan</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>577.4 Grassland Ecology/Ekologi Padang 
+Rumput<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini ekologi sabana</FONT></P>
+<P><STRONG><FONT face=Arial size=2>577.51 Coastal Ecology/Ekologi Pantai, 
+Ekologi Pesisir</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>577.52 Island Ecology/Ekologi Kepulauan, 
+Ekologi Pulau</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>577.53 Mountain Ecology/Ekologi Pegunungan, 
+Ekologi Gunung</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>577.54 Desert Ecology/Ekologi Padang 
+Pasir</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>577.55 Agricultural Ecology/Ekologi 
+Pertanian</STRONG></FONT></P>
+<P><STRONG><FONT face=Arial size=2>577.56 Urban Ecology/Ekologi 
+Perkotaan</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>577.57 Soil Ecology/Ekologi 
+Tanah<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 631.4 untuk ilmu tanah</FONT></P>
+<P><STRONG><FONT face=Arial size=2>577.584 Cave Ecology/Ekologi 
+Gua</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>577.586 Tundra, Glacier, Snow Cover 
+Ecology/Ekologi Tundra, Ekologi Daerah Gletser dan Bersalju</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>577.6 Aquatic Ecology and Freshwater 
+Ecology/Ekologi&nbsp;Perairan dan Ekologi Air 
+Tawar<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini biological 
+limnology<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk ekologi danau dan kolam, ekologi sungai, ekologi hutan mangrove, 
+ekologi rawa, ekologi payau</FONT></P>
+<P><FONT face=Arial size=2><STRONG>577.6 Marine 
+Ecology/Ekologi&nbsp;Lautan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini ekologi batu 
+karang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-size: 11.0pt">551.42 
+untuk batu karang</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>577.73 - 577.75 Ecology of Specific Ocean and 
+Sea/Ekologi Samudera dan Lautan 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Tambahkan nomor dasar 577.7 notasi 163 - 165 dari <A href="Table%202%20Geographic%20Areas.htm">Tabel 
+2</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<EM>Contoh</EM>: ekologi di samudera Atlantik 577.74 (bukan 
+577.73164)</FONT></P>
+<P><FONT face=Arial size=2><STRONG>577.75 Ecology of Hindia Ocean/Ekologi di 
+Samudera 
+Indonesia<BR></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Ekologi di Samudera Hindia</FONT></P>
+<P><FONT face=Arial size=2><STRONG>577.8 
+Synecology/Sinikologi<BR></STRONG></FONT><FONT face=Arial 
+size=2><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Sinekologi: cabang ilmu ekologi yang mempelajari struktur dan 
+perkembangan ekologi tumbuhan dan hewan</FONT></P>
+<P><STRONG><FONT face=Arial size=2>577.82 Ecological Communities/Komunitas 
+Ekologikal</FONT></STRONG></P>
+<P><STRONG><FONT face=Arial size=2>577.83 Competition Ecological/Kompetisi 
+Ekologikal</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>577.85 
+Symbiosis/Simbiosis<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini simbiosis mutualisme, simbiosis parasitisme</FONT></P>
+<P><FONT face=Arial size=2><STRONG>577.9 Population Biology/Biologi 
+Populasi&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga genetika populasi&nbsp;</FONT></P>
+<P><FONT face=Arial size=2><STRONG>578 Natural History of Organism/Perkembangan 
+Organisme&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG></FONT></P>
+<P><FONT face=Arial size=2><STRONG>578.012 Classification of 
+Organism/Klasifikasi 
+Organisme&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini species/spesies, 
+taxonomy/taksonomi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Taxonomy: ilmu klasifikasi tumbuhan dan binatang</FONT></P>
+<P><FONT face=Arial size=2><STRONG>578.4 Adaptation/Adaptasi 
+Organisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 581.4 untuk adaptasi 
+tumbuhan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 591.4 untuk adaptasi binatang</FONT></P>
+<P><FONT face=Arial size=2><STRONG>578.6 Miscellaneous Nontaxonomic Kinds of 
+Organisms/Jenis Organisme 
+Nontaksonomik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Nontaxonomic: tidak 
+terklasifikasi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 581.6 untuk tumbuhan 
+nontaksonomik<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 591.6 untuk binatang nontaksonomik</FONT></P>
+<P><FONT face=Arial size=2><STRONG>578.7 Organisms Characteristic of Specific 
+Environments/Karakteristik Organisme di Lingkungan 
+Tertentu<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini karakteristik organisme di daratan, karakteristik 
+organisme di perairan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>579 
+Microorganisms/Mikroorganisme<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga&nbsp;561 untuk fosil mikroorganisme</FONT></P>
+<P><FONT face=Arial size=2><STRONG>579.2 
+Viruses/Virus<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.92 untuk penyakit 
+yang disebabkan bakteri dan virus</SPAN></FONT></P>
+<P><FONT face=Arial size=2><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"></SPAN></FONT><FONT 
+face=Arial size=2><STRONG>579.3 Prokaryotes, 
+Bacteria/Bakteri<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini mycoplasma, rhizobium, bacillus/baksil, mycobacteria, 
+hewan 
+pengurai<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">616.92 untuk penyakit 
+yang disebabkan bakteri dan virus</SPAN></FONT></P>
+<P><FONT face=Arial size=2><STRONG>579.4 
+Protozoa/Protozoa<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini rhizopodea, amoebas/amuba, sporozoa, cnidospora, 
+hymenostomatida<BR><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 561.9<STRONG> </STRONG>untuk fosil protozoa</FONT></P>
+<P><FONT face=Arial size=2><STRONG>579.5 Fungi, 
+Eumycophyta/Jamur<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini mycology/mikologi, myxomycotina, oomycetes, 
+penicillium, 
+discomycetes<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Mycology:&nbsp;cabang ilmu biologi yang mempelajari tentang 
+jamur<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT><FONT face=Arial size=2>Lihat juga 561.9<STRONG> </STRONG>untuk fosil 
+jamur<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga <SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'"><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'">615.3295654&nbsp;untuk 
+penisilin</SPAN></SPAN></SPAN></SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lihat juga 635.8 untuk&nbsp;jamur yang dapat dimakan</FONT></P>
+<P><FONT face=Arial size=2><STRONG>579.6 
+Mushrooms/Cendawan<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Lihat juga 635.8 untuk&nbsp;cendawan yang dapat dimakan</FONT></P>
+<P><STRONG><FONT face=Arial size=2>579.7 Lichens/Lumut</FONT></STRONG></P>
+<P><FONT face=Arial size=2><STRONG>579.8 
+Algae/Ganggang<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</STRONG>Kelaskan di sini algology/algologi, 
+phycology/fikologi<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Termasuk&nbsp;seaweed/rumput 
+laut<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Algology: ilmu&nbsp;yang mempelajari tentang 
+ganggang&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT 
+face=Arial size=2>Lihat juga </FONT><FONT face=Arial size=2>561.9</FONT><FONT 
+size=2><FONT face=Arial><STRONG> </STRONG>untuk fosil 
+ganggang</FONT></FONT></P></FONT></FONT></FONT><FONT face=Arial 
+size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</FONT></P>
+<P align=right><A href="Home.htm"><IMG alt="" src="template/ilovebook.jpg" border=0></A></P><FONT 
+face="Times New Roman" color=#808080><FONT size=2>
+<HR>
+</FONT><FONT face=Arial color=#ff0000 size=1><EM><STRONG>Copyright © 2012 
+Rotmianto Mohamad</STRONG></EM></FONT></FONT></DIV>
+<P></P>
+</body>
+</html>
